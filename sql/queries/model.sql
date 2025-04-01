@@ -1,5 +1,5 @@
 -- name: CreateModel :one
-INSERT INTO models (datasheet_id, line, name, M, T, Sv, inv_sv, inv_sv_descr, W, Ld, OC, base_size, base_size_descr)
+INSERT INTO models (old_id, datasheet_id, name, M, T, Sv, inv_sv, W, Ld, OC)
 VALUES(
     $1,
     $2,
@@ -10,9 +10,6 @@ VALUES(
     $7,
     $8,
     $9,
-    $10,
-    $11,
-    $12,
-    $13
+    $10
 )
 RETURNING *;

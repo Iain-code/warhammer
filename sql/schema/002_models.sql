@@ -1,6 +1,7 @@
 -- +goose up
 CREATE TABLE models (
-    datasheet_id INT PRIMARY KEY NOT NULL,
+    old_id INT,
+    datasheet_id real PRIMARY KEY NOT NULL,
     name TEXT NOT NULL,
     M TEXT NOT NULL,
     T INT NOT NULL,
