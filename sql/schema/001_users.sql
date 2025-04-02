@@ -1,4 +1,4 @@
--- +goose up
+-- +goose Up
 CREATE TABLE users (
     id UUID PRIMARY KEY,
     created_at TIMESTAMP,
@@ -7,5 +7,5 @@ CREATE TABLE users (
     hashed_password TEXT
 );
 
--- +goose down
+-- +goose Down
 DROP TABLE users;

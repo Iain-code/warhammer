@@ -1,5 +1,24 @@
 package main
 
+import (
+	"database/sql"
+	"warhammer/internal/db"
+
+	"github.com/google/uuid"
+)
+
+type ApiConfig struct {
+	db db.Queries
+}
+
+type User struct {
+	Id             uuid.UUID      `json:"id"`
+	CreatedAt      sql.NullTime   `json:"created_at"`
+	UpdatedAt      sql.NullTime   `json:"updated_at"`
+	Email          string         `json:"email"`
+	HashedPassword sql.NullString `json:"-"`
+}
+
 type Model struct {
 	OldID       int     `json:"old_id"`
 	DatasheetID float64 `json:"datasheet_id"`

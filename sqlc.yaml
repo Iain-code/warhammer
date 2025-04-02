@@ -1,8 +1,13 @@
-version: "2"
+version: '2'
+servers:
+- engine: postgresql
+  uri: "postgres://postgres:turnstoashes1@database-warhammer.ch6mwkwuozzd.eu-north-1.rds.amazonaws.com:5432/warhammer"
 sql:
-  - schema: "sql/schema"
-    queries: "sql/queries"
-    engine: "postgresql"
-    gen:
-      go:
-        out: "internal/database"
+- schema: sql/schema
+  queries: sql/queries
+  engine: postgresql
+  database:
+    managed: true
+  gen:
+    go:
+      out: "internal/db"

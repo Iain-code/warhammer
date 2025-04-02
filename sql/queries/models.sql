@@ -1,4 +1,4 @@
--- name: CreateModel :one
+-- name: CreateModel :exec
 INSERT INTO models (old_id, datasheet_id, name, M, T, Sv, inv_sv, W, Ld, OC)
 VALUES(
     $1,
@@ -11,5 +11,4 @@ VALUES(
     $8,
     $9,
     $10
-)
-RETURNING *;
+);

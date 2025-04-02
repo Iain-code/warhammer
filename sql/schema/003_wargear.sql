@@ -1,4 +1,4 @@
--- +goose up
+-- +goose Up
 CREATE TABLE wargear (
     datasheet_id INT NOT NULL,
     Field2 INT,
@@ -14,5 +14,5 @@ CREATE TABLE wargear (
     REFERENCES models(datasheet_id)
 );
 
--- +goose down
+-- +goose Down
 DROP TABLE wargear;

@@ -1,11 +1,11 @@
--- +goose up
+-- +goose Up
 CREATE TABLE faction (
-    id real UNIQUE,
+    id NUMERIC(8, 1) UNIQUE,
     name TEXT,
     faction_id TEXT,
     FOREIGN KEY (id)
     REFERENCES models(datasheet_id)
 );
 
--- +goose down
+-- +goose Down
 DROP TABLE faction;

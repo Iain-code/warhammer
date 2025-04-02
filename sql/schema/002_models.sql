@@ -1,7 +1,7 @@
--- +goose up
+-- +goose Up
 CREATE TABLE models (
     old_id INT,
-    datasheet_id real PRIMARY KEY NOT NULL,
+    datasheet_id NUMERIC(6, 1) PRIMARY KEY NOT NULL,
     name TEXT NOT NULL,
     M TEXT NOT NULL,
     T INT NOT NULL,
@@ -12,5 +12,5 @@ CREATE TABLE models (
     OC TEXT
 );
 
--- +goose down
+-- +goose Down
 DROP TABLE models;
