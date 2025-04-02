@@ -13,10 +13,6 @@ import (
 
 func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 
-	// get json email / password --
-	// hash password
-	// add user to database
-	// marshall user struct and respond with JSON
 	type NewUser struct {
 		Email    string `json:"email"`
 		Password string `json:"password"`

@@ -20,16 +20,16 @@ type User struct {
 }
 
 type Model struct {
-	OldID       int     `json:"old_id"`
-	DatasheetID float64 `json:"datasheet_id"`
-	Name        string  `json:"name"`
-	M           string  `json:"M"`
-	T           int     `json:"T"`
-	Sv          string  `json:"Sv"`
-	InvSv       string  `json:"inv_sv"`
-	W           int     `json:"W"`
-	Ld          string  `json:"Ld"`
-	Oc          int     `json:"OC"`
+	OldID       sql.NullInt32  `json:"old_id"`
+	DatasheetID string         `json:"datasheet_id"`
+	Name        string         `json:"name"`
+	M           string         `json:"M"`
+	T           int32          `json:"T"`
+	Sv          sql.NullString `json:"Sv"`
+	InvSv       sql.NullString `json:"inv_sv"`
+	W           sql.NullInt32  `json:"W"`
+	Ld          sql.NullString `json:"Ld"`
+	Oc          sql.NullString `json:"OC"`
 }
 
 type Faction struct {
@@ -37,16 +37,15 @@ type Faction struct {
 	Name      string `json:"name"`
 	FactionID string `json:"faction_id"`
 }
-
 type Wargear struct {
-	DatasheetID int    `json:"datasheet_id"`
-	Field2      int    `json:"field2"`
-	Name        string `json:"name"`
-	Range       string `json:"range"`
-	Type        string `json:"type"`
-	A           string `json:"attacks"`
-	BS_WS       string `json:"BS_WS"`
-	S           string `json:"strength"`
-	AP          int    `json:"AP"`
-	D           string `json:"damage"`
+	DatasheetID int32          `json:"datasheet_id"`
+	Field2      sql.NullInt32  `json:"field2"`
+	Name        string         `json:"name"`
+	Range       sql.NullString `json:"range"`
+	Type        sql.NullString `json:"type"`
+	A           sql.NullString `json:"attacks"`
+	BsWs        sql.NullString `json:"BS_WS"`
+	Strength    sql.NullString `json:"strength"`
+	Ap          sql.NullString `json:"AP"`
+	Damage      sql.NullString `json:"damage"`
 }

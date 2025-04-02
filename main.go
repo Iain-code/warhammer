@@ -45,17 +45,23 @@ func main() {
 		AllowedOrigins:   []string{"https://*", "http://*"},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"*"},
-		ExposedHeaders:   []string{"Link"},
+		ExposedHeaders:   []string{"Link", "Content-Type", "Authorization"},
 		AllowCredentials: false,
 		MaxAge:           300,
 	}))
 
 	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		w.WriteHeader(http.StatusOK)
-		s := []byte("OK")
-		w.Write(s)
+		http.ServeFile(w, r, "index.html")
 	})
 	router.Post("/users", cfg.CreateUser)
+	router.Get("/models", cfg.GetModel)
+	router.Get("/faction", cfg.GetModelsForFaction)
+	router.Get("/wargear", cfg.GetWargearForModel)
+
+	chi.Walk(router, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
+		log.Printf("%s %s\n", method, route)
+		return nil
+	})
 
 	srv := &http.Server{
 		Addr:              ":" + port,

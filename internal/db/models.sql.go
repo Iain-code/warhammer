@@ -54,3 +54,106 @@ func (q *Queries) CreateModel(ctx context.Context, arg CreateModelParams) error 
 	)
 	return err
 }
+
+const getModel = `-- name: GetModel :one
+SELECT old_id, datasheet_id, name, m, t, sv, inv_sv, w, ld, oc FROM models
+WHERE datasheet_id = $1
+`
+
+func (q *Queries) GetModel(ctx context.Context, datasheetID string) (Model, error) {
+	row := q.db.QueryRowContext(ctx, getModel, datasheetID)
+	var i Model
+	err := row.Scan(
+		&i.OldID,
+		&i.DatasheetID,
+		&i.Name,
+		&i.M,
+		&i.T,
+		&i.Sv,
+		&i.InvSv,
+		&i.W,
+		&i.Ld,
+		&i.Oc,
+	)
+	return i, err
+}
+
+const getModelsForFaction = `-- name: GetModelsForFaction :many
+SELECT models.old_id, models.datasheet_id, models.name, models.m, models.t, models.sv, models.inv_sv, models.w, models.ld, models.oc FROM models
+JOIN faction ON models.datasheet_id = faction.id
+WHERE faction.faction_id = $1
+`
+
+func (q *Queries) GetModelsForFaction(ctx context.Context, factionID sql.NullString) ([]Model, error) {
+	rows, err := q.db.QueryContext(ctx, getModelsForFaction, factionID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Model
+	for rows.Next() {
+		var i Model
+		if err := rows.Scan(
+			&i.OldID,
+			&i.DatasheetID,
+			&i.Name,
+			&i.M,
+			&i.T,
+			&i.Sv,
+			&i.InvSv,
+			&i.W,
+			&i.Ld,
+			&i.Oc,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const getWargearForModel = `-- name: GetWargearForModel :many
+SELECT wargear.datasheet_id, wargear.field2, wargear.name, wargear.range, wargear.type, wargear.a, wargear.bs_ws, wargear.strength, wargear.ap, wargear.damage FROM wargear
+JOIN models ON wargear.datasheet_id = models.datasheet_id
+WHERE wargear.datasheet_id = $1
+`
+
+func (q *Queries) GetWargearForModel(ctx context.Context, datasheetID int32) ([]Wargear, error) {
+	rows, err := q.db.QueryContext(ctx, getWargearForModel, datasheetID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Wargear
+	for rows.Next() {
+		var i Wargear
+		if err := rows.Scan(
+			&i.DatasheetID,
+			&i.Field2,
+			&i.Name,
+			&i.Range,
+			&i.Type,
+			&i.A,
+			&i.BsWs,
+			&i.Strength,
+			&i.Ap,
+			&i.Damage,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}

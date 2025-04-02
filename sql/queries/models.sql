@@ -12,3 +12,23 @@ VALUES(
     $9,
     $10
 );
+
+-- name: GetModel :one
+SELECT * FROM models
+WHERE datasheet_id = $1;
+
+-- name: GetModelsForFaction :many
+SELECT models.* FROM models
+JOIN faction ON models.datasheet_id = faction.id
+WHERE faction.faction_id = $1;
+
+-- GetOneModel :one
+SELECT * FROM models
+WHERE datasheet_id = $1;
+
+-- name: GetWargearForModel :many
+SELECT wargear.* FROM wargear
+JOIN models ON wargear.datasheet_id = models.datasheet_id
+WHERE wargear.datasheet_id = $1;
+
+
