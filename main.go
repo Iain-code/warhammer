@@ -1,14 +1,16 @@
 package main
 
 import (
-	"context"
 	"database/sql"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
-	"warhammer/application"
+	"time"
 	"warhammer/internal/db"
 
+	"github.com/go-chi/chi"
+	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
@@ -18,7 +20,7 @@ func main() {
 	if err != nil {
 		log.Printf("warning: assuming default configuration. .env unreadable: %v", err)
 	}
-
+	port := os.Getenv("port")
 	dbUrl := os.Getenv("dbUrl")
 
 	dbConn, err := sql.Open("postgres", dbUrl)
@@ -35,19 +37,32 @@ func main() {
 	dbQueries := db.New(dbConn)
 	cfg := ApiConfig{}
 	cfg.db = *dbQueries
-
-	file, err := os.Open("./json/faction.json")
-	fmt.Println("File opening and transfering")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-
 	fmt.Println("Successfully connected to the AWS RDS PostgreSQL database!")
-	app := application.NewConstructor()
-	err = app.Start(context.TODO())
-	if err != nil {
-		fmt.Println("failed to start app")
+
+	router := chi.NewRouter()
+
+	router.Use(cors.Handler(cors.Options{
+		AllowedOrigins:   []string{"https://*", "http://*"},
+		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowedHeaders:   []string{"*"},
+		ExposedHeaders:   []string{"Link"},
+		AllowCredentials: false,
+		MaxAge:           300,
+	}))
+
+	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		w.WriteHeader(http.StatusOK)
+		s := []byte("OK")
+		w.Write(s)
+	})
+	router.Post("/users", cfg.CreateUser)
+
+	srv := &http.Server{
+		Addr:              ":" + port,
+		Handler:           router,
+		ReadHeaderTimeout: time.Hour * 1,
 	}
+	log.Printf("Serving on port: %s\n", port)
+	log.Fatal(srv.ListenAndServe())
 
 }
