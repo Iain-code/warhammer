@@ -29,12 +29,19 @@ type Model struct {
 	Oc          sql.NullString
 }
 
+type RefreshToken struct {
+	Token     string
+	UserID    uuid.UUID
+	ExpiresAt sql.NullTime
+}
+
 type User struct {
 	ID             uuid.UUID
 	CreatedAt      sql.NullTime
 	UpdatedAt      sql.NullTime
 	Email          string
 	HashedPassword sql.NullString
+	IsAdmin        bool
 }
 
 type Wargear struct {

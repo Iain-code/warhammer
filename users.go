@@ -32,6 +32,7 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 	hashedPassword, err := auth.HashPassword(newUser.Password)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "password invalid")
+		return
 	}
 
 	userParams := db.CreateUserParams{
@@ -43,7 +44,8 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 	}
 	user, err := cfg.db.CreateUser(r.Context(), userParams)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "unable to create user")
+		respondWithError(w, http.StatusInternalServerError, "Internal Server Error")
+		return
 	}
 	userJSON := User{
 		Id:             user.ID,
@@ -54,4 +56,100 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 	}
 
 	respondWithJSON(w, 200, userJSON)
+}
+
+func (cfg *ApiConfig) DeleteUser(w http.ResponseWriter, r *http.Request) {
+
+	user := User{}
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&user)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid request")
+		return
+	}
+
+	gotUser, err := cfg.db.GetUserFromEmail(r.Context(), user.Email)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid request")
+		return
+	}
+	err = cfg.db.DeleteUser(r.Context(), gotUser.ID)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "internal server error")
+		return
+	}
+}
+
+func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
+
+	// decode JSON
+	// check users hashed password
+	// find user by email
+	// check JWT token
+	// get refresh token
+
+	type TokenUser struct {
+		ID           uuid.UUID `json:"id"`
+		CreatedAt    time.Time `json:"created_at"`
+		UpdatedAt    time.Time `json:"updated_at"`
+		Email        string    `json:"email"`
+		IsAdmin      bool      `json:"is_admin"`
+		Token        string    `json:"token"`
+		RefreshToken string    `json:"refresh_token"`
+	}
+	req := User{}
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&req)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid request")
+		return
+	}
+	user, err := cfg.db.GetUserFromEmail(r.Context(), req.Email)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid request")
+		return
+	}
+	err = auth.CompareHashedPassword(req.HashedPassword.String, user.HashedPassword.String)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "incorrect password")
+		return
+	}
+
+	jwtToken, err := auth.MakeJWT(req.Id, cfg.tokenSecret, 15*time.Minute)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "failed to make token")
+		return
+	}
+
+	userID, err := auth.ValidateJWT(jwtToken, cfg.tokenSecret)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid token")
+		return
+	}
+
+	tknR, err := auth.MakeRefreshToken()
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
+	}
+
+	refreshParams := db.CreateRefreshTokenParams{
+		Token:     tknR,
+		UserID:    userID,
+		ExpiresAt: sql.NullTime{Time: time.Now().Add(24 * time.Hour), Valid: true},
+	}
+	_, err = cfg.db.CreateRefreshToken(r.Context(), refreshParams)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
+	}
+	tknUser := TokenUser{
+		ID:           req.Id,
+		CreatedAt:    time.Now(),
+		UpdatedAt:    time.Now(),
+		Email:        req.Email,
+		IsAdmin:      req.IsAdmin,
+		Token:        jwtToken,
+		RefreshToken: tknR,
+	}
+
+	respondWithJSON(w, 200, tknUser)
 }

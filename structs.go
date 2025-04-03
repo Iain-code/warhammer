@@ -8,7 +8,8 @@ import (
 )
 
 type ApiConfig struct {
-	db db.Queries
+	db          db.Queries
+	tokenSecret string
 }
 
 type User struct {
@@ -17,6 +18,7 @@ type User struct {
 	UpdatedAt      sql.NullTime   `json:"updated_at"`
 	Email          string         `json:"email"`
 	HashedPassword sql.NullString `json:"-"`
+	IsAdmin        bool           `json:"is_admin"`
 }
 
 type Model struct {

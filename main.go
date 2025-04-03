@@ -22,6 +22,7 @@ func main() {
 	}
 	port := os.Getenv("port")
 	dbUrl := os.Getenv("dbUrl")
+	tknSecret := os.Getenv("TOKEN_SECRET")
 
 	dbConn, err := sql.Open("postgres", dbUrl)
 	if err != nil {
@@ -37,6 +38,7 @@ func main() {
 	dbQueries := db.New(dbConn)
 	cfg := ApiConfig{}
 	cfg.db = *dbQueries
+	cfg.tokenSecret = tknSecret
 	fmt.Println("Successfully connected to the AWS RDS PostgreSQL database!")
 
 	router := chi.NewRouter()
