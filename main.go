@@ -57,8 +57,9 @@ func main() {
 	})
 	router.Post("/users", cfg.CreateUser)
 	router.Get("/models", cfg.GetModel)
-	router.Get("/faction", cfg.GetModelsForFaction)
-	router.Get("/wargear", cfg.GetWargearForModel)
+	router.Get("/factions", cfg.GetModelsForFaction)
+	router.Get("/wargears", cfg.GetWargearForModel)
+	router.Get("/login", cfg.Login)
 
 	chi.Walk(router, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
 		log.Printf("%s %s\n", method, route)

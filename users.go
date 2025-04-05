@@ -97,25 +97,29 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		Token        string    `json:"token"`
 		RefreshToken string    `json:"refresh_token"`
 	}
-	req := User{}
+	type NewUser struct {
+		Email    string `json:"email"`
+		Password string `json:"password"`
+	}
+	newUser := NewUser{}
 	decoder := json.NewDecoder(r.Body)
-	err := decoder.Decode(&req)
+	err := decoder.Decode(&newUser)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	user, err := cfg.db.GetUserFromEmail(r.Context(), req.Email)
+	user, err := cfg.db.GetUserFromEmail(r.Context(), newUser.Email)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	err = auth.CompareHashedPassword(req.HashedPassword.String, user.HashedPassword.String)
+	err = auth.CompareHashedPassword(newUser.Password, user.HashedPassword.String)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "incorrect password")
 		return
 	}
 
-	jwtToken, err := auth.MakeJWT(req.Id, cfg.tokenSecret, 15*time.Minute)
+	jwtToken, err := auth.MakeJWT(user.ID, cfg.tokenSecret, 15*time.Minute)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to make token")
 		return
@@ -130,6 +134,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 	tknR, err := auth.MakeRefreshToken()
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
+		return
 	}
 
 	refreshParams := db.CreateRefreshTokenParams{
@@ -140,13 +145,14 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 	_, err = cfg.db.CreateRefreshToken(r.Context(), refreshParams)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
+		return
 	}
 	tknUser := TokenUser{
-		ID:           req.Id,
+		ID:           userID,
 		CreatedAt:    time.Now(),
 		UpdatedAt:    time.Now(),
-		Email:        req.Email,
-		IsAdmin:      req.IsAdmin,
+		Email:        user.Email,
+		IsAdmin:      user.IsAdmin,
 		Token:        jwtToken,
 		RefreshToken: tknR,
 	}
