@@ -61,11 +61,6 @@ func main() {
 	router.Get("/wargears", cfg.GetWargearForModel)
 	router.Get("/login", cfg.Login)
 
-	chi.Walk(router, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
-		log.Printf("%s %s\n", method, route)
-		return nil
-	})
-
 	srv := &http.Server{
 		Addr:              ":" + port,
 		Handler:           router,

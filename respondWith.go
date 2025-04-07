@@ -17,6 +17,9 @@ func respondWithJSON(w http.ResponseWriter, code int, payload interface{}) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(code)
 	w.Write(data)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "response cannot be formed")
+	}
 }
 
 func respondWithError(w http.ResponseWriter, code int, msg string) {
