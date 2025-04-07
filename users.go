@@ -142,7 +142,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		UserID:    userID,
 		ExpiresAt: sql.NullTime{Time: time.Now().Add(24 * time.Hour), Valid: true},
 	}
-	_, err = cfg.db.CreateRefreshToken(r.Context(), refreshParams)
+	err = cfg.db.CreateRefreshToken(r.Context(), refreshParams)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
 		return
