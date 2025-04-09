@@ -53,7 +53,7 @@ func main() {
 	}))
 
 	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "index.html")
+		http.ServeFile(w, r, "./app/index.html")
 	})
 	router.Post("/users", cfg.CreateUser)
 	router.Get("/models", cfg.GetModel)

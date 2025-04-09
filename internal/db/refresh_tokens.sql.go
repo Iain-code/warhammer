@@ -31,3 +31,33 @@ func (q *Queries) CreateRefreshToken(ctx context.Context, arg CreateRefreshToken
 	_, err := q.db.ExecContext(ctx, createRefreshToken, arg.Token, arg.UserID, arg.ExpiresAt)
 	return err
 }
+
+const getUserFromToken = `-- name: GetUserFromToken :one
+SELECT users.id, users.created_at, users.updated_at, users.email, users.hashed_password, users.is_admin FROM users
+JOIN refresh_tokens ON users.id = refresh_tokens.user_id
+WHERE refresh_tokens.token = $1
+`
+
+func (q *Queries) GetUserFromToken(ctx context.Context, token string) (User, error) {
+	row := q.db.QueryRowContext(ctx, getUserFromToken, token)
+	var i User
+	err := row.Scan(
+		&i.ID,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+		&i.Email,
+		&i.HashedPassword,
+		&i.IsAdmin,
+	)
+	return i, err
+}
+
+const revokeRefreshToken = `-- name: RevokeRefreshToken :exec
+DELETE FROM refresh_tokens
+WHERE refresh_tokens.token = $1
+`
+
+func (q *Queries) RevokeRefreshToken(ctx context.Context, token string) error {
+	_, err := q.db.ExecContext(ctx, revokeRefreshToken, token)
+	return err
+}

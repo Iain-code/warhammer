@@ -82,12 +82,6 @@ func (cfg *ApiConfig) DeleteUser(w http.ResponseWriter, r *http.Request) {
 
 func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 
-	// decode JSON
-	// check users hashed password
-	// find user by email
-	// check JWT token
-	// get refresh token
-
 	type TokenUser struct {
 		ID           uuid.UUID `json:"id"`
 		CreatedAt    time.Time `json:"created_at"`
@@ -119,7 +113,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	jwtToken, err := auth.MakeJWT(user.ID, cfg.tokenSecret, 15*time.Minute)
+	jwtToken, err := auth.MakeJWT(user.ID, cfg.tokenSecret, 1*time.Hour)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to make token")
 		return
