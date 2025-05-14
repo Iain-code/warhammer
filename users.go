@@ -91,23 +91,23 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		Token        string    `json:"token"`
 		RefreshToken string    `json:"refresh_token"`
 	}
-	type NewUser struct {
+	type UserLogin struct {
 		Email    string `json:"email"`
 		Password string `json:"password"`
 	}
-	newUser := NewUser{}
+	userLogin := UserLogin{}
 	decoder := json.NewDecoder(r.Body)
-	err := decoder.Decode(&newUser)
+	err := decoder.Decode(&userLogin)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	user, err := cfg.db.GetUserFromEmail(r.Context(), newUser.Email)
+	user, err := cfg.db.GetUserFromEmail(r.Context(), userLogin.Email)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	err = auth.CompareHashedPassword(newUser.Password, user.HashedPassword.String)
+	err = auth.CompareHashedPassword(userLogin.Password, user.HashedPassword.String)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "incorrect password")
 		return
