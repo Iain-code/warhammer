@@ -39,15 +39,29 @@ type Faction struct {
 	Name      string `json:"name"`
 	FactionID string `json:"faction_id"`
 }
+
 type Wargear struct {
 	DatasheetID int32          `json:"datasheet_id"`
-	Field2      sql.NullInt32  `json:"field2"`
-	Name        string         `json:"name"`
+	Field2      int32          `json:"field2"`
+	Name        sql.NullString `json:"name"`
 	Range       sql.NullString `json:"range"`
 	Type        sql.NullString `json:"type"`
-	A           sql.NullString `json:"attacks"`
-	BsWs        sql.NullString `json:"BS_WS"`
-	Strength    sql.NullString `json:"strength"`
-	Ap          sql.NullString `json:"AP"`
-	Damage      sql.NullString `json:"damage"`
+	A           sql.NullString `json:"a"`
+	BsWs        sql.NullString `json:"bs_ws"`
+	S           sql.NullString `json:"s"`
+	Ap          sql.NullInt32 `json:"ap"`
+	D           sql.NullString `json:"d"`
+}
+
+type WargearJSON struct {
+	DatasheetID int32  `json:"datasheet_id"`
+	Field2      int32  `json:"field2"`
+	Name        string `json:"name"`
+	Range       string `json:"range"`
+	Type        string `json:"type"`
+	A           string `json:"a"`
+	BsWs        string `json:"bs_ws"`
+	S           string `json:"s"`
+	Ap          int32 `json:"ap"`
+	D           string `json:"d"`
 }

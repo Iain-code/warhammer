@@ -46,13 +46,13 @@ type User struct {
 
 type Wargear struct {
 	DatasheetID int32
-	Field2      sql.NullInt32
-	Name        string
+	Field2      int32
+	Name        sql.NullString
 	Range       sql.NullString
 	Type        sql.NullString
 	A           sql.NullString
 	BsWs        sql.NullString
-	Strength    sql.NullString
-	Ap          sql.NullString
-	Damage      sql.NullString
+	S           sql.NullString
+	Ap          sql.NullInt32
+	D           sql.NullString
 }

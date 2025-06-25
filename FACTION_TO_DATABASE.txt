@@ -1,0 +1,22 @@
+	jsonData, err := os.ReadFile("./json/faction.json")
+    if err != nil {
+        log.Fatal(err)
+    }
+	var factions []Faction
+    if err := json.Unmarshal(jsonData, &factions); err != nil {
+        log.Fatal(err)
+    }
+	
+	// Insert each wargear into DB
+    for _, w := range factions {
+        _, err := dbConn.Exec(`
+            INSERT INTO faction (id, name, faction_id)
+            VALUES ($1, $2, $3)`,
+            w.Id, w.Name, w.FactionID)
+
+        if err != nil {
+            log.Printf("Failed to insert %v: %v", w, err)
+        } else {
+            fmt.Printf("Inserted wargear: %s\n", w.Name)
+        }
+    }
