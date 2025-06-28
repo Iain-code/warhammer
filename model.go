@@ -39,7 +39,7 @@ func (cfg *ApiConfig) GetModelsForFaction(w http.ResponseWriter, r *http.Request
 
 	factionID := r.URL.Query().Get("faction_id")
 	if factionID == "" {
-		respondWithError(w, http.StatusBadRequest, "Datasheet ID not provided") // Ensure this isn't the response
+		respondWithError(w, http.StatusBadRequest, "Faction ID not provided")
 		return
 	}
 	str := sql.NullString{String: factionID, Valid: true}

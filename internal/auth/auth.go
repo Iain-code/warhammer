@@ -2,11 +2,8 @@ package auth
 
 import (
 	"crypto/rand"
-	"encoding/base64"
 	"encoding/hex"
-	"encoding/json"
 	"errors"
-	"fmt"
 	"net/http"
 	"strings"
 	"time"
@@ -113,24 +110,24 @@ func MakeRefreshToken() (string, error) {
 
 }
 
-func isTokenExpired(tokenString string) (bool, error) {
+// func isTokenExpired(tokenString string) (bool, error) {
 
-	parts := strings.Split(tokenString, ".")
-	if len(parts) != 3 {
-		return true, fmt.Errorf("invalid token")
-	}
+// 	parts := strings.Split(tokenString, ".")
+// 	if len(parts) != 3 {
+// 		return true, fmt.Errorf("invalid token")
+// 	}
 
-	payload, err := base64.RawURLEncoding.DecodeString(parts[1])
-	if err != nil {
-		return true, err
-	}
+// 	payload, err := base64.RawURLEncoding.DecodeString(parts[1])
+// 	if err != nil {
+// 		return true, err
+// 	}
 
-	claims := &jwt.RegisteredClaims{}
-	if err := json.Unmarshal(payload, &claims); err != nil {
-		return true, err
-	}
+// 	claims := &jwt.RegisteredClaims{}
+// 	if err := json.Unmarshal(payload, &claims); err != nil {
+// 		return true, err
+// 	}
 
-	currentTime := time.Now().Unix()
+// 	currentTime := time.Now().Unix()
 
-	return claims.ExpiresAt.Unix() < currentTime, nil
-}
+// 	return claims.ExpiresAt.Unix() < currentTime, nil
+// }

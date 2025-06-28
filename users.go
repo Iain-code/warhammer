@@ -82,12 +82,6 @@ func (cfg *ApiConfig) DeleteUser(w http.ResponseWriter, r *http.Request) {
 
 func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 
-	// decode JSON
-	// check users hashed password
-	// find user by email
-	// check JWT token
-	// get refresh token
-
 	type TokenUser struct {
 		ID           uuid.UUID `json:"id"`
 		CreatedAt    time.Time `json:"created_at"`
@@ -97,29 +91,32 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		Token        string    `json:"token"`
 		RefreshToken string    `json:"refresh_token"`
 	}
-	type NewUser struct {
+	type UserLogin struct {
 		Email    string `json:"email"`
 		Password string `json:"password"`
 	}
-	newUser := NewUser{}
+
+	userLogin := UserLogin{}
 	decoder := json.NewDecoder(r.Body)
-	err := decoder.Decode(&newUser)
+	err := decoder.Decode(&userLogin)
+
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	user, err := cfg.db.GetUserFromEmail(r.Context(), newUser.Email)
+
+	user, err := cfg.db.GetUserFromEmail(r.Context(), userLogin.Email)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	err = auth.CompareHashedPassword(newUser.Password, user.HashedPassword.String)
+	err = auth.CompareHashedPassword(userLogin.Password, user.HashedPassword.String)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "incorrect password")
 		return
 	}
 
-	jwtToken, err := auth.MakeJWT(user.ID, cfg.tokenSecret, 15*time.Minute)
+	jwtToken, err := auth.MakeJWT(user.ID, cfg.tokenSecret, 1*time.Hour)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to make token")
 		return
@@ -142,7 +139,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		UserID:    userID,
 		ExpiresAt: sql.NullTime{Time: time.Now().Add(24 * time.Hour), Valid: true},
 	}
-	_, err = cfg.db.CreateRefreshToken(r.Context(), refreshParams)
+	err = cfg.db.CreateRefreshToken(r.Context(), refreshParams)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
 		return

@@ -7,6 +7,7 @@ import (
 )
 
 func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("REQUEST RECEIVED")
 	datasheetID := r.URL.Query().Get("datasheet_id")
 	if datasheetID == "" {
 		respondWithError(w, http.StatusBadRequest, "Datasheet ID not provided")
@@ -26,6 +27,7 @@ func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request)
 		respondWithError(w, http.StatusBadRequest, "wargear not found")
 		return
 	}
+
 	wargearSlice := []Wargear{}
 	for _, wargear := range wargears {
 		wargearJSON := Wargear{
@@ -36,9 +38,9 @@ func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request)
 			Type:        wargear.Type,
 			A:           wargear.A,
 			BsWs:        wargear.BsWs,
-			Strength:    wargear.Strength,
+			S:           wargear.S,
 			Ap:          wargear.Ap,
-			Damage:      wargear.Damage,
+			D:           wargear.D,
 		}
 		wargearSlice = append(wargearSlice, wargearJSON)
 	}

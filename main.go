@@ -8,6 +8,7 @@ import (
 	"os"
 	"time"
 	"warhammer/internal/db"
+	// "encoding/json"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/cors"
@@ -35,6 +36,7 @@ func main() {
 		log.Fatal(err)
 	}
 
+
 	dbQueries := db.New(dbConn)
 	cfg := ApiConfig{}
 	cfg.db = *dbQueries
@@ -52,19 +54,16 @@ func main() {
 		MaxAge:           300,
 	}))
 
+	router.Use(logRequest)
+	
 	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "index.html")
+		http.ServeFile(w, r, "./app/index.html")
 	})
 	router.Post("/users", cfg.CreateUser)
 	router.Get("/models", cfg.GetModel)
 	router.Get("/factions", cfg.GetModelsForFaction)
 	router.Get("/wargears", cfg.GetWargearForModel)
-	router.Get("/login", cfg.Login)
-
-	chi.Walk(router, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
-		log.Printf("%s %s\n", method, route)
-		return nil
-	})
+	router.Post("/login", cfg.Login)
 
 	srv := &http.Server{
 		Addr:              ":" + port,
@@ -73,5 +72,4 @@ func main() {
 	}
 	log.Printf("Serving on port: %s\n", port)
 	log.Fatal(srv.ListenAndServe())
-
 }

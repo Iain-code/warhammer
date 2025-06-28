@@ -1,0 +1,24 @@
+	
+	jsonData, err := os.ReadFile("./json/wargear.json")
+    if err != nil {
+        log.Fatal(err)
+    }
+	var wargears []WargearJSON
+    if err := json.Unmarshal(jsonData, &wargears); err != nil {
+        log.Fatal(err)
+    }
+	
+	// Insert each wargear into DB
+    for _, w := range wargears {
+        _, err := dbConn.Exec(`
+            INSERT INTO wargear (datasheet_id, Field2, Name, Range, Type, A, BS_WS, S, AP, D)
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`,
+            w.DatasheetID, w.Field2, w.Name, w.Range, w.Type, w.A, w.BsWs, w.S, w.Ap, w.D)
+
+        if err != nil {
+            log.Printf("Failed to insert %v: %v", w, err)
+        } else {
+            fmt.Printf("Inserted wargear: %s\n", w.Name)
+        }
+    }
+	

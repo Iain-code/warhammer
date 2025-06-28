@@ -119,7 +119,7 @@ func (q *Queries) GetModelsForFaction(ctx context.Context, factionID sql.NullStr
 }
 
 const getWargearForModel = `-- name: GetWargearForModel :many
-SELECT wargear.datasheet_id, wargear.field2, wargear.name, wargear.range, wargear.type, wargear.a, wargear.bs_ws, wargear.strength, wargear.ap, wargear.damage FROM wargear
+SELECT wargear.datasheet_id, wargear.field2, wargear.name, wargear.range, wargear.type, wargear.a, wargear.bs_ws, wargear.s, wargear.ap, wargear.d FROM wargear
 JOIN models ON wargear.datasheet_id = models.datasheet_id
 WHERE wargear.datasheet_id = $1
 `
@@ -141,9 +141,9 @@ func (q *Queries) GetWargearForModel(ctx context.Context, datasheetID int32) ([]
 			&i.Type,
 			&i.A,
 			&i.BsWs,
-			&i.Strength,
+			&i.S,
 			&i.Ap,
-			&i.Damage,
+			&i.D,
 		); err != nil {
 			return nil, err
 		}
