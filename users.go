@@ -95,13 +95,16 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		Email    string `json:"email"`
 		Password string `json:"password"`
 	}
+
 	userLogin := UserLogin{}
 	decoder := json.NewDecoder(r.Body)
 	err := decoder.Decode(&userLogin)
+
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
+
 	user, err := cfg.db.GetUserFromEmail(r.Context(), userLogin.Email)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")

@@ -63,7 +63,7 @@ func main() {
 	router.Get("/models", cfg.GetModel)
 	router.Get("/factions", cfg.GetModelsForFaction)
 	router.Get("/wargears", cfg.GetWargearForModel)
-	router.Get("/login", cfg.Login)
+	router.Post("/login", cfg.Login)
 
 	srv := &http.Server{
 		Addr:              ":" + port,
