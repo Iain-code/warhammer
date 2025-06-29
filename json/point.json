@@ -1,0 +1,12206 @@
+[
+ {
+   "datasheet_id": 1,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 4,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 6,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 7,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 8,
+   "line": 1,
+   "description": "2 models",
+   "cost": 235
+ },
+ {
+   "datasheet_id": 9,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 10,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 11,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 12,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 13,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 14,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 15,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 16,
+   "line": 1,
+   "description": "10 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 16,
+   "line": 2,
+   "description": "20 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 17,
+   "line": 1,
+   "description": "11 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 17,
+   "line": 2,
+   "description": "22 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 19,
+   "line": 1,
+   "description": "1 Spanner and 4 Burna Boyz",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 19,
+   "line": 2,
+   "description": "2 Spanners and 8 Burna Boyz",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 20,
+   "line": 1,
+   "description": "6 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 21,
+   "line": 1,
+   "description": "5 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 21,
+   "line": 2,
+   "description": "10 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 22,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 23,
+   "line": 1,
+   "description": "3 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 24,
+   "line": 1,
+   "description": "2 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 24,
+   "line": 2,
+   "description": "3 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 24,
+   "line": 3,
+   "description": "5 models",
+   "cost": 175
+ },
+ {
+   "datasheet_id": 24,
+   "line": 4,
+   "description": "6 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 25,
+   "line": 1,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 26,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 27,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 27,
+   "line": 2,
+   "description": "10 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 28,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 28,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 29,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 30,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 31,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 32,
+   "line": 1,
+   "description": "1 model",
+   "cost": 175
+ },
+ {
+   "datasheet_id": 33,
+   "line": 1,
+   "description": "3 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 33,
+   "line": 2,
+   "description": "6 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 34,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 34,
+   "line": 2,
+   "description": "2 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 35,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 35,
+   "line": 2,
+   "description": "2 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 36,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 36,
+   "line": 2,
+   "description": "2 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 37,
+   "line": 1,
+   "description": "1 model",
+   "cost": 20
+ },
+ {
+   "datasheet_id": 37,
+   "line": 2,
+   "description": "2 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 38,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 38,
+   "line": 2,
+   "description": "2 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 38,
+   "line": 3,
+   "description": "3 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 39,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 40,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 41,
+   "line": 1,
+   "description": "3 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 41,
+   "line": 2,
+   "description": "6 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 42,
+   "line": 1,
+   "description": "1 model",
+   "cost": 280
+ },
+ {
+   "datasheet_id": 43,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 44,
+   "line": 1,
+   "description": "1 Spanner and 4 Lootas",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 44,
+   "line": 2,
+   "description": "2 Spanners and 8 Lootas",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 45,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 45,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 46,
+   "line": 1,
+   "description": "1 model",
+   "cost": 800
+ },
+ {
+   "datasheet_id": 49,
+   "line": 1,
+   "description": "4 models",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 49,
+   "line": 2,
+   "description": "8 models",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 50,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 51,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 52,
+   "line": 1,
+   "description": "1 model",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 53,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 54,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 55,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 56,
+   "line": 1,
+   "description": "1 model",
+   "cost": 295
+ },
+ {
+   "datasheet_id": 57,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 59,
+   "line": 1,
+   "description": "1 model",
+   "cost": 440
+ },
+ {
+   "datasheet_id": 60,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 61,
+   "line": 1,
+   "description": "5 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 61,
+   "line": 2,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 63,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 64,
+   "line": 1,
+   "description": "5 models",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 64,
+   "line": 2,
+   "description": "10 models",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 65,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 66,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 67,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 68,
+   "line": 1,
+   "description": "3 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 70,
+   "line": 1,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 71,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 71,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 72,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 73,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 76,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 79,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 81,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 83,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 84,
+   "line": 1,
+   "description": "1 model",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 85,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 86,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 86,
+   "line": 2,
+   "description": "2 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 87,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 91,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 92,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 93,
+   "line": 1,
+   "description": "1 model",
+   "cost": 385
+ },
+ {
+   "datasheet_id": 94,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 95,
+   "line": 1,
+   "description": "4 models",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 96,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 97,
+   "line": 1,
+   "description": "1 model",
+   "cost": 175
+ },
+ {
+   "datasheet_id": 98,
+   "line": 1,
+   "description": "1 model",
+   "cost": 30
+ },
+ {
+   "datasheet_id": 98,
+   "line": 2,
+   "description": "2 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 98,
+   "line": 3,
+   "description": "3 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 99,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 103,
+   "line": 1,
+   "description": "3 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 103,
+   "line": 2,
+   "description": "6 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 104,
+   "line": 1,
+   "description": "5 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 104,
+   "line": 2,
+   "description": "10 models",
+   "cost": 400
+ },
+ {
+   "datasheet_id": 107,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 110,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 111,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 112,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 113,
+   "line": 1,
+   "description": "1 model",
+   "cost": 255
+ },
+ {
+   "datasheet_id": 114,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 115,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 116,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 116,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 116,
+   "line": 3,
+   "description": "Attack Bike",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 117,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 118,
+   "line": 1,
+   "description": "5 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 118,
+   "line": 2,
+   "description": "10 models",
+   "cost": 360
+ },
+ {
+   "datasheet_id": 119,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 120,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 121,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 122,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 123,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 124,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 125,
+   "line": 1,
+   "description": "3 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 125,
+   "line": 2,
+   "description": "6 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 126,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 126,
+   "line": 2,
+   "description": "10 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 127,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 128,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 128,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 129,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 131,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 132,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 134,
+   "line": 1,
+   "description": "4 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 135,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 136,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 137,
+   "line": 1,
+   "description": "3 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 137,
+   "line": 2,
+   "description": "6 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 138,
+   "line": 1,
+   "description": "1 model",
+   "cost": 320
+ },
+ {
+   "datasheet_id": 139,
+   "line": 1,
+   "description": "1 model",
+   "cost": 840
+ },
+ {
+   "datasheet_id": 140,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 146,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 147,
+   "line": 1,
+   "description": "5 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 147,
+   "line": 2,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 148,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 151,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 152,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 153,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 154,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 155,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 156,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 157,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 158,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 159,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 160,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 164,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 165,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 165,
+   "line": 2,
+   "description": "6 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 166,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 167,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 168,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 169,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 218,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 219,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 225,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 226,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 230,
+   "line": 1,
+   "description": "5 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 230,
+   "line": 2,
+   "description": "10 models",
+   "cost": 360
+ },
+ {
+   "datasheet_id": 231,
+   "line": 1,
+   "description": "5 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 238,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 239,
+   "line": 1,
+   "description": "1 model",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 240,
+   "line": 1,
+   "description": "1 model",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 241,
+   "line": 1,
+   "description": "3 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 241,
+   "line": 2,
+   "description": "6 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 242,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 243,
+   "line": 1,
+   "description": "1 model",
+   "cost": 480
+ },
+ {
+   "datasheet_id": 282,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 283,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 284,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 285,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 286,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 287,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 288,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 292,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 297,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 300,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 301,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 302,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 303,
+   "line": 1,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 303,
+   "line": 2,
+   "description": "15 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 304,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 305,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 305,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 306,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 308,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 310,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 310,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 311,
+   "line": 1,
+   "description": "5 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 311,
+   "line": 2,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 314,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 315,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 315,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 317,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 318,
+   "line": 1,
+   "description": "5 models",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 318,
+   "line": 2,
+   "description": "10 models",
+   "cost": 370
+ },
+ {
+   "datasheet_id": 321,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 322,
+   "line": 1,
+   "description": "3 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 322,
+   "line": 2,
+   "description": "6 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 323,
+   "line": 1,
+   "description": "5 models",
+   "cost": 30
+ },
+ {
+   "datasheet_id": 323,
+   "line": 2,
+   "description": "10 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 324,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 324,
+   "line": 2,
+   "description": "10 models",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 324,
+   "line": 3,
+   "description": "15 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 325,
+   "line": 1,
+   "description": "1 model",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 326,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 326,
+   "line": 2,
+   "description": "6 models",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 358,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 373,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 374,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 375,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 376,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 377,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 379,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 380,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 381,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 381,
+   "line": 2,
+   "description": "10 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 382,
+   "line": 1,
+   "description": "5 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 382,
+   "line": 2,
+   "description": "10 models",
+   "cost": 400
+ },
+ {
+   "datasheet_id": 383,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 383,
+   "line": 2,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 384,
+   "line": 1,
+   "description": "5 models",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 384,
+   "line": 2,
+   "description": "10 models",
+   "cost": 430
+ },
+ {
+   "datasheet_id": 387,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 387,
+   "line": 2,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 388,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 388,
+   "line": 2,
+   "description": "10 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 389,
+   "line": 1,
+   "description": "1 model",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 390,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 391,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 392,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 393,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 395,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 396,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 397,
+   "line": 1,
+   "description": "4 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 398,
+   "line": 1,
+   "description": "1 model",
+   "cost": 280
+ },
+ {
+   "datasheet_id": 399,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 400,
+   "line": 1,
+   "description": "1 model",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 402,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 403,
+   "line": 1,
+   "description": "4 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 403,
+   "line": 2,
+   "description": "8 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 403,
+   "line": 3,
+   "description": "12 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 404,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 405,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 406,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 407,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 408,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 409,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 410,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 411,
+   "line": 1,
+   "description": "10 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 412,
+   "line": 1,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 413,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 413,
+   "line": 2,
+   "description": "20 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 414,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 414,
+   "line": 2,
+   "description": "2 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 414,
+   "line": 3,
+   "description": "3 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 415,
+   "line": 1,
+   "description": "5 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 415,
+   "line": 2,
+   "description": "10 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 417,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 417,
+   "line": 2,
+   "description": "6 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 418,
+   "line": 1,
+   "description": "3 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 418,
+   "line": 2,
+   "description": "6 models",
+   "cost": 400
+ },
+ {
+   "datasheet_id": 420,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 421,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 422,
+   "line": 1,
+   "description": "10 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 423,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 423,
+   "line": 2,
+   "description": "2 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 423,
+   "line": 3,
+   "description": "3 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 424,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 425,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 426,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 427,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 427,
+   "line": 2,
+   "description": "10 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 428,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 430,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 431,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 432,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 433,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 433,
+   "line": 2,
+   "description": "2 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 433,
+   "line": 3,
+   "description": "3 models",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 434,
+   "line": 1,
+   "description": "1 model",
+   "cost": 400
+ },
+ {
+   "datasheet_id": 435,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 436,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 436,
+   "line": 2,
+   "description": "Tidewall Defence Platform",
+   "cost": 20
+ },
+ {
+   "datasheet_id": 437,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 439,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 443,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 443,
+   "line": 2,
+   "description": "2 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 444,
+   "line": 1,
+   "description": "1 model",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 445,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 446,
+   "line": 1,
+   "description": "1 model",
+   "cost": 790
+ },
+ {
+   "datasheet_id": 447,
+   "line": 1,
+   "description": "2 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 447,
+   "line": 2,
+   "description": "4 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 448,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 449,
+   "line": 1,
+   "description": "2 models",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 452,
+   "line": 1,
+   "description": "2 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 453,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 454,
+   "line": 1,
+   "description": "1 model",
+   "cost": 325
+ },
+ {
+   "datasheet_id": 455,
+   "line": 1,
+   "description": "1 model",
+   "cost": 315
+ },
+ {
+   "datasheet_id": 456,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 457,
+   "line": 1,
+   "description": "1 model",
+   "cost": 2100
+ },
+ {
+   "datasheet_id": 458,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 459,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 460,
+   "line": 1,
+   "description": "1 model",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 461,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 462,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 463,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 465,
+   "line": 1,
+   "description": "1 model",
+   "cost": 175
+ },
+ {
+   "datasheet_id": 467,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 467,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 468,
+   "line": 1,
+   "description": "10 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 468,
+   "line": 2,
+   "description": "20 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 469,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 469,
+   "line": 2,
+   "description": "20 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 470,
+   "line": 1,
+   "description": "1 model",
+   "cost": 25
+ },
+ {
+   "datasheet_id": 470,
+   "line": 2,
+   "description": "2 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 470,
+   "line": 3,
+   "description": "3 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 471,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 471,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 472,
+   "line": 1,
+   "description": "3 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 472,
+   "line": 2,
+   "description": "6 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 473,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 474,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 475,
+   "line": 1,
+   "description": "3 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 475,
+   "line": 2,
+   "description": "6 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 476,
+   "line": 1,
+   "description": "3 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 476,
+   "line": 2,
+   "description": "6 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 477,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 477,
+   "line": 2,
+   "description": "2 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 477,
+   "line": 3,
+   "description": "3 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 478,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 479,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 482,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 483,
+   "line": 1,
+   "description": "3 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 484,
+   "line": 1,
+   "description": "10 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 484,
+   "line": 2,
+   "description": "20 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 485,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 486,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 487,
+   "line": 1,
+   "description": "1 model",
+   "cost": 30
+ },
+ {
+   "datasheet_id": 487,
+   "line": 2,
+   "description": "2 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 488,
+   "line": 1,
+   "description": "3 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 488,
+   "line": 2,
+   "description": "6 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 489,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 490,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 490,
+   "line": 2,
+   "description": "2 models",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 491,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 491,
+   "line": 2,
+   "description": "2 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 491,
+   "line": 3,
+   "description": "3 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 493,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 494,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 495,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 496,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 497,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 498,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 499,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 500,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 503,
+   "line": 1,
+   "description": "1 model",
+   "cost": 340
+ },
+ {
+   "datasheet_id": 504,
+   "line": 1,
+   "description": "1 model",
+   "cost": 610
+ },
+ {
+   "datasheet_id": 505,
+   "line": 1,
+   "description": "1 model",
+   "cost": 810
+ },
+ {
+   "datasheet_id": 506,
+   "line": 1,
+   "description": "1 model",
+   "cost": 330
+ },
+ {
+   "datasheet_id": 507,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 508,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 509,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 510,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 511,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 511,
+   "line": 2,
+   "description": "10 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 512,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 512,
+   "line": 2,
+   "description": "20 models",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 513,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 513,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 514,
+   "line": 1,
+   "description": "5 models",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 514,
+   "line": 2,
+   "description": "10 models",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 515,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 515,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 516,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 521,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 522,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 523,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 524,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 527,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 528,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 530,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 531,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 532,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 533,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 534,
+   "line": 1,
+   "description": "10 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 534,
+   "line": 2,
+   "description": "20 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 535,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 535,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 536,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 536,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 537,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 537,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 538,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 538,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 539,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 539,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 540,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 541,
+   "line": 1,
+   "description": "1 model",
+   "cost": 305
+ },
+ {
+   "datasheet_id": 542,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 543,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 544,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 545,
+   "line": 1,
+   "description": "1 model",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 546,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 546,
+   "line": 2,
+   "description": "6 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 548,
+   "line": 1,
+   "description": "3 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 548,
+   "line": 2,
+   "description": "6 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 551,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 551,
+   "line": 2,
+   "description": "2 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 552,
+   "line": 1,
+   "description": "1 model",
+   "cost": 400
+ },
+ {
+   "datasheet_id": 553,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 554,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 555,
+   "line": 1,
+   "description": "1 model",
+   "cost": 295
+ },
+ {
+   "datasheet_id": 556,
+   "line": 1,
+   "description": "1 model",
+   "cost": 425
+ },
+ {
+   "datasheet_id": 557,
+   "line": 1,
+   "description": "1 model",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 558,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 559,
+   "line": 1,
+   "description": "3 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 559,
+   "line": 2,
+   "description": "6 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 560,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 561,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 562,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 564,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 567,
+   "line": 1,
+   "description": "1 model",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 568,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 569,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 570,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 571,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 572,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 573,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 574,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 575,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 576,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 577,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 580,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 581,
+   "line": 1,
+   "description": "1 model",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 582,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 583,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 584,
+   "line": 1,
+   "description": "2 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 584,
+   "line": 2,
+   "description": "4 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 585,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 587,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 587,
+   "line": 2,
+   "description": "2 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 588,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 589,
+   "line": 1,
+   "description": "11 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 590,
+   "line": 1,
+   "description": "11 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 591,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 591,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 592,
+   "line": 1,
+   "description": "5 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 592,
+   "line": 2,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 593,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 593,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 594,
+   "line": 1,
+   "description": "5 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 594,
+   "line": 2,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 595,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 595,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 596,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 596,
+   "line": 2,
+   "description": "10 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 597,
+   "line": 1,
+   "description": "5 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 598,
+   "line": 1,
+   "description": "5 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 599,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 600,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 600,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 601,
+   "line": 1,
+   "description": "5 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 601,
+   "line": 2,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 602,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 602,
+   "line": 2,
+   "description": "6 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 603,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 605,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 605,
+   "line": 2,
+   "description": "2 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 606,
+   "line": 1,
+   "description": "1 model",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 607,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 607,
+   "line": 2,
+   "description": "10 models",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 609,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 610,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 611,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 612,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 612,
+   "line": 2,
+   "description": "2 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 613,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 614,
+   "line": 1,
+   "description": "1 model",
+   "cost": 435
+ },
+ {
+   "datasheet_id": 615,
+   "line": 1,
+   "description": "5 Shadow Spectres",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 615,
+   "line": 2,
+   "description": "10 Shadow Spectres",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 615,
+   "line": 3,
+   "description": "Shadow Spectre Exarch",
+   "cost": 30
+ },
+ {
+   "datasheet_id": 616,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 617,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 618,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 619,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 620,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 621,
+   "line": 1,
+   "description": "1 model",
+   "cost": 410
+ },
+ {
+   "datasheet_id": 622,
+   "line": 1,
+   "description": "1 model",
+   "cost": 415
+ },
+ {
+   "datasheet_id": 623,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 624,
+   "line": 1,
+   "description": "1 model",
+   "cost": 175
+ },
+ {
+   "datasheet_id": 625,
+   "line": 1,
+   "description": "1 model",
+   "cost": 430
+ },
+ {
+   "datasheet_id": 626,
+   "line": 1,
+   "description": "1 model",
+   "cost": 460
+ },
+ {
+   "datasheet_id": 627,
+   "line": 1,
+   "description": "1 model",
+   "cost": 490
+ },
+ {
+   "datasheet_id": 628,
+   "line": 1,
+   "description": "1 model",
+   "cost": 1100
+ },
+ {
+   "datasheet_id": 629,
+   "line": 1,
+   "description": "3 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 629,
+   "line": 2,
+   "description": "4 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 629,
+   "line": 3,
+   "description": "6 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 629,
+   "line": 4,
+   "description": "7 models",
+   "cost": 245
+ },
+ {
+   "datasheet_id": 630,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 631,
+   "line": 1,
+   "description": "1 model",
+   "cost": 2100
+ },
+ {
+   "datasheet_id": 632,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 632,
+   "line": 2,
+   "description": "6 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 632,
+   "line": 3,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 632,
+   "line": 4,
+   "description": "11 models",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 633,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 633,
+   "line": 2,
+   "description": "6 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 633,
+   "line": 3,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 633,
+   "line": 4,
+   "description": "11 models",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 634,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 639,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 640,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 641,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 642,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 643,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 644,
+   "line": 1,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 646,
+   "line": 1,
+   "description": "10 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 648,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 648,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 649,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 649,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 650,
+   "line": 1,
+   "description": "5 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 650,
+   "line": 2,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 651,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 651,
+   "line": 2,
+   "description": "6 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 652,
+   "line": 1,
+   "description": "7 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 656,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 657,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 658,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 658,
+   "line": 2,
+   "description": "6 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 659,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 659,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 660,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 661,
+   "line": 1,
+   "description": "1 model",
+   "cost": 235
+ },
+ {
+   "datasheet_id": 662,
+   "line": 1,
+   "description": "5 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 662,
+   "line": 2,
+   "description": "10 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 663,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 663,
+   "line": 2,
+   "description": "2 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 664,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 664,
+   "line": 2,
+   "description": "2 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 665,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 666,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 667,
+   "line": 1,
+   "description": "1 model",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 680,
+   "line": 1,
+   "description": "1 model",
+   "cost": 235
+ },
+ {
+   "datasheet_id": 686,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 690,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 690,
+   "line": 2,
+   "description": "2 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 691,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 691,
+   "line": 2,
+   "description": "2 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 692,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 693,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 694,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 695,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 696,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 697,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 698,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 699,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 700,
+   "line": 1,
+   "description": "1 model",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 701,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 702,
+   "line": 1,
+   "description": "1 model",
+   "cost": 480
+ },
+ {
+   "datasheet_id": 703,
+   "line": 1,
+   "description": "1 model",
+   "cost": 450
+ },
+ {
+   "datasheet_id": 704,
+   "line": 1,
+   "description": "1 model",
+   "cost": 480
+ },
+ {
+   "datasheet_id": 705,
+   "line": 1,
+   "description": "1 model",
+   "cost": 445
+ },
+ {
+   "datasheet_id": 706,
+   "line": 1,
+   "description": "1 model",
+   "cost": 450
+ },
+ {
+   "datasheet_id": 707,
+   "line": 1,
+   "description": "1 model",
+   "cost": 440
+ },
+ {
+   "datasheet_id": 708,
+   "line": 1,
+   "description": "1 model",
+   "cost": 460
+ },
+ {
+   "datasheet_id": 709,
+   "line": 1,
+   "description": "1 model",
+   "cost": 495
+ },
+ {
+   "datasheet_id": 713,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 714,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 716,
+   "line": 1,
+   "description": "1 model",
+   "cost": 30
+ },
+ {
+   "datasheet_id": 719,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 721,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 722,
+   "line": 1,
+   "description": "3 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 722,
+   "line": 2,
+   "description": "6 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 723,
+   "line": 1,
+   "description": "3 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 723,
+   "line": 2,
+   "description": "6 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 724,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 724,
+   "line": 2,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 725,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 727,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 728,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 729,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 730,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 731,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 733,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 735,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 736,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 737,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 739,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 740,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 741,
+   "line": 1,
+   "description": "1 model",
+   "cost": 25
+ },
+ {
+   "datasheet_id": 743,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 744,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 745,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 746,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 747,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 751,
+   "line": 1,
+   "description": "1 model",
+   "cost": 270
+ },
+ {
+   "datasheet_id": 752,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 753,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 754,
+   "line": 1,
+   "description": "1 model",
+   "cost": 235
+ },
+ {
+   "datasheet_id": 755,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 756,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 757,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 757,
+   "line": 2,
+   "description": "2 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 757,
+   "line": 3,
+   "description": "3 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 758,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 758,
+   "line": 2,
+   "description": "2 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 759,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 760,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 762,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 762,
+   "line": 2,
+   "description": "2 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 762,
+   "line": 3,
+   "description": "3 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 763,
+   "line": 1,
+   "description": "1 model",
+   "cost": 415
+ },
+ {
+   "datasheet_id": 764,
+   "line": 1,
+   "description": "1 model",
+   "cost": 480
+ },
+ {
+   "datasheet_id": 766,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 767,
+   "line": 1,
+   "description": "1 model",
+   "cost": 325
+ },
+ {
+   "datasheet_id": 768,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 769,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 770,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 771,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 772,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 773,
+   "line": 1,
+   "description": "1 model",
+   "cost": 345
+ },
+ {
+   "datasheet_id": 774,
+   "line": 1,
+   "description": "1 model",
+   "cost": 375
+ },
+ {
+   "datasheet_id": 775,
+   "line": 1,
+   "description": "1 model",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 776,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 777,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 778,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 779,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 780,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 781,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 783,
+   "line": 1,
+   "description": "1 model",
+   "cost": 255
+ },
+ {
+   "datasheet_id": 784,
+   "line": 1,
+   "description": "1 model",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 786,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 838,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 839,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 840,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 841,
+   "line": 1,
+   "description": "3 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 841,
+   "line": 2,
+   "description": "6 models",
+   "cost": 320
+ },
+ {
+   "datasheet_id": 842,
+   "line": 1,
+   "description": "3 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 842,
+   "line": 2,
+   "description": "6 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 843,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 843,
+   "line": 2,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 844,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 844,
+   "line": 2,
+   "description": "10 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 845,
+   "line": 1,
+   "description": "2 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 845,
+   "line": 2,
+   "description": "4 models",
+   "cost": 360
+ },
+ {
+   "datasheet_id": 846,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 847,
+   "line": 1,
+   "description": "4 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 848,
+   "line": 1,
+   "description": "10 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 849,
+   "line": 1,
+   "description": "10 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 850,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 850,
+   "line": 2,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 851,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 851,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 852,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 852,
+   "line": 2,
+   "description": "2 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 852,
+   "line": 3,
+   "description": "3 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 853,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 853,
+   "line": 2,
+   "description": "2 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 853,
+   "line": 3,
+   "description": "3 models",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 854,
+   "line": 1,
+   "description": "1 model",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 855,
+   "line": 1,
+   "description": "1 model",
+   "cost": 345
+ },
+ {
+   "datasheet_id": 856,
+   "line": 1,
+   "description": "1 model",
+   "cost": 345
+ },
+ {
+   "datasheet_id": 857,
+   "line": 1,
+   "description": "1 model",
+   "cost": 365
+ },
+ {
+   "datasheet_id": 858,
+   "line": 1,
+   "description": "1 model",
+   "cost": 345
+ },
+ {
+   "datasheet_id": 859,
+   "line": 1,
+   "description": "1 model",
+   "cost": 365
+ },
+ {
+   "datasheet_id": 860,
+   "line": 1,
+   "description": "1 model",
+   "cost": 700
+ },
+ {
+   "datasheet_id": 861,
+   "line": 1,
+   "description": "1 model",
+   "cost": 365
+ },
+ {
+   "datasheet_id": 862,
+   "line": 1,
+   "description": "1 model",
+   "cost": 365
+ },
+ {
+   "datasheet_id": 863,
+   "line": 1,
+   "description": "1 model",
+   "cost": 365
+ },
+ {
+   "datasheet_id": 864,
+   "line": 1,
+   "description": "1 model",
+   "cost": 365
+ },
+ {
+   "datasheet_id": 865,
+   "line": 1,
+   "description": "1 model",
+   "cost": 355
+ },
+ {
+   "datasheet_id": 866,
+   "line": 1,
+   "description": "1 model",
+   "cost": 355
+ },
+ {
+   "datasheet_id": 867,
+   "line": 1,
+   "description": "1 model",
+   "cost": 1100
+ },
+ {
+   "datasheet_id": 868,
+   "line": 1,
+   "description": "1 model",
+   "cost": 2200
+ },
+ {
+   "datasheet_id": 869,
+   "line": 1,
+   "description": "1 model",
+   "cost": 3500
+ },
+ {
+   "datasheet_id": 870,
+   "line": 1,
+   "description": "1 model (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 870,
+   "line": 2,
+   "description": "1 model (Assigned Agent)",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 871,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 872,
+   "line": 1,
+   "description": "1 model (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 872,
+   "line": 2,
+   "description": "1 model (Assigned Agent)",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 873,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 874,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 875,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 876,
+   "line": 1,
+   "description": "1 model (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 876,
+   "line": 2,
+   "description": "1 model (Assigned Agent)",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 877,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 882,
+   "line": 1,
+   "description": "4 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 882,
+   "line": 2,
+   "description": "5 models",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 883,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 884,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 889,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 894,
+   "line": 1,
+   "description": "2 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 894,
+   "line": 2,
+   "description": "4 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 895,
+   "line": 1,
+   "description": "2 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 895,
+   "line": 2,
+   "description": "4 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 896,
+   "line": 1,
+   "description": "3 models",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 896,
+   "line": 2,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 897,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 897,
+   "line": 2,
+   "description": "2 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 898,
+   "line": 1,
+   "description": "3 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 899,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 900,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 901,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 902,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 903,
+   "line": 1,
+   "description": "10 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 904,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 904,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 907,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 907,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 908,
+   "line": 1,
+   "description": "5 models",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 909,
+   "line": 1,
+   "description": "10 models",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 910,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 911,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 912,
+   "line": 1,
+   "description": "1 model",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 914,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 917,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 918,
+   "line": 1,
+   "description": "1 model",
+   "cost": 260
+ },
+ {
+   "datasheet_id": 919,
+   "line": 1,
+   "description": "1 model",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 920,
+   "line": 1,
+   "description": "1 model",
+   "cost": 550
+ },
+ {
+   "datasheet_id": 921,
+   "line": 1,
+   "description": "1 model",
+   "cost": 525
+ },
+ {
+   "datasheet_id": 922,
+   "line": 1,
+   "description": "1 model",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 923,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 924,
+   "line": 1,
+   "description": "1 model",
+   "cost": 280
+ },
+ {
+   "datasheet_id": 925,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 926,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 928,
+   "line": 1,
+   "description": "2 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 929,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 930,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 931,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 932,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 933,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 934,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 935,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 936,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 937,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 938,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 939,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 940,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 941,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 942,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 943,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 944,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 946,
+   "line": 1,
+   "description": "10 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 946,
+   "line": 2,
+   "description": "20 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 947,
+   "line": 1,
+   "description": "5 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 947,
+   "line": 2,
+   "description": "10 models",
+   "cost": 360
+ },
+ {
+   "datasheet_id": 952,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 952,
+   "line": 2,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 953,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 953,
+   "line": 2,
+   "description": "10 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 954,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 955,
+   "line": 1,
+   "description": "3 models",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 956,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 957,
+   "line": 1,
+   "description": "3 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 957,
+   "line": 2,
+   "description": "6 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 958,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 958,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 959,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 959,
+   "line": 2,
+   "description": "10 models",
+   "cost": 270
+ },
+ {
+   "datasheet_id": 960,
+   "line": 1,
+   "description": "2 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 961,
+   "line": 1,
+   "description": "1 model",
+   "cost": 205
+ },
+ {
+   "datasheet_id": 962,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 963,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 964,
+   "line": 1,
+   "description": "1 model",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 965,
+   "line": 1,
+   "description": "2 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 966,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 967,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 968,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 969,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 970,
+   "line": 1,
+   "description": "1 model",
+   "cost": 450
+ },
+ {
+   "datasheet_id": 1016,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1017,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1020,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1020,
+   "line": 2,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 1021,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1022,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 1023,
+   "line": 1,
+   "description": "2 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1024,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 1025,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 1026,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 1027,
+   "line": 1,
+   "description": "1 model",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 1028,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 1029,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1030,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 1031,
+   "line": 1,
+   "description": "1 model",
+   "cost": 420
+ },
+ {
+   "datasheet_id": 1032,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1033,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1034,
+   "line": 1,
+   "description": "10 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1034,
+   "line": 2,
+   "description": "20 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1035,
+   "line": 1,
+   "description": "5 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 1035,
+   "line": 2,
+   "description": "10 models",
+   "cost": 375
+ },
+ {
+   "datasheet_id": 1036,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 1044,
+   "line": 1,
+   "description": "5 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 1044,
+   "line": 2,
+   "description": "7 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1044,
+   "line": 3,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 1045,
+   "line": 1,
+   "description": "5 models",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 1045,
+   "line": 2,
+   "description": "10 models",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 1046,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 1047,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1048,
+   "line": 1,
+   "description": "2 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1049,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 1050,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 1051,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 1052,
+   "line": 1,
+   "description": "1 model",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 1053,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 1054,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1055,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1056,
+   "line": 1,
+   "description": "10 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1056,
+   "line": 2,
+   "description": "20 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1057,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 1058,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1094,
+   "line": 1,
+   "description": "1 model",
+   "cost": 355
+ },
+ {
+   "datasheet_id": 1095,
+   "line": 1,
+   "description": "1 model",
+   "cost": 355
+ },
+ {
+   "datasheet_id": 1096,
+   "line": 1,
+   "description": "1 model",
+   "cost": 355
+ },
+ {
+   "datasheet_id": 1097,
+   "line": 1,
+   "description": "1 model",
+   "cost": 355
+ },
+ {
+   "datasheet_id": 1098,
+   "line": 1,
+   "description": "1 model",
+   "cost": 345
+ },
+ {
+   "datasheet_id": 1099,
+   "line": 1,
+   "description": "1 model",
+   "cost": 700
+ },
+ {
+   "datasheet_id": 1100,
+   "line": 1,
+   "description": "1 model",
+   "cost": 345
+ },
+ {
+   "datasheet_id": 1104,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1105,
+   "line": 1,
+   "description": "1 model",
+   "cost": 305
+ },
+ {
+   "datasheet_id": 1106,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1111,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 1112,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1112,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1114,
+   "line": 1,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1115,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1115,
+   "line": 2,
+   "description": "6 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 1116,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 1117,
+   "line": 1,
+   "description": "1 model",
+   "cost": 270
+ },
+ {
+   "datasheet_id": 1118,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 1119,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1120,
+   "line": 1,
+   "description": "1 model",
+   "cost": 260
+ },
+ {
+   "datasheet_id": 1125,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1125,
+   "line": 2,
+   "description": "6 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1126,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1127,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1127,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1128,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 1129,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1130,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 1132,
+   "line": 1,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1133,
+   "line": 1,
+   "description": "3 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 1133,
+   "line": 2,
+   "description": "6 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1134,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1134,
+   "line": 2,
+   "description": "2 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1135,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1135,
+   "line": 2,
+   "description": "6 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 1136,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 1137,
+   "line": 1,
+   "description": "1 model",
+   "cost": 290
+ },
+ {
+   "datasheet_id": 1138,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1139,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1141,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 1142,
+   "line": 1,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1143,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1143,
+   "line": 2,
+   "description": "6 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 1144,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1144,
+   "line": 2,
+   "description": "2 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1145,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1145,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1146,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1146,
+   "line": 2,
+   "description": "2 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1147,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 1148,
+   "line": 1,
+   "description": "1 model",
+   "cost": 375
+ },
+ {
+   "datasheet_id": 1149,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 1150,
+   "line": 1,
+   "description": "5 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 1150,
+   "line": 2,
+   "description": "10 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1151,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 1153,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 1154,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 1154,
+   "line": 2,
+   "description": "10 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 1156,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 1157,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1157,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1158,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1159,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1159,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1160,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1160,
+   "line": 2,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 1161,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 1162,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1163,
+   "line": 1,
+   "description": "1 model",
+   "cost": 235
+ },
+ {
+   "datasheet_id": 1164,
+   "line": 1,
+   "description": "2 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 1165,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 1166,
+   "line": 1,
+   "description": "2 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1166,
+   "line": 2,
+   "description": "5 models",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 1167,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1168,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 1169,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 1172,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1174,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1175,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 1177,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1177,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 1178,
+   "line": 1,
+   "description": "1 model",
+   "cost": 175
+ },
+ {
+   "datasheet_id": 1179,
+   "line": 1,
+   "description": "1 model",
+   "cost": 1100
+ },
+ {
+   "datasheet_id": 1182,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 1183,
+   "line": 1,
+   "description": "5 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 1183,
+   "line": 2,
+   "description": "10 models",
+   "cost": 340
+ },
+ {
+   "datasheet_id": 1184,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 1185,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 1188,
+   "line": 1,
+   "description": "1 model",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 1189,
+   "line": 1,
+   "description": "1 model",
+   "cost": 610
+ },
+ {
+   "datasheet_id": 1190,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 1191,
+   "line": 1,
+   "description": "1 model",
+   "cost": 280
+ },
+ {
+   "datasheet_id": 1192,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1193,
+   "line": 1,
+   "description": "3 models",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 1193,
+   "line": 2,
+   "description": "6 models",
+   "cost": 330
+ },
+ {
+   "datasheet_id": 1196,
+   "line": 1,
+   "description": "1 model",
+   "cost": 255
+ },
+ {
+   "datasheet_id": 1197,
+   "line": 1,
+   "description": "1 model",
+   "cost": 805
+ },
+ {
+   "datasheet_id": 1199,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1237,
+   "line": 1,
+   "description": "1 model",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 1293,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1294,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1295,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 1297,
+   "line": 1,
+   "description": "1 model",
+   "cost": 425
+ },
+ {
+   "datasheet_id": 1298,
+   "line": 1,
+   "description": "1 model",
+   "cost": 560
+ },
+ {
+   "datasheet_id": 1302,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 1310,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 1311,
+   "line": 1,
+   "description": "1 model",
+   "cost": 325
+ },
+ {
+   "datasheet_id": 1317,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 1318,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 1321,
+   "line": 1,
+   "description": "1 model",
+   "cost": 840
+ },
+ {
+   "datasheet_id": 1329,
+   "line": 1,
+   "description": "1 model",
+   "cost": 415
+ },
+ {
+   "datasheet_id": 1332,
+   "line": 1,
+   "description": "1 model",
+   "cost": 320
+ },
+ {
+   "datasheet_id": 1333,
+   "line": 1,
+   "description": "1 model",
+   "cost": 315
+ },
+ {
+   "datasheet_id": 1336,
+   "line": 1,
+   "description": "3 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 1337,
+   "line": 1,
+   "description": "3 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1338,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 1339,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1340,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 1344,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1345,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 1346,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1347,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 1348,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1355,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1360,
+   "line": 1,
+   "description": "1 model",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 1361,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 1362,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1363,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1364,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 1367,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1368,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 1369,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1370,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 1371,
+   "line": 1,
+   "description": "3 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 1371,
+   "line": 2,
+   "description": "6 models",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 1372,
+   "line": 1,
+   "description": "3 models",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 1372,
+   "line": 2,
+   "description": "5 models",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 1372,
+   "line": 3,
+   "description": "10 models",
+   "cost": 370
+ },
+ {
+   "datasheet_id": 1374,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 1374,
+   "line": 2,
+   "description": "2 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 1376,
+   "line": 1,
+   "description": "1 model",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 1377,
+   "line": 1,
+   "description": "1 model",
+   "cost": 380
+ },
+ {
+   "datasheet_id": 1383,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1385,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1386,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1387,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1388,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 1389,
+   "line": 1,
+   "description": "1 model",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 1390,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1391,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1392,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1393,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 1394,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 1396,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 1397,
+   "line": 1,
+   "description": "4 models",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 1398,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 1400,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 1406,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 1423,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 1446,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 1447,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1448,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1449,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1450,
+   "line": 1,
+   "description": "4 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 1450,
+   "line": 2,
+   "description": "5 models",
+   "cost": 260
+ },
+ {
+   "datasheet_id": 1453,
+   "line": 1,
+   "description": "2 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 1453,
+   "line": 2,
+   "description": "3 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 1453,
+   "line": 3,
+   "description": "5 models",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 1453,
+   "line": 4,
+   "description": "6 models",
+   "cost": 360
+ },
+ {
+   "datasheet_id": 1454,
+   "line": 1,
+   "description": "2 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1454,
+   "line": 2,
+   "description": "3 models",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 1455,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1456,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1458,
+   "line": 1,
+   "description": "1 model",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 1460,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 1461,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 1462,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1463,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 1464,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1465,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 1466,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 1467,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 1468,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 1469,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1470,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1472,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 1474,
+   "line": 1,
+   "description": "3 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1474,
+   "line": 2,
+   "description": "6 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1476,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1477,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1478,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1479,
+   "line": 1,
+   "description": "1 model",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 1481,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1482,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 1483,
+   "line": 1,
+   "description": "1 model",
+   "cost": 335
+ },
+ {
+   "datasheet_id": 1484,
+   "line": 1,
+   "description": "1 model",
+   "cost": 380
+ },
+ {
+   "datasheet_id": 1485,
+   "line": 1,
+   "description": "1 model",
+   "cost": 395
+ },
+ {
+   "datasheet_id": 1486,
+   "line": 1,
+   "description": "1 model",
+   "cost": 395
+ },
+ {
+   "datasheet_id": 1509,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1523,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1523,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1524,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1525,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1525,
+   "line": 2,
+   "description": "10 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 1526,
+   "line": 1,
+   "description": "5 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1526,
+   "line": 2,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1527,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 1533,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 1536,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1537,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1538,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1539,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1540,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1541,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1542,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 1545,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1546,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 1553,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1556,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 1557,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 1558,
+   "line": 1,
+   "description": "3 models",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 1558,
+   "line": 2,
+   "description": "6 models",
+   "cost": 390
+ },
+ {
+   "datasheet_id": 1559,
+   "line": 1,
+   "description": "5 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 1560,
+   "line": 1,
+   "description": "3 models",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 1560,
+   "line": 2,
+   "description": "6 models",
+   "cost": 450
+ },
+ {
+   "datasheet_id": 1561,
+   "line": 1,
+   "description": "3 models",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 1561,
+   "line": 2,
+   "description": "6 models",
+   "cost": 330
+ },
+ {
+   "datasheet_id": 1562,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 1563,
+   "line": 1,
+   "description": "5 models",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 1564,
+   "line": 1,
+   "description": "1 model",
+   "cost": 690
+ },
+ {
+   "datasheet_id": 1565,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 1567,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1568,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 1569,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1570,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1571,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1572,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1573,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1573,
+   "line": 2,
+   "description": "2 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 1574,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1574,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1576,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 1577,
+   "line": 1,
+   "description": "1 model",
+   "cost": 540
+ },
+ {
+   "datasheet_id": 1579,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 1580,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1581,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1583,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1584,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 1586,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 1587,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 1588,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 1589,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1596,
+   "line": 1,
+   "description": "2 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 1598,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1600,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 1601,
+   "line": 1,
+   "description": "4 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 1603,
+   "line": 1,
+   "description": "4 models",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 1604,
+   "line": 1,
+   "description": "10 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 1606,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1606,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1607,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 1608,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 1609,
+   "line": 1,
+   "description": "1 model",
+   "cost": 290
+ },
+ {
+   "datasheet_id": 1610,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1611,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 1630,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1647,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 1648,
+   "line": 1,
+   "description": "1 model",
+   "cost": 380
+ },
+ {
+   "datasheet_id": 1649,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 1650,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1651,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 1658,
+   "line": 1,
+   "description": "1 model",
+   "cost": 400
+ },
+ {
+   "datasheet_id": 1659,
+   "line": 1,
+   "description": "1 model",
+   "cost": 480
+ },
+ {
+   "datasheet_id": 1660,
+   "line": 1,
+   "description": "1 model",
+   "cost": 400
+ },
+ {
+   "datasheet_id": 1661,
+   "line": 1,
+   "description": "1 model",
+   "cost": 380
+ },
+ {
+   "datasheet_id": 1662,
+   "line": 1,
+   "description": "1 model",
+   "cost": 765
+ },
+ {
+   "datasheet_id": 1663,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 1664,
+   "line": 1,
+   "description": "1 model",
+   "cost": 765
+ },
+ {
+   "datasheet_id": 1666,
+   "line": 1,
+   "description": "1 model",
+   "cost": 515
+ },
+ {
+   "datasheet_id": 1667,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1668,
+   "line": 1,
+   "description": "3 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1680,
+   "line": 1,
+   "description": "1 model",
+   "cost": 580
+ },
+ {
+   "datasheet_id": 1822,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 1825,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1991,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 1993,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 1994,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 1997,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 1997,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2063,
+   "line": 1,
+   "description": "1 model",
+   "cost": 235
+ },
+ {
+   "datasheet_id": 2064,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2066,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2066,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2067,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2067,
+   "line": 2,
+   "description": "2 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2068,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2076,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2076,
+   "line": 2,
+   "description": "2 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2076,
+   "line": 3,
+   "description": "3 models",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 2077,
+   "line": 1,
+   "description": "1 model",
+   "cost": 2600
+ },
+ {
+   "datasheet_id": 2080,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2081,
+   "line": 1,
+   "description": "3 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2081,
+   "line": 2,
+   "description": "6 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2082,
+   "line": 1,
+   "description": "3 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2082,
+   "line": 2,
+   "description": "6 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2083,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2083,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2084,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2084,
+   "line": 2,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2085,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2086,
+   "line": 1,
+   "description": "1 model",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 2087,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2088,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2090,
+   "line": 1,
+   "description": "1 model (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2090,
+   "line": 2,
+   "description": "1 model (Assigned Agent)",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2092,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 2093,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2098,
+   "line": 1,
+   "description": "5 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2098,
+   "line": 2,
+   "description": "10 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 2099,
+   "line": 1,
+   "description": "3 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2099,
+   "line": 2,
+   "description": "6 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 2100,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2102,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2103,
+   "line": 1,
+   "description": "5 models",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 2105,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2108,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2109,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2110,
+   "line": 1,
+   "description": "3 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2110,
+   "line": 2,
+   "description": "6 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2111,
+   "line": 1,
+   "description": "2 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2112,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2114,
+   "line": 1,
+   "description": "3 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 2114,
+   "line": 2,
+   "description": "6 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2115,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2116,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2116,
+   "line": 2,
+   "description": "2 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2116,
+   "line": 3,
+   "description": "3 models",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 2173,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 2199,
+   "line": 1,
+   "description": "3 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2202,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2202,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2234,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2252,
+   "line": 1,
+   "description": "1 model",
+   "cost": 315
+ },
+ {
+   "datasheet_id": 2255,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2255,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2258,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2266,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2267,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2268,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 2269,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2270,
+   "line": 1,
+   "description": "5 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2285,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2285,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2291,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 2296,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2302,
+   "line": 1,
+   "description": "5 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2302,
+   "line": 2,
+   "description": "10 models",
+   "cost": 400
+ },
+ {
+   "datasheet_id": 2350,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 2351,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2352,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2353,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2354,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2355,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2357,
+   "line": 1,
+   "description": "1 model",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 2358,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2358,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2359,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 2359,
+   "line": 2,
+   "description": "2 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2359,
+   "line": 3,
+   "description": "3 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2359,
+   "line": 4,
+   "description": "6 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2360,
+   "line": 1,
+   "description": "3 models",
+   "cost": 420
+ },
+ {
+   "datasheet_id": 2361,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2361,
+   "line": 2,
+   "description": "2 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2361,
+   "line": 3,
+   "description": "3 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2362,
+   "line": 1,
+   "description": "1 model",
+   "cost": 920
+ },
+ {
+   "datasheet_id": 2363,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 2374,
+   "line": 1,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2375,
+   "line": 1,
+   "description": "5 models",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 2377,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2378,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 2379,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2453,
+   "line": 1,
+   "description": "1 model",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 2459,
+   "line": 1,
+   "description": "2 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 2460,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2461,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 2462,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 2468,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2471,
+   "line": 1,
+   "description": "4 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2472,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 2473,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2477,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 2478,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 2479,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2480,
+   "line": 1,
+   "description": "2 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2481,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2481,
+   "line": 2,
+   "description": "10 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 2482,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 2483,
+   "line": 1,
+   "description": "3 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 2484,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2485,
+   "line": 1,
+   "description": "6 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2488,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2489,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2490,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 2491,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2492,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2493,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 2494,
+   "line": 1,
+   "description": "10 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2494,
+   "line": 2,
+   "description": "20 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 2496,
+   "line": 1,
+   "description": "4 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2496,
+   "line": 2,
+   "description": "8 models",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 2497,
+   "line": 1,
+   "description": "1 model",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 2498,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 2499,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 2500,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2501,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 2507,
+   "line": 1,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2509,
+   "line": 1,
+   "description": "6 models (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2509,
+   "line": 2,
+   "description": "6 models (Assigned Agent)",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2518,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2519,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2520,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2521,
+   "line": 1,
+   "description": "4 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 2521,
+   "line": 2,
+   "description": "5 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 2521,
+   "line": 3,
+   "description": "9 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2521,
+   "line": 4,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2522,
+   "line": 1,
+   "description": "4 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 2522,
+   "line": 2,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2522,
+   "line": 3,
+   "description": "9 models",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 2522,
+   "line": 4,
+   "description": "10 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 2523,
+   "line": 1,
+   "description": "4 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 2523,
+   "line": 2,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2523,
+   "line": 3,
+   "description": "9 models",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 2523,
+   "line": 4,
+   "description": "10 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 2524,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2525,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2528,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2529,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2530,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2531,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2531,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2532,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2532,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2533,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2533,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2534,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2535,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2536,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2536,
+   "line": 2,
+   "description": "6 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2536,
+   "line": 3,
+   "description": "11 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 2536,
+   "line": 4,
+   "description": "12 models",
+   "cost": 205
+ },
+ {
+   "datasheet_id": 2537,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2538,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 2539,
+   "line": 1,
+   "description": "2 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2539,
+   "line": 2,
+   "description": "4 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 2540,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 2541,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2542,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2543,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2544,
+   "line": 1,
+   "description": "1 model",
+   "cost": 260
+ },
+ {
+   "datasheet_id": 2562,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 2563,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2564,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2565,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 2566,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2567,
+   "line": 1,
+   "description": "1 model",
+   "cost": 365
+ },
+ {
+   "datasheet_id": 2568,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2569,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2570,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2570,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2571,
+   "line": 1,
+   "description": "8 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2571,
+   "line": 2,
+   "description": "16 models",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 2572,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 2582,
+   "line": 1,
+   "description": "1 model",
+   "cost": 305
+ },
+ {
+   "datasheet_id": 2583,
+   "line": 1,
+   "description": "10 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 2584,
+   "line": 1,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2587,
+   "line": 1,
+   "description": "10 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2588,
+   "line": 1,
+   "description": "12 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2589,
+   "line": 1,
+   "description": "2 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2590,
+   "line": 1,
+   "description": "10 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2591,
+   "line": 1,
+   "description": "16 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2592,
+   "line": 1,
+   "description": "7 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 2593,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2594,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2595,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2596,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2597,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2598,
+   "line": 1,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2599,
+   "line": 1,
+   "description": "5 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2599,
+   "line": 2,
+   "description": "10 models",
+   "cost": 320
+ },
+ {
+   "datasheet_id": 2600,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2600,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2601,
+   "line": 1,
+   "description": "3 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2601,
+   "line": 2,
+   "description": "6 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2602,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 2603,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2603,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2604,
+   "line": 1,
+   "description": "1 model",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 2605,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2606,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2607,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2609,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2610,
+   "line": 1,
+   "description": "3 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 2612,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2612,
+   "line": 2,
+   "description": "20 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2613,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2613,
+   "line": 2,
+   "description": "20 models",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 2614,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2614,
+   "line": 2,
+   "description": "20 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2615,
+   "line": 1,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2616,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2616,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2617,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 2619,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 2621,
+   "line": 1,
+   "description": "1 model",
+   "cost": 385
+ },
+ {
+   "datasheet_id": 2622,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2623,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2624,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2625,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2626,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2627,
+   "line": 1,
+   "description": "10 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2627,
+   "line": 2,
+   "description": "20 models",
+   "cost": 360
+ },
+ {
+   "datasheet_id": 2628,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2628,
+   "line": 2,
+   "description": "20 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2629,
+   "line": 1,
+   "description": "5 models",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 2629,
+   "line": 2,
+   "description": "10 models",
+   "cost": 370
+ },
+ {
+   "datasheet_id": 2630,
+   "line": 1,
+   "description": "3 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2630,
+   "line": 2,
+   "description": "6 models",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 2631,
+   "line": 1,
+   "description": "3 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2631,
+   "line": 2,
+   "description": "6 models",
+   "cost": 320
+ },
+ {
+   "datasheet_id": 2632,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2633,
+   "line": 1,
+   "description": "2 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2634,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 2635,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2636,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 2637,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 2638,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2639,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2640,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2641,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2642,
+   "line": 1,
+   "description": "1 model",
+   "cost": 505
+ },
+ {
+   "datasheet_id": 2677,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2678,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2679,
+   "line": 1,
+   "description": "1 model",
+   "cost": 175
+ },
+ {
+   "datasheet_id": 2682,
+   "line": 1,
+   "description": "1 model",
+   "cost": 315
+ },
+ {
+   "datasheet_id": 2683,
+   "line": 1,
+   "description": "11 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2684,
+   "line": 1,
+   "description": "11 models (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2684,
+   "line": 2,
+   "description": "11 models (Assigned Agent)",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2685,
+   "line": 1,
+   "description": "11 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2686,
+   "line": 1,
+   "description": "5 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2686,
+   "line": 2,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2687,
+   "line": 1,
+   "description": "11 models",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 2687,
+   "line": 2,
+   "description": "22 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2688,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 2689,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2690,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 2691,
+   "line": 1,
+   "description": "3 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2691,
+   "line": 2,
+   "description": "6 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2692,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2692,
+   "line": 2,
+   "description": "6 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 2693,
+   "line": 1,
+   "description": "3 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2693,
+   "line": 2,
+   "description": "6 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2694,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2700,
+   "line": 1,
+   "description": "1 model",
+   "cost": 525
+ },
+ {
+   "datasheet_id": 2701,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2702,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2703,
+   "line": 1,
+   "description": "3 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2703,
+   "line": 2,
+   "description": "6 models",
+   "cost": 300
+ },
+ {
+   "datasheet_id": 2704,
+   "line": 1,
+   "description": "1 model",
+   "cost": 535
+ },
+ {
+   "datasheet_id": 2705,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2706,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2707,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2708,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2709,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2710,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 2711,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2712,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2712,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2712,
+   "line": 3,
+   "description": "Invader ATV",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2713,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2714,
+   "line": 1,
+   "description": "1 model",
+   "cost": 135
+ },
+ {
+   "datasheet_id": 2715,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2717,
+   "line": 1,
+   "description": "1 model",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 2718,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2718,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2719,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2720,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 2721,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2722,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 2723,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2724,
+   "line": 1,
+   "description": "1 model",
+   "cost": 495
+ },
+ {
+   "datasheet_id": 2725,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2726,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2727,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 2728,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 2729,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 2730,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2731,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 2732,
+   "line": 1,
+   "description": "3 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2733,
+   "line": 1,
+   "description": "4 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 2733,
+   "line": 2,
+   "description": "7 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2734,
+   "line": 1,
+   "description": "3 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2735,
+   "line": 1,
+   "description": "3 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2736,
+   "line": 1,
+   "description": "3 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 2737,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2737,
+   "line": 2,
+   "description": "10 models",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 2738,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2739,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 2740,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2741,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2742,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2743,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2744,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2745,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 2746,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2746,
+   "line": 2,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2748,
+   "line": 1,
+   "description": "3 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2749,
+   "line": 1,
+   "description": "1 model",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 2750,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 2751,
+   "line": 1,
+   "description": "1 model",
+   "cost": 260
+ },
+ {
+   "datasheet_id": 2752,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 2753,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2755,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2757,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2758,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2759,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2760,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 2761,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2761,
+   "line": 2,
+   "description": "10 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2762,
+   "line": 1,
+   "description": "4 models (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2762,
+   "line": 2,
+   "description": "4 models (Assigned Agent)",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 2763,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 2764,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 2765,
+   "line": 1,
+   "description": "1 model (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2765,
+   "line": 2,
+   "description": "1 model (Assigned Agent)",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2766,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 2767,
+   "line": 1,
+   "description": "6 models (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2767,
+   "line": 2,
+   "description": "12 models (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2767,
+   "line": 3,
+   "description": "6 models (Assigned Agent)",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2767,
+   "line": 4,
+   "description": "12 models (Assigned Agent)",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2768,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 2769,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2771,
+   "line": 1,
+   "description": "2 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2772,
+   "line": 1,
+   "description": "4 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 2773,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 2775,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 2776,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2776,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2779,
+   "line": 1,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2780,
+   "line": 1,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2781,
+   "line": 1,
+   "description": "10 models",
+   "cost": 270
+ },
+ {
+   "datasheet_id": 2783,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 2783,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 2786,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 2787,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2788,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2789,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 2790,
+   "line": 1,
+   "description": "1 model",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 2791,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 2792,
+   "line": 1,
+   "description": "4 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2793,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 2794,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 2795,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2796,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 2797,
+   "line": 1,
+   "description": "1 Sword Brother",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2797,
+   "line": 2,
+   "description": "1 Sword Brother",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2798,
+   "line": 1,
+   "description": "5 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2798,
+   "line": 2,
+   "description": "10 models",
+   "cost": 270
+ },
+ {
+   "datasheet_id": 2799,
+   "line": 1,
+   "description": "1 Sword Brother and 4 Initiates",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 2799,
+   "line": 2,
+   "description": "1 Sword Brother and 9 Initiates",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 2799,
+   "line": 3,
+   "description": "1 Sword Brother",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2799,
+   "line": 4,
+   "description": "1 Sword Brother",
+   "cost": null
+ },
+ {
+   "datasheet_id": 2801,
+   "line": 1,
+   "description": "1 model",
+   "cost": 155
+ },
+ {
+   "datasheet_id": 2802,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 2803,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 2804,
+   "line": 1,
+   "description": "1 model",
+   "cost": 30
+ },
+ {
+   "datasheet_id": 2805,
+   "line": 1,
+   "description": "1 model",
+   "cost": 20
+ },
+ {
+   "datasheet_id": 2806,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 2806,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 2808,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 2809,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2809,
+   "line": 2,
+   "description": "2 models",
+   "cost": 280
+ },
+ {
+   "datasheet_id": 2810,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 2811,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 3582,
+   "line": 1,
+   "description": "10 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3582,
+   "line": 2,
+   "description": "20 models",
+   "cost": 360
+ },
+ {
+   "datasheet_id": 3583,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3583,
+   "line": 2,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 3584,
+   "line": 1,
+   "description": "5 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3584,
+   "line": 2,
+   "description": "7 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 3584,
+   "line": 3,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 3585,
+   "line": 1,
+   "description": "1 model",
+   "cost": 840
+ },
+ {
+   "datasheet_id": 3586,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 3587,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 3588,
+   "line": 1,
+   "description": "1 model",
+   "cost": 840
+ },
+ {
+   "datasheet_id": 3589,
+   "line": 1,
+   "description": "1 model",
+   "cost": 560
+ },
+ {
+   "datasheet_id": 3590,
+   "line": 1,
+   "description": "1 model",
+   "cost": 425
+ },
+ {
+   "datasheet_id": 3591,
+   "line": 1,
+   "description": "1 model",
+   "cost": 840
+ },
+ {
+   "datasheet_id": 3592,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3593,
+   "line": 1,
+   "description": "7 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3594,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3595,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3596,
+   "line": 1,
+   "description": "16 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3597,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3598,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3599,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3600,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3601,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3602,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3603,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 3604,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 3605,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 3606,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 3607,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 3608,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 3609,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 3610,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 3611,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 3612,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 3613,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 3614,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 3615,
+   "line": 1,
+   "description": "1 model",
+   "cost": 290
+ },
+ {
+   "datasheet_id": 3616,
+   "line": 1,
+   "description": "1 model",
+   "cost": 290
+ },
+ {
+   "datasheet_id": 3617,
+   "line": 1,
+   "description": "1 model",
+   "cost": 290
+ },
+ {
+   "datasheet_id": 3618,
+   "line": 1,
+   "description": "1 model",
+   "cost": 290
+ },
+ {
+   "datasheet_id": 3619,
+   "line": 1,
+   "description": "1 model",
+   "cost": 315
+ },
+ {
+   "datasheet_id": 3620,
+   "line": 1,
+   "description": "1 model",
+   "cost": 315
+ },
+ {
+   "datasheet_id": 3621,
+   "line": 1,
+   "description": "1 model",
+   "cost": 315
+ },
+ {
+   "datasheet_id": 3622,
+   "line": 1,
+   "description": "1 model",
+   "cost": 315
+ },
+ {
+   "datasheet_id": 3623,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3624,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3625,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3626,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3627,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 3628,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 3629,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 3630,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 3631,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 3632,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 3633,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 3634,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 3635,
+   "line": 1,
+   "description": "1 model",
+   "cost": 1100
+ },
+ {
+   "datasheet_id": 3636,
+   "line": 1,
+   "description": "1 model",
+   "cost": 1100
+ },
+ {
+   "datasheet_id": 3637,
+   "line": 1,
+   "description": "1 model",
+   "cost": 1100
+ },
+ {
+   "datasheet_id": 3638,
+   "line": 1,
+   "description": "1 model",
+   "cost": 1100
+ },
+ {
+   "datasheet_id": 3639,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3640,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3641,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3642,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3643,
+   "line": 1,
+   "description": "1 model",
+   "cost": 610
+ },
+ {
+   "datasheet_id": 3644,
+   "line": 1,
+   "description": "1 model",
+   "cost": 610
+ },
+ {
+   "datasheet_id": 3645,
+   "line": 1,
+   "description": "1 model",
+   "cost": 610
+ },
+ {
+   "datasheet_id": 3646,
+   "line": 1,
+   "description": "1 model",
+   "cost": 610
+ },
+ {
+   "datasheet_id": 3647,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 3648,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 3649,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 3650,
+   "line": 1,
+   "description": "1 model",
+   "cost": 215
+ },
+ {
+   "datasheet_id": 3651,
+   "line": 1,
+   "description": "1 model",
+   "cost": 535
+ },
+ {
+   "datasheet_id": 3652,
+   "line": 1,
+   "description": "1 model",
+   "cost": 535
+ },
+ {
+   "datasheet_id": 3653,
+   "line": 1,
+   "description": "1 model",
+   "cost": 535
+ },
+ {
+   "datasheet_id": 3654,
+   "line": 1,
+   "description": "1 model",
+   "cost": 535
+ },
+ {
+   "datasheet_id": 3655,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3656,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3657,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3658,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3659,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3660,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3661,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3662,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3663,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3664,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3665,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3666,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3667,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3668,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3669,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3670,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3671,
+   "line": 1,
+   "description": "1 model",
+   "cost": 255
+ },
+ {
+   "datasheet_id": 3672,
+   "line": 1,
+   "description": "1 model",
+   "cost": 255
+ },
+ {
+   "datasheet_id": 3673,
+   "line": 1,
+   "description": "1 model",
+   "cost": 255
+ },
+ {
+   "datasheet_id": 3674,
+   "line": 1,
+   "description": "1 model",
+   "cost": 255
+ },
+ {
+   "datasheet_id": 3675,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3676,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3677,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3678,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3679,
+   "line": 1,
+   "description": "1 model",
+   "cost": 385
+ },
+ {
+   "datasheet_id": 3680,
+   "line": 1,
+   "description": "1 model",
+   "cost": 385
+ },
+ {
+   "datasheet_id": 3681,
+   "line": 1,
+   "description": "1 model",
+   "cost": 385
+ },
+ {
+   "datasheet_id": 3682,
+   "line": 1,
+   "description": "1 model",
+   "cost": 385
+ },
+ {
+   "datasheet_id": 3683,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3684,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3685,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3686,
+   "line": 1,
+   "description": "1 model",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3687,
+   "line": 1,
+   "description": "1 model",
+   "cost": 515
+ },
+ {
+   "datasheet_id": 3688,
+   "line": 1,
+   "description": "1 model",
+   "cost": 515
+ },
+ {
+   "datasheet_id": 3689,
+   "line": 1,
+   "description": "1 model",
+   "cost": 515
+ },
+ {
+   "datasheet_id": 3690,
+   "line": 1,
+   "description": "1 model",
+   "cost": 515
+ },
+ {
+   "datasheet_id": 3691,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 3692,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 3693,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3694,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 3694,
+   "line": 2,
+   "description": "2 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3694,
+   "line": 3,
+   "description": "3 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 3695,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 3696,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3697,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3698,
+   "line": 1,
+   "description": "3 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3698,
+   "line": 2,
+   "description": "6 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3699,
+   "line": 1,
+   "description": "3 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 3700,
+   "line": 1,
+   "description": "3 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 3701,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3702,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 3703,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 3704,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 3705,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3706,
+   "line": 1,
+   "description": "3 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3706,
+   "line": 2,
+   "description": "6 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3707,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3709,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3710,
+   "line": 1,
+   "description": "10 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3711,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3712,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 3713,
+   "line": 1,
+   "description": "10 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 3713,
+   "line": 2,
+   "description": "20 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3714,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3715,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3716,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3716,
+   "line": 2,
+   "description": "10 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3811,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 3812,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 3813,
+   "line": 1,
+   "description": "5 models (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 3813,
+   "line": 2,
+   "description": "5 models (Assigned Agent)",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 3814,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3815,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 3816,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3816,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 3817,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3818,
+   "line": 1,
+   "description": "10 models (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 3818,
+   "line": 2,
+   "description": "10 models (Assigned Agent)",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3819,
+   "line": 1,
+   "description": "1 model (<ky>AGENTS OF THE IMPERIUM<",
+   "cost": null
+ },
+ {
+   "datasheet_id": 3819,
+   "line": 2,
+   "description": "1 model (Assigned Agent)",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3820,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3821,
+   "line": 1,
+   "description": "11 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3822,
+   "line": 1,
+   "description": "5 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 3822,
+   "line": 2,
+   "description": "10 models",
+   "cost": 420
+ },
+ {
+   "datasheet_id": 3823,
+   "line": 1,
+   "description": "3 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3823,
+   "line": 2,
+   "description": "6 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3824,
+   "line": 1,
+   "description": "5 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 3824,
+   "line": 2,
+   "description": "10 models",
+   "cost": 320
+ },
+ {
+   "datasheet_id": 3825,
+   "line": 1,
+   "description": "5 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3825,
+   "line": 2,
+   "description": "10 models",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 3826,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3826,
+   "line": 2,
+   "description": "10 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 3827,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3827,
+   "line": 2,
+   "description": "10 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3828,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 3828,
+   "line": 2,
+   "description": "2 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3829,
+   "line": 1,
+   "description": "1 model",
+   "cost": 30
+ },
+ {
+   "datasheet_id": 3830,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3831,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3832,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3833,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3834,
+   "line": 1,
+   "description": "10 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3835,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 3836,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3836,
+   "line": 2,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 3837,
+   "line": 1,
+   "description": "5 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3837,
+   "line": 2,
+   "description": "10 models",
+   "cost": 280
+ },
+ {
+   "datasheet_id": 3838,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3839,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3840,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3841,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 3842,
+   "line": 1,
+   "description": "10 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3843,
+   "line": 1,
+   "description": "10 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3844,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 3845,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3846,
+   "line": 1,
+   "description": "2 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 3847,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3848,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3849,
+   "line": 1,
+   "description": "10 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 3849,
+   "line": 2,
+   "description": "20 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3850,
+   "line": 1,
+   "description": "10 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 3850,
+   "line": 2,
+   "description": "20 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3851,
+   "line": 1,
+   "description": "8 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3851,
+   "line": 2,
+   "description": "16 models",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 3852,
+   "line": 1,
+   "description": "10 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3853,
+   "line": 1,
+   "description": "10 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3854,
+   "line": 1,
+   "description": "7 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3855,
+   "line": 1,
+   "description": "16 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3856,
+   "line": 1,
+   "description": "4 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 3857,
+   "line": 1,
+   "description": "3 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3858,
+   "line": 1,
+   "description": "4 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 3858,
+   "line": 2,
+   "description": "7 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3859,
+   "line": 1,
+   "description": "3 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3860,
+   "line": 1,
+   "description": "3 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3861,
+   "line": 1,
+   "description": "6 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3871,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 3872,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3873,
+   "line": 1,
+   "description": "5 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 3873,
+   "line": 2,
+   "description": "10 models",
+   "cost": 350
+ },
+ {
+   "datasheet_id": 3874,
+   "line": 1,
+   "description": "10 models",
+   "cost": 290
+ },
+ {
+   "datasheet_id": 3875,
+   "line": 1,
+   "description": "11 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 3876,
+   "line": 1,
+   "description": "5 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3876,
+   "line": 2,
+   "description": "10 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 3877,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3878,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3879,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3880,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3881,
+   "line": 1,
+   "description": "10 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3881,
+   "line": 2,
+   "description": "20 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3882,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 3883,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3884,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 3885,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3886,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3887,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3888,
+   "line": 1,
+   "description": "3 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3888,
+   "line": 2,
+   "description": "6 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3889,
+   "line": 1,
+   "description": "6 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3890,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3891,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3892,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 3893,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3893,
+   "line": 2,
+   "description": "10 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3894,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3895,
+   "line": 1,
+   "description": "4 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3896,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3897,
+   "line": 1,
+   "description": "2 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3898,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3898,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3909,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3910,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3911,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3912,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3913,
+   "line": 1,
+   "description": "1 model",
+   "cost": 420
+ },
+ {
+   "datasheet_id": 3914,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3915,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 3916,
+   "line": 1,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3917,
+   "line": 1,
+   "description": "10 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3918,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3918,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3919,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3919,
+   "line": 2,
+   "description": "3 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3920,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3921,
+   "line": 1,
+   "description": "1 model",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3922,
+   "line": 1,
+   "description": "5 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3923,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3924,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3925,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 3926,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3927,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3928,
+   "line": 1,
+   "description": "2 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3928,
+   "line": 2,
+   "description": "4 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 3929,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3929,
+   "line": 2,
+   "description": "6 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 3929,
+   "line": 3,
+   "description": "11 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 3929,
+   "line": 4,
+   "description": "12 models",
+   "cost": 205
+ },
+ {
+   "datasheet_id": 3930,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3931,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3931,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3932,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3932,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 3933,
+   "line": 1,
+   "description": "3 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 3933,
+   "line": 2,
+   "description": "4 models",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3933,
+   "line": 3,
+   "description": "6 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 3933,
+   "line": 4,
+   "description": "7 models",
+   "cost": 245
+ },
+ {
+   "datasheet_id": 3934,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3934,
+   "line": 2,
+   "description": "6 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 3934,
+   "line": 3,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 3934,
+   "line": 4,
+   "description": "11 models",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 3935,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3935,
+   "line": 2,
+   "description": "6 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 3935,
+   "line": 3,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 3935,
+   "line": 4,
+   "description": "11 models",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 3937,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 3938,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 3939,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3940,
+   "line": 1,
+   "description": "5 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3941,
+   "line": 1,
+   "description": "6 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3942,
+   "line": 1,
+   "description": "1 model",
+   "cost": 235
+ },
+ {
+   "datasheet_id": 3943,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3944,
+   "line": 1,
+   "description": "1 model",
+   "cost": 265
+ },
+ {
+   "datasheet_id": 3945,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 3946,
+   "line": 1,
+   "description": "5 models",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 3947,
+   "line": 1,
+   "description": "5 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3948,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3948,
+   "line": 2,
+   "description": "20 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3949,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3949,
+   "line": 2,
+   "description": "20 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3950,
+   "line": 1,
+   "description": "10 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3950,
+   "line": 2,
+   "description": "20 models",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 3951,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 3952,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3953,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3954,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3955,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 3956,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3957,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3958,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3959,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 3959,
+   "line": 2,
+   "description": "2 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 3960,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3960,
+   "line": 2,
+   "description": "2 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 3961,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3962,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3962,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3963,
+   "line": 1,
+   "description": "1 model",
+   "cost": 480
+ },
+ {
+   "datasheet_id": 3964,
+   "line": 1,
+   "description": "1 model",
+   "cost": 450
+ },
+ {
+   "datasheet_id": 3965,
+   "line": 1,
+   "description": "1 model",
+   "cost": 480
+ },
+ {
+   "datasheet_id": 3966,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 3967,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3968,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 3969,
+   "line": 1,
+   "description": "5 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 3969,
+   "line": 2,
+   "description": "10 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 3970,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 3971,
+   "line": 1,
+   "description": "1 model",
+   "cost": 445
+ },
+ {
+   "datasheet_id": 3972,
+   "line": 1,
+   "description": "2 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3973,
+   "line": 1,
+   "description": "1 model",
+   "cost": 450
+ },
+ {
+   "datasheet_id": 3974,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 3975,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3976,
+   "line": 1,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3977,
+   "line": 1,
+   "description": "5 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 3977,
+   "line": 2,
+   "description": "10 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 3978,
+   "line": 1,
+   "description": "4 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 3979,
+   "line": 1,
+   "description": "1 model",
+   "cost": 185
+ },
+ {
+   "datasheet_id": 3980,
+   "line": 1,
+   "description": "1 model",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 3981,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3982,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 3983,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 3984,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 3985,
+   "line": 1,
+   "description": "1 model",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 3986,
+   "line": 1,
+   "description": "1 model",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 3987,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 3988,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 3988,
+   "line": 2,
+   "description": "2 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3989,
+   "line": 1,
+   "description": "1 model",
+   "cost": 440
+ },
+ {
+   "datasheet_id": 3990,
+   "line": 1,
+   "description": "1 model",
+   "cost": 460
+ },
+ {
+   "datasheet_id": 3991,
+   "line": 1,
+   "description": "1 model",
+   "cost": 495
+ },
+ {
+   "datasheet_id": 3992,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 3993,
+   "line": 1,
+   "description": "1 model",
+   "cost": 25
+ },
+ {
+   "datasheet_id": 3994,
+   "line": 1,
+   "description": "1 model",
+   "cost": 480
+ },
+ {
+   "datasheet_id": 3995,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 3996,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 3997,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 3998,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 3999,
+   "line": 1,
+   "description": "1 model",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 4000,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 4001,
+   "line": 1,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 4002,
+   "line": 1,
+   "description": "1 model",
+   "cost": 325
+ },
+ {
+   "datasheet_id": 4003,
+   "line": 1,
+   "description": "1 model",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 4004,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 4005,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 4006,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 4007,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 4008,
+   "line": 1,
+   "description": "1 model",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 4009,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 4010,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 4011,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 4012,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 4013,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 4014,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 4015,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 4016,
+   "line": 1,
+   "description": "1 model",
+   "cost": 270
+ },
+ {
+   "datasheet_id": 4017,
+   "line": 1,
+   "description": "1 model",
+   "cost": 310
+ },
+ {
+   "datasheet_id": 4018,
+   "line": 1,
+   "description": "1 model",
+   "cost": 235
+ },
+ {
+   "datasheet_id": 4019,
+   "line": 1,
+   "description": "1 model",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 4020,
+   "line": 1,
+   "description": "1 model",
+   "cost": 225
+ },
+ {
+   "datasheet_id": 4021,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 4022,
+   "line": 1,
+   "description": "4 models",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 4023,
+   "line": 1,
+   "description": "1 model",
+   "cost": 275
+ },
+ {
+   "datasheet_id": 4024,
+   "line": 1,
+   "description": "1 model",
+   "cost": 35
+ },
+ {
+   "datasheet_id": 4024,
+   "line": 2,
+   "description": "2 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 4024,
+   "line": 3,
+   "description": "3 models",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 4025,
+   "line": 1,
+   "description": "3 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 4026,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4027,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 4028,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 4029,
+   "line": 1,
+   "description": "1 model",
+   "cost": 415
+ },
+ {
+   "datasheet_id": 4030,
+   "line": 1,
+   "description": "1 model",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 4031,
+   "line": 1,
+   "description": "1 model",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 4031,
+   "line": 2,
+   "description": "2 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4031,
+   "line": 3,
+   "description": "3 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 4032,
+   "line": 1,
+   "description": "1 model",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 4033,
+   "line": 1,
+   "description": "1 model",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 4034,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4035,
+   "line": 1,
+   "description": "1 model",
+   "cost": 285
+ },
+ {
+   "datasheet_id": 4036,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4037,
+   "line": 1,
+   "description": "1 model",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 4038,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4039,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 4040,
+   "line": 1,
+   "description": "1 model",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 4041,
+   "line": 1,
+   "description": "1 model",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4042,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 4043,
+   "line": 1,
+   "description": "5 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 4043,
+   "line": 2,
+   "description": "10 models",
+   "cost": 360
+ },
+ {
+   "datasheet_id": 4044,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 4044,
+   "line": 2,
+   "description": "10 models",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 4045,
+   "line": 1,
+   "description": "1 model",
+   "cost": 45
+ },
+ {
+   "datasheet_id": 4046,
+   "line": 1,
+   "description": "5 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4047,
+   "line": 1,
+   "description": "2 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 4048,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 4049,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 4050,
+   "line": 1,
+   "description": "10 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 4050,
+   "line": 2,
+   "description": "20 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 4051,
+   "line": 1,
+   "description": "10 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 4051,
+   "line": 2,
+   "description": "20 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 4052,
+   "line": 1,
+   "description": "8 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4052,
+   "line": 2,
+   "description": "16 models",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 4053,
+   "line": 1,
+   "description": "10 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 4054,
+   "line": 1,
+   "description": "10 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 4055,
+   "line": 1,
+   "description": "7 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 4056,
+   "line": 1,
+   "description": "16 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 4057,
+   "line": 1,
+   "description": "4 models",
+   "cost": 55
+ },
+ {
+   "datasheet_id": 4058,
+   "line": 1,
+   "description": "3 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 4059,
+   "line": 1,
+   "description": "4 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 4059,
+   "line": 2,
+   "description": "7 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 4060,
+   "line": 1,
+   "description": "3 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 4061,
+   "line": 1,
+   "description": "3 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 4062,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 4063,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 4064,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4064,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 4065,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 4066,
+   "line": 1,
+   "description": "5 models",
+   "cost": 120
+ },
+ {
+   "datasheet_id": 4066,
+   "line": 2,
+   "description": "10 models",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 4067,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4067,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 4068,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 4069,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4070,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4071,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 4072,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4073,
+   "line": 1,
+   "description": "5 models",
+   "cost": 125
+ },
+ {
+   "datasheet_id": 4073,
+   "line": 2,
+   "description": "10 models",
+   "cost": 270
+ },
+ {
+   "datasheet_id": 4074,
+   "line": 1,
+   "description": "9 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 4075,
+   "line": 1,
+   "description": "9 models",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 4076,
+   "line": 1,
+   "description": "8 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 4077,
+   "line": 1,
+   "description": "1 model",
+   "cost": 365
+ },
+ {
+   "datasheet_id": 4078,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4079,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 4079,
+   "line": 2,
+   "description": "10 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 4080,
+   "line": 1,
+   "description": "5 models",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 4080,
+   "line": 2,
+   "description": "10 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 4081,
+   "line": 1,
+   "description": "5 models",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 4082,
+   "line": 1,
+   "description": "1 model",
+   "cost": 240
+ },
+ {
+   "datasheet_id": 4083,
+   "line": 1,
+   "description": "1 model",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 4084,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 4085,
+   "line": 1,
+   "description": "1 model",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 4086,
+   "line": 1,
+   "description": "1 model",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 4087,
+   "line": 1,
+   "description": "1 model",
+   "cost": 200
+ },
+ {
+   "datasheet_id": 4088,
+   "line": 1,
+   "description": "6 models",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 4089,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 4089,
+   "line": 2,
+   "description": "6 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 4090,
+   "line": 1,
+   "description": "2 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4091,
+   "line": 1,
+   "description": "1 model",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 4092,
+   "line": 1,
+   "description": "1 model",
+   "cost": 195
+ },
+ {
+   "datasheet_id": 4093,
+   "line": 1,
+   "description": "1 model",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4094,
+   "line": 1,
+   "description": "1 model",
+   "cost": 380
+ },
+ {
+   "datasheet_id": 4095,
+   "line": 1,
+   "description": "10 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4096,
+   "line": 1,
+   "description": "3 models",
+   "cost": 95
+ },
+ {
+   "datasheet_id": 4096,
+   "line": 2,
+   "description": "6 models",
+   "cost": 190
+ },
+ {
+   "datasheet_id": 4097,
+   "line": 1,
+   "description": "1 model",
+   "cost": 280
+ },
+ {
+   "datasheet_id": 4098,
+   "line": 1,
+   "description": "5 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4098,
+   "line": 2,
+   "description": "10 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 4099,
+   "line": 1,
+   "description": "6 models",
+   "cost": 145
+ },
+ {
+   "datasheet_id": 4100,
+   "line": 1,
+   "description": "1 model",
+   "cost": 140
+ },
+ {
+   "datasheet_id": 4101,
+   "line": 1,
+   "description": "1 model",
+   "cost": 105
+ },
+ {
+   "datasheet_id": 4101,
+   "line": 2,
+   "description": "2 models",
+   "cost": 210
+ },
+ {
+   "datasheet_id": 4102,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 4103,
+   "line": 1,
+   "description": "1 model",
+   "cost": 85
+ },
+ {
+   "datasheet_id": 4104,
+   "line": 1,
+   "description": "1 model",
+   "cost": 305
+ },
+ {
+   "datasheet_id": 4105,
+   "line": 1,
+   "description": "1 model",
+   "cost": 305
+ },
+ {
+   "datasheet_id": 4106,
+   "line": 1,
+   "description": "10 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4107,
+   "line": 1,
+   "description": "3 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 4107,
+   "line": 2,
+   "description": "6 models",
+   "cost": 220
+ },
+ {
+   "datasheet_id": 4108,
+   "line": 1,
+   "description": "5 models",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 4108,
+   "line": 2,
+   "description": "10 models",
+   "cost": 150
+ },
+ {
+   "datasheet_id": 4109,
+   "line": 1,
+   "description": "1 model",
+   "cost": 75
+ },
+ {
+   "datasheet_id": 4110,
+   "line": 1,
+   "description": "1 model",
+   "cost": 100
+ },
+ {
+   "datasheet_id": 4111,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 4112,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 4113,
+   "line": 1,
+   "description": "10 models",
+   "cost": 110
+ },
+ {
+   "datasheet_id": 4114,
+   "line": 1,
+   "description": "3 models",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 4114,
+   "line": 2,
+   "description": "6 models",
+   "cost": 230
+ },
+ {
+   "datasheet_id": 4115,
+   "line": 1,
+   "description": "1 model",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 4115,
+   "line": 2,
+   "description": "2 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 4116,
+   "line": 1,
+   "description": "3 models",
+   "cost": 40
+ },
+ {
+   "datasheet_id": 4116,
+   "line": 2,
+   "description": "6 models",
+   "cost": 70
+ },
+ {
+   "datasheet_id": 4117,
+   "line": 1,
+   "description": "5 models",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 4118,
+   "line": 1,
+   "description": "5 models",
+   "cost": 165
+ },
+ {
+   "datasheet_id": 4119,
+   "line": 1,
+   "description": "9 models",
+   "cost": 60
+ },
+ {
+   "datasheet_id": 4120,
+   "line": 1,
+   "description": "1 model",
+   "cost": 170
+ },
+ {
+   "datasheet_id": 4121,
+   "line": 1,
+   "description": "2 models",
+   "cost": 90
+ },
+ {
+   "datasheet_id": 4121,
+   "line": 2,
+   "description": "4 models",
+   "cost": 180
+ },
+ {
+   "datasheet_id": 4122,
+   "line": 1,
+   "description": "3 models",
+   "cost": 50
+ },
+ {
+   "datasheet_id": 4122,
+   "line": 2,
+   "description": "6 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4123,
+   "line": 1,
+   "description": "1 model",
+   "cost": 260
+ },
+ {
+   "datasheet_id": 4124,
+   "line": 1,
+   "description": "1 model",
+   "cost": 250
+ },
+ {
+   "datasheet_id": 4125,
+   "line": 1,
+   "description": "3 models",
+   "cost": 65
+ },
+ {
+   "datasheet_id": 4125,
+   "line": 2,
+   "description": "6 models",
+   "cost": 130
+ },
+ {
+   "datasheet_id": 4126,
+   "line": 1,
+   "description": "3 models",
+   "cost": 80
+ },
+ {
+   "datasheet_id": 4126,
+   "line": 2,
+   "description": "6 models",
+   "cost": 160
+ },
+ {
+   "datasheet_id": 4127,
+   "line": 1,
+   "description": "10 models",
+   "cost": 115
+ },
+ {
+   "datasheet_id": 4128,
+   "line": 1,
+   "description": "10 models",
+   "cost": 90
+ }
+]
