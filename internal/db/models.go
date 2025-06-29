@@ -39,14 +39,14 @@ type User struct {
 	ID             uuid.UUID
 	CreatedAt      sql.NullTime
 	UpdatedAt      sql.NullTime
-	Email          string
+	Username       string
 	HashedPassword sql.NullString
 	IsAdmin        bool
 }
 
 type Wargear struct {
 	DatasheetID int32
-	Field2      sql.NullInt32
+	ID          int32
 	Name        string
 	Range       sql.NullString
 	Type        sql.NullString

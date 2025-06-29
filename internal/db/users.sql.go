@@ -13,21 +13,21 @@ import (
 )
 
 const createUser = `-- name: CreateUser :one
-INSERT INTO users (id, created_at, updated_at, email, hashed_password)
+INSERT INTO users (id, created_at, updated_at, username, hashed_password)
 VALUES (
     $1,
     $2,
     $3,
     $4,
     $5
-) RETURNING id, created_at, updated_at, email, hashed_password, is_admin
+) RETURNING id, created_at, updated_at, username, hashed_password, is_admin
 `
 
 type CreateUserParams struct {
 	ID             uuid.UUID
 	CreatedAt      sql.NullTime
 	UpdatedAt      sql.NullTime
-	Email          string
+	Username       string
 	HashedPassword sql.NullString
 }
 
@@ -36,7 +36,7 @@ func (q *Queries) CreateUser(ctx context.Context, arg CreateUserParams) (User, e
 		arg.ID,
 		arg.CreatedAt,
 		arg.UpdatedAt,
-		arg.Email,
+		arg.Username,
 		arg.HashedPassword,
 	)
 	var i User
@@ -44,7 +44,7 @@ func (q *Queries) CreateUser(ctx context.Context, arg CreateUserParams) (User, e
 		&i.ID,
 		&i.CreatedAt,
 		&i.UpdatedAt,
-		&i.Email,
+		&i.Username,
 		&i.HashedPassword,
 		&i.IsAdmin,
 	)
@@ -62,7 +62,7 @@ func (q *Queries) DeleteUser(ctx context.Context, id uuid.UUID) error {
 }
 
 const getUser = `-- name: GetUser :one
-SELECT id, created_at, updated_at, email, hashed_password, is_admin FROM users
+SELECT id, created_at, updated_at, username, hashed_password, is_admin FROM users
 WHERE id = $1
 `
 
@@ -73,7 +73,7 @@ func (q *Queries) GetUser(ctx context.Context, id uuid.UUID) (User, error) {
 		&i.ID,
 		&i.CreatedAt,
 		&i.UpdatedAt,
-		&i.Email,
+		&i.Username,
 		&i.HashedPassword,
 		&i.IsAdmin,
 	)
@@ -81,18 +81,18 @@ func (q *Queries) GetUser(ctx context.Context, id uuid.UUID) (User, error) {
 }
 
 const getUserFromEmail = `-- name: GetUserFromEmail :one
-SELECT id, created_at, updated_at, email, hashed_password, is_admin FROM users
-WHERE email = $1
+SELECT id, created_at, updated_at, username, hashed_password, is_admin FROM users
+WHERE username = $1
 `
 
-func (q *Queries) GetUserFromEmail(ctx context.Context, email string) (User, error) {
-	row := q.db.QueryRowContext(ctx, getUserFromEmail, email)
+func (q *Queries) GetUserFromEmail(ctx context.Context, username string) (User, error) {
+	row := q.db.QueryRowContext(ctx, getUserFromEmail, username)
 	var i User
 	err := row.Scan(
 		&i.ID,
 		&i.CreatedAt,
 		&i.UpdatedAt,
-		&i.Email,
+		&i.Username,
 		&i.HashedPassword,
 		&i.IsAdmin,
 	)

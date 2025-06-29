@@ -14,7 +14,7 @@ import (
 func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 
 	type NewUser struct {
-		Email    string `json:"email"`
+		Username string `json:"username"`
 		Password string `json:"password"`
 	}
 	newUser := NewUser{}
@@ -25,7 +25,7 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "Invalid request body", http.StatusBadRequest)
 		return
 	}
-	if newUser.Password == "" || newUser.Email == "" {
+	if newUser.Password == "" || newUser.Username == "" {
 		respondWithError(w, http.StatusBadRequest, "Email and password are required")
 		return
 	}
@@ -39,7 +39,7 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 		ID:             uuid.New(),
 		CreatedAt:      sql.NullTime{Time: time.Now(), Valid: true},
 		UpdatedAt:      sql.NullTime{Time: time.Now(), Valid: true},
-		Email:          newUser.Email,
+		Username:       newUser.Username,
 		HashedPassword: sql.NullString{String: hashedPassword, Valid: true},
 	}
 	user, err := cfg.db.CreateUser(r.Context(), userParams)
@@ -51,7 +51,7 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 		Id:             user.ID,
 		CreatedAt:      user.CreatedAt,
 		UpdatedAt:      user.UpdatedAt,
-		Email:          user.Email,
+		Username:       user.Username,
 		HashedPassword: user.HashedPassword,
 	}
 
@@ -68,7 +68,7 @@ func (cfg *ApiConfig) DeleteUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	gotUser, err := cfg.db.GetUserFromEmail(r.Context(), user.Email)
+	gotUser, err := cfg.db.GetUserFromEmail(r.Context(), user.Username)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
@@ -92,13 +92,13 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		ID           uuid.UUID `json:"id"`
 		CreatedAt    time.Time `json:"created_at"`
 		UpdatedAt    time.Time `json:"updated_at"`
-		Email        string    `json:"email"`
+		Username     string    `json:"username"`
 		IsAdmin      bool      `json:"is_admin"`
 		Token        string    `json:"token"`
 		RefreshToken string    `json:"refresh_token"`
 	}
 	type NewUser struct {
-		Email    string `json:"email"`
+		Username string `json:"username"`
 		Password string `json:"password"`
 	}
 	newUser := NewUser{}
@@ -108,7 +108,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	user, err := cfg.db.GetUserFromEmail(r.Context(), newUser.Email)
+	user, err := cfg.db.GetUserFromEmail(r.Context(), newUser.Username)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
@@ -151,7 +151,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		ID:           userID,
 		CreatedAt:    time.Now(),
 		UpdatedAt:    time.Now(),
-		Email:        user.Email,
+		Username:     user.Username,
 		IsAdmin:      user.IsAdmin,
 		Token:        jwtToken,
 		RefreshToken: tknR,

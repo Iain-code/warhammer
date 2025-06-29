@@ -16,7 +16,7 @@ type User struct {
 	Id             uuid.UUID      `json:"id"`
 	CreatedAt      sql.NullTime   `json:"created_at"`
 	UpdatedAt      sql.NullTime   `json:"updated_at"`
-	Email          string         `json:"email"`
+	Username       string         `json:"username"`
 	HashedPassword sql.NullString `json:"-"`
 	IsAdmin        bool           `json:"is_admin"`
 }

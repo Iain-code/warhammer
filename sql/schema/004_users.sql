@@ -3,8 +3,9 @@ CREATE TABLE users (
     id UUID PRIMARY KEY,
     created_at TIMESTAMP,
     updated_at TIMESTAMP,
-    email TEXT UNIQUE NOT NULL,
-    hashed_password TEXT
+    username TEXT UNIQUE NOT NULL,
+    hashed_password TEXT,
+    is_admin BOOLEAN NOT NULL DEFAULT False
 );
 
 -- +goose Down

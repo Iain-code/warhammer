@@ -1,7 +1,7 @@
 -- +goose Up
 CREATE TABLE wargear (
     datasheet_id INT NOT NULL,
-    Field2 INT,
+    id INT PRIMARY KEY,
     Name TEXT NOT NULL,
     Range TEXT,
     Type TEXT,
