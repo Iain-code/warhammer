@@ -8,6 +8,8 @@ package db
 import (
 	"context"
 	"database/sql"
+
+	"github.com/lib/pq"
 )
 
 const createModel = `-- name: CreateModel :exec
@@ -27,16 +29,16 @@ VALUES(
 `
 
 type CreateModelParams struct {
-	OldID       sql.NullInt32
-	DatasheetID string
+	OldID       int32
+	DatasheetID int32
 	Name        string
 	M           string
-	T           int32
-	Sv          sql.NullString
-	InvSv       sql.NullString
-	W           sql.NullInt32
-	Ld          sql.NullString
-	Oc          sql.NullString
+	T           string
+	Sv          string
+	InvSv       string
+	W           int32
+	Ld          string
+	Oc          int32
 }
 
 func (q *Queries) CreateModel(ctx context.Context, arg CreateModelParams) error {
@@ -55,12 +57,40 @@ func (q *Queries) CreateModel(ctx context.Context, arg CreateModelParams) error 
 	return err
 }
 
+const getKeywordsForFaction = `-- name: GetKeywordsForFaction :many
+SELECT id, datasheet_id, keyword FROM keywords
+WHERE datasheet_id = ANY($1)
+`
+
+func (q *Queries) GetKeywordsForFaction(ctx context.Context, datasheetID []int32) ([]Keyword, error) {
+	rows, err := q.db.QueryContext(ctx, getKeywordsForFaction, pq.Array(datasheetID))
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Keyword
+	for rows.Next() {
+		var i Keyword
+		if err := rows.Scan(&i.ID, &i.DatasheetID, &i.Keyword); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getModel = `-- name: GetModel :one
 SELECT old_id, datasheet_id, name, m, t, sv, inv_sv, w, ld, oc FROM models
 WHERE datasheet_id = $1
 `
 
-func (q *Queries) GetModel(ctx context.Context, datasheetID string) (Model, error) {
+func (q *Queries) GetModel(ctx context.Context, datasheetID int32) (Model, error) {
 	row := q.db.QueryRowContext(ctx, getModel, datasheetID)
 	var i Model
 	err := row.Scan(
@@ -156,4 +186,120 @@ func (q *Queries) GetWargearForModel(ctx context.Context, datasheetID int32) ([]
 		return nil, err
 	}
 	return items, nil
+}
+
+const updateModel = `-- name: UpdateModel :one
+UPDATE models
+SET
+  old_id = $2,
+  name = $3,
+  M = $4,
+  T = $5,
+  W = $6,
+  Sv = $7,
+  inv_sv = $8,
+  Ld = $9,
+  OC = $10
+WHERE datasheet_id = $1
+RETURNING old_id, datasheet_id, name, m, t, sv, inv_sv, w, ld, oc
+`
+
+type UpdateModelParams struct {
+	DatasheetID int32
+	OldID       int32
+	Name        string
+	M           string
+	T           string
+	W           int32
+	Sv          string
+	InvSv       string
+	Ld          string
+	Oc          int32
+}
+
+func (q *Queries) UpdateModel(ctx context.Context, arg UpdateModelParams) (Model, error) {
+	row := q.db.QueryRowContext(ctx, updateModel,
+		arg.DatasheetID,
+		arg.OldID,
+		arg.Name,
+		arg.M,
+		arg.T,
+		arg.W,
+		arg.Sv,
+		arg.InvSv,
+		arg.Ld,
+		arg.Oc,
+	)
+	var i Model
+	err := row.Scan(
+		&i.OldID,
+		&i.DatasheetID,
+		&i.Name,
+		&i.M,
+		&i.T,
+		&i.Sv,
+		&i.InvSv,
+		&i.W,
+		&i.Ld,
+		&i.Oc,
+	)
+	return i, err
+}
+
+const updateWargear = `-- name: UpdateWargear :one
+UPDATE wargear
+SET
+  datasheet_id = $2,
+  Name = $3,
+  Range = $4,
+  Type = $5,
+  A = $6,
+  BS_WS = $7,
+  Strength = $8,
+  AP = $9,
+  Damage = $10
+WHERE id = $1
+RETURNING datasheet_id, id, name, range, type, a, bs_ws, strength, ap, damage
+`
+
+type UpdateWargearParams struct {
+	ID          int32
+	DatasheetID int32
+	Name        string
+	Range       string
+	Type        string
+	A           string
+	BsWs        string
+	Strength    string
+	Ap          sql.NullInt32
+	Damage      string
+}
+
+func (q *Queries) UpdateWargear(ctx context.Context, arg UpdateWargearParams) (Wargear, error) {
+	row := q.db.QueryRowContext(ctx, updateWargear,
+		arg.ID,
+		arg.DatasheetID,
+		arg.Name,
+		arg.Range,
+		arg.Type,
+		arg.A,
+		arg.BsWs,
+		arg.Strength,
+		arg.Ap,
+		arg.Damage,
+	)
+	var i Wargear
+	err := row.Scan(
+		&i.DatasheetID,
+		&i.ID,
+		&i.Name,
+		&i.Range,
+		&i.Type,
+		&i.A,
+		&i.BsWs,
+		&i.Strength,
+		&i.Ap,
+		&i.Damage,
+	)
+	return i, err
 }

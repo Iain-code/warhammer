@@ -7,7 +7,6 @@ package db
 
 import (
 	"context"
-	"database/sql"
 )
 
 const getFaction = `-- name: GetFaction :one
@@ -15,7 +14,7 @@ SELECT id, name, faction_id FROM faction
 WHERE faction.id = $1
 `
 
-func (q *Queries) GetFaction(ctx context.Context, id sql.NullString) (Faction, error) {
+func (q *Queries) GetFaction(ctx context.Context, id int32) (Faction, error) {
 	row := q.db.QueryRowContext(ctx, getFaction, id)
 	var i Faction
 	err := row.Scan(&i.ID, &i.Name, &i.FactionID)

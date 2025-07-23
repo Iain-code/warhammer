@@ -1,6 +1,6 @@
 -- +goose Up
 CREATE TABLE faction (
-    id NUMERIC(8, 1) UNIQUE,
+    id INT PRIMARY KEY,
     name TEXT,
     faction_id TEXT,
     FOREIGN KEY (id)

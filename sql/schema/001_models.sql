@@ -1,15 +1,15 @@
 -- +goose Up
 CREATE TABLE models (
-    old_id INT,
-    datasheet_id NUMERIC(6, 1) PRIMARY KEY NOT NULL,
+    old_id INT PRIMARY KEY,
+    datasheet_id INT NOT NULL UNIQUE,
     name TEXT NOT NULL,
     M TEXT NOT NULL,
-    T INT NOT NULL,
-    Sv TEXT,
-    inv_sv TEXT,
-    W INT,
-    Ld TEXT,
-    OC TEXT
+    T TEXT NOT NULL,
+    Sv TEXT NOT NULL,
+    inv_sv TEXT NOT NULL,
+    W INT NOT NULL,
+    Ld TEXT NOT NULL,
+    OC INT NOT NULL
 );
 
 -- +goose Down

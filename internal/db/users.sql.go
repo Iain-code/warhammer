@@ -28,7 +28,7 @@ type CreateUserParams struct {
 	CreatedAt      sql.NullTime
 	UpdatedAt      sql.NullTime
 	Username       string
-	HashedPassword sql.NullString
+	HashedPassword string
 }
 
 func (q *Queries) CreateUser(ctx context.Context, arg CreateUserParams) (User, error) {
@@ -80,13 +80,55 @@ func (q *Queries) GetUser(ctx context.Context, id uuid.UUID) (User, error) {
 	return i, err
 }
 
-const getUserFromEmail = `-- name: GetUserFromEmail :one
+const getUserFromUsername = `-- name: GetUserFromUsername :one
 SELECT id, created_at, updated_at, username, hashed_password, is_admin FROM users
 WHERE username = $1
 `
 
-func (q *Queries) GetUserFromEmail(ctx context.Context, username string) (User, error) {
-	row := q.db.QueryRowContext(ctx, getUserFromEmail, username)
+func (q *Queries) GetUserFromUsername(ctx context.Context, username string) (User, error) {
+	row := q.db.QueryRowContext(ctx, getUserFromUsername, username)
+	var i User
+	err := row.Scan(
+		&i.ID,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+		&i.Username,
+		&i.HashedPassword,
+		&i.IsAdmin,
+	)
+	return i, err
+}
+
+const makeAdmin = `-- name: MakeAdmin :one
+UPDATE users
+SET is_admin = true
+WHERE users.id = $1
+RETURNING id, created_at, updated_at, username, hashed_password, is_admin
+`
+
+func (q *Queries) MakeAdmin(ctx context.Context, id uuid.UUID) (User, error) {
+	row := q.db.QueryRowContext(ctx, makeAdmin, id)
+	var i User
+	err := row.Scan(
+		&i.ID,
+		&i.CreatedAt,
+		&i.UpdatedAt,
+		&i.Username,
+		&i.HashedPassword,
+		&i.IsAdmin,
+	)
+	return i, err
+}
+
+const removeAdmin = `-- name: RemoveAdmin :one
+UPDATE users
+SET is_admin = false
+WHERE users.id = $1
+RETURNING id, created_at, updated_at, username, hashed_password, is_admin
+`
+
+func (q *Queries) RemoveAdmin(ctx context.Context, id uuid.UUID) (User, error) {
+	row := q.db.QueryRowContext(ctx, removeAdmin, id)
 	var i User
 	err := row.Scan(
 		&i.ID,

@@ -31,4 +31,36 @@ SELECT wargear.* FROM wargear
 JOIN models ON wargear.datasheet_id = models.datasheet_id
 WHERE wargear.datasheet_id = $1;
 
+-- name: UpdateModel :one
+UPDATE models
+SET
+  old_id = $2,
+  name = $3,
+  M = $4,
+  T = $5,
+  W = $6,
+  Sv = $7,
+  inv_sv = $8,
+  Ld = $9,
+  OC = $10
+WHERE datasheet_id = $1
+RETURNING *;
 
+-- name: UpdateWargear :one
+UPDATE wargear
+SET
+  datasheet_id = $2,
+  Name = $3,
+  Range = $4,
+  Type = $5,
+  A = $6,
+  BS_WS = $7,
+  Strength = $8,
+  AP = $9,
+  Damage = $10
+WHERE id = $1
+RETURNING *;
+
+-- name: GetKeywordsForFaction :many
+SELECT * FROM keywords
+WHERE datasheet_id = ANY($1);

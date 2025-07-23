@@ -1,10 +1,26 @@
 package main
 
 import (
+	"database/sql"
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"strconv"
+	"warhammer/internal/db"
 )
+
+type wargearResponse struct {
+	DatasheetID int32  `json:"datasheet_id"`
+	Id          int32  `json:"id"`
+	Name        string `json:"name"`
+	Range       string `json:"range"`
+	Type        string `json:"type"`
+	A           string `json:"attacks"`
+	BsWs        string `json:"BS_WS"`
+	Strength    string `json:"strength"`
+	Ap          *int32 `json:"AP"`
+	Damage      string `json:"damage"`
+}
 
 func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request) {
 	datasheetID := r.URL.Query().Get("datasheet_id")
@@ -26,18 +42,24 @@ func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request)
 		respondWithError(w, http.StatusBadRequest, "wargear not found")
 		return
 	}
-	wargearSlice := []Wargear{}
+
+	wargearSlice := []wargearResponse{}
 	for _, wargear := range wargears {
-		wargearJSON := Wargear{
+
+		var ap *int32
+		if wargear.Ap.Valid {
+			ap = &wargear.Ap.Int32
+		}
+		wargearJSON := wargearResponse{
 			DatasheetID: wargear.DatasheetID,
-			Field2:      wargear.Field2,
+			Id:          wargear.ID,
 			Name:        wargear.Name,
 			Range:       wargear.Range,
 			Type:        wargear.Type,
 			A:           wargear.A,
 			BsWs:        wargear.BsWs,
 			Strength:    wargear.Strength,
-			Ap:          wargear.Ap,
+			Ap:          ap,
 			Damage:      wargear.Damage,
 		}
 		wargearSlice = append(wargearSlice, wargearJSON)
@@ -45,5 +67,80 @@ func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request)
 	respondWithJSON(w, 200, wargearSlice)
 }
 
-// why do we use r.context() for the context
-// why is the input a string for wargear model
+func (cfg *ApiConfig) UpdateWargear(w http.ResponseWriter, r *http.Request) {
+
+	type wargearRequest struct {
+		DatasheetID int32  `json:"datasheet_id"`
+		Id          int32  `json:"id"`
+		Name        string `json:"name"`
+		Range       string `json:"range"`
+		Type        string `json:"type"`
+		A           string `json:"attacks"`
+		BsWs        string `json:"BS_WS"`
+		Strength    string `json:"strength"`
+		Ap          int32  `json:"AP"`
+		Damage      string `json:"damage"`
+	}
+
+	request := wargearRequest{}
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&request)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "Invalid request body")
+		return
+	}
+
+	fmt.Println(request)
+
+	wargear := Wargear{
+		DatasheetID: request.DatasheetID,
+		Id:          request.Id,
+		Name:        request.Name,
+		Range:       request.Range,
+		Type:        request.Type,
+		A:           request.A,
+		BsWs:        request.BsWs,
+		Strength:    request.Strength,
+		Ap:          sql.NullInt32{Int32: int32(request.Ap), Valid: true},
+		Damage:      request.Damage,
+	}
+
+	paramWargear := db.UpdateWargearParams{
+		DatasheetID: wargear.DatasheetID,
+		ID:          wargear.Id,
+		Name:        wargear.Name,
+		Range:       wargear.Range,
+		Type:        wargear.Type,
+		A:           wargear.A,
+		BsWs:        wargear.BsWs,
+		Strength:    wargear.Strength,
+		Ap:          wargear.Ap,
+		Damage:      wargear.Damage,
+	}
+
+	updatedWargear, err := cfg.db.UpdateWargear(r.Context(), paramWargear)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to update wargear")
+		return
+	}
+
+	var ap *int32
+	if updatedWargear.Ap.Valid {
+		ap = &updatedWargear.Ap.Int32
+	}
+
+	wargearJSON := wargearResponse{
+		DatasheetID: updatedWargear.DatasheetID,
+		Id:          updatedWargear.ID,
+		Name:        updatedWargear.Name,
+		Range:       updatedWargear.Range,
+		Type:        updatedWargear.Type,
+		A:           updatedWargear.A,
+		BsWs:        updatedWargear.BsWs,
+		Strength:    updatedWargear.Strength,
+		Ap:          ap,
+		Damage:      updatedWargear.Damage,
+	}
+
+	respondWithJSON(w, 200, wargearJSON)
+}

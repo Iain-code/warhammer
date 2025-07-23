@@ -13,25 +13,25 @@ type ApiConfig struct {
 }
 
 type User struct {
-	Id             uuid.UUID      `json:"id"`
-	CreatedAt      sql.NullTime   `json:"created_at"`
-	UpdatedAt      sql.NullTime   `json:"updated_at"`
-	Username       string         `json:"username"`
-	HashedPassword sql.NullString `json:"-"`
-	IsAdmin        bool           `json:"is_admin"`
+	Id             uuid.UUID    `json:"id"`
+	CreatedAt      sql.NullTime `json:"created_at"`
+	UpdatedAt      sql.NullTime `json:"updated_at"`
+	Username       string       `json:"username"`
+	HashedPassword string       `json:"-"`
+	IsAdmin        bool         `json:"is_admin"`
 }
 
 type Model struct {
-	OldID       sql.NullInt32  `json:"old_id"`
-	DatasheetID string         `json:"datasheet_id"`
-	Name        string         `json:"name"`
-	M           string         `json:"M"`
-	T           int32          `json:"T"`
-	Sv          sql.NullString `json:"Sv"`
-	InvSv       sql.NullString `json:"inv_sv"`
-	W           sql.NullInt32  `json:"W"`
-	Ld          sql.NullString `json:"Ld"`
-	Oc          sql.NullString `json:"OC"`
+	OldID       int32  `json:"old_id"`
+	DatasheetID int32  `json:"datasheet_id"`
+	Name        string `json:"name"`
+	M           string `json:"M"`
+	T           string `json:"T"`
+	Sv          string `json:"Sv"`
+	InvSv       string `json:"inv_sv"`
+	W           int32  `json:"W"`
+	Ld          string `json:"Ld"`
+	Oc          int32  `json:"OC"`
 }
 
 type Faction struct {
@@ -40,14 +40,28 @@ type Faction struct {
 	FactionID string `json:"faction_id"`
 }
 type Wargear struct {
-	DatasheetID int32          `json:"datasheet_id"`
-	Field2      sql.NullInt32  `json:"field2"`
-	Name        string         `json:"name"`
-	Range       sql.NullString `json:"range"`
-	Type        sql.NullString `json:"type"`
-	A           sql.NullString `json:"attacks"`
-	BsWs        sql.NullString `json:"BS_WS"`
-	Strength    sql.NullString `json:"strength"`
-	Ap          sql.NullString `json:"AP"`
-	Damage      sql.NullString `json:"damage"`
+	DatasheetID int32         `json:"datasheet_id"`
+	Id          int32         `json:"id"`
+	Name        string        `json:"name"`
+	Range       string        `json:"range"`
+	Type        string        `json:"type"`
+	A           string        `json:"attacks"`
+	BsWs        string        `json:"BS_WS"`
+	Strength    string        `json:"strength"`
+	Ap          sql.NullInt32 `json:"AP"`
+	Damage      string        `json:"damage"`
+}
+
+type Points struct {
+	Id           int32  `json:"id"`
+	Datasheet_id int32  `json:"datasheet_id"`
+	Line         int32  `json:"line"`
+	Description  string `json:"description"`
+	Cost         int32  `json:"cost"`
+}
+
+type Keyword struct {
+	Id          int32  `json:"id"`
+	DatasheetID int32  `json:"datasheet_id"`
+	Keyword     string `json:"keyword"`
 }

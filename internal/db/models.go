@@ -11,22 +11,36 @@ import (
 )
 
 type Faction struct {
-	ID        sql.NullString
+	ID        int32
 	Name      sql.NullString
 	FactionID sql.NullString
 }
 
+type Keyword struct {
+	ID          int32
+	DatasheetID int32
+	Keyword     string
+}
+
 type Model struct {
-	OldID       sql.NullInt32
-	DatasheetID string
+	OldID       int32
+	DatasheetID int32
 	Name        string
 	M           string
-	T           int32
-	Sv          sql.NullString
-	InvSv       sql.NullString
-	W           sql.NullInt32
-	Ld          sql.NullString
-	Oc          sql.NullString
+	T           string
+	Sv          string
+	InvSv       string
+	W           int32
+	Ld          string
+	Oc          int32
+}
+
+type Point struct {
+	ID          int32
+	DatasheetID int32
+	Line        int32
+	Description string
+	Cost        int32
 }
 
 type RefreshToken struct {
@@ -40,7 +54,7 @@ type User struct {
 	CreatedAt      sql.NullTime
 	UpdatedAt      sql.NullTime
 	Username       string
-	HashedPassword sql.NullString
+	HashedPassword string
 	IsAdmin        bool
 }
 
@@ -48,11 +62,11 @@ type Wargear struct {
 	DatasheetID int32
 	ID          int32
 	Name        string
-	Range       sql.NullString
-	Type        sql.NullString
-	A           sql.NullString
-	BsWs        sql.NullString
-	Strength    sql.NullString
-	Ap          sql.NullString
-	Damage      sql.NullString
+	Range       string
+	Type        string
+	A           string
+	BsWs        string
+	Strength    string
+	Ap          sql.NullInt32
+	Damage      string
 }

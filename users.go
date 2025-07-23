@@ -3,6 +3,7 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"time"
 	"warhammer/internal/auth"
@@ -22,11 +23,11 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 	decoder := json.NewDecoder(r.Body)
 	err := decoder.Decode(&newUser)
 	if err != nil {
-		http.Error(w, "Invalid request body", http.StatusBadRequest)
+		respondWithError(w, http.StatusBadRequest, "Invalid request body", )
 		return
 	}
 	if newUser.Password == "" || newUser.Username == "" {
-		respondWithError(w, http.StatusBadRequest, "Email and password are required")
+		respondWithError(w, http.StatusBadRequest, "username and password are required")
 		return
 	}
 	hashedPassword, err := auth.HashPassword(newUser.Password)
@@ -40,7 +41,7 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 		CreatedAt:      sql.NullTime{Time: time.Now(), Valid: true},
 		UpdatedAt:      sql.NullTime{Time: time.Now(), Valid: true},
 		Username:       newUser.Username,
-		HashedPassword: sql.NullString{String: hashedPassword, Valid: true},
+		HashedPassword: hashedPassword,
 	}
 	user, err := cfg.db.CreateUser(r.Context(), userParams)
 	if err != nil {
@@ -52,7 +53,7 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 		CreatedAt:      user.CreatedAt,
 		UpdatedAt:      user.UpdatedAt,
 		Username:       user.Username,
-		HashedPassword: user.HashedPassword,
+		HashedPassword: hashedPassword,
 	}
 
 	respondWithJSON(w, 200, userJSON)
@@ -68,7 +69,7 @@ func (cfg *ApiConfig) DeleteUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	gotUser, err := cfg.db.GetUserFromEmail(r.Context(), user.Username)
+	gotUser, err := cfg.db.GetUserFromUsername(r.Context(), user.Username)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
@@ -82,20 +83,13 @@ func (cfg *ApiConfig) DeleteUser(w http.ResponseWriter, r *http.Request) {
 
 func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 
-	// decode JSON
-	// check users hashed password
-	// find user by email
-	// check JWT token
-	// get refresh token
-
 	type TokenUser struct {
-		ID           uuid.UUID `json:"id"`
-		CreatedAt    time.Time `json:"created_at"`
-		UpdatedAt    time.Time `json:"updated_at"`
-		Username     string    `json:"username"`
-		IsAdmin      bool      `json:"is_admin"`
-		Token        string    `json:"token"`
-		RefreshToken string    `json:"refresh_token"`
+		ID        uuid.UUID `json:"id"`
+		CreatedAt time.Time `json:"created_at"`
+		UpdatedAt time.Time `json:"updated_at"`
+		Username  string    `json:"username"`
+		IsAdmin   bool      `json:"is_admin"`
+		Token     string    `json:"token"`
 	}
 	type NewUser struct {
 		Username string `json:"username"`
@@ -108,12 +102,14 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	user, err := cfg.db.GetUserFromEmail(r.Context(), newUser.Username)
+
+	user, err := cfg.db.GetUserFromUsername(r.Context(), newUser.Username)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	err = auth.CompareHashedPassword(newUser.Password, user.HashedPassword.String)
+
+	err = auth.CompareHashedPassword(newUser.Password, user.HashedPassword)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "incorrect password")
 		return
@@ -125,11 +121,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	userID, err := auth.ValidateJWT(jwtToken, cfg.tokenSecret)
-	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "invalid token")
-		return
-	}
+	// HERE NEED TO GET AND DELETE REFRESH TOKEN FOR USER.ID TO CLEAR PREVIOUS TOKENS
 
 	tknR, err := auth.MakeRefreshToken()
 	if err != nil {
@@ -139,7 +131,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 
 	refreshParams := db.CreateRefreshTokenParams{
 		Token:     tknR,
-		UserID:    userID,
+		UserID:    user.ID,
 		ExpiresAt: sql.NullTime{Time: time.Now().Add(24 * time.Hour), Valid: true},
 	}
 	_, err = cfg.db.CreateRefreshToken(r.Context(), refreshParams)
@@ -147,15 +139,134 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
 		return
 	}
+
 	tknUser := TokenUser{
-		ID:           userID,
-		CreatedAt:    time.Now(),
-		UpdatedAt:    time.Now(),
-		Username:     user.Username,
-		IsAdmin:      user.IsAdmin,
-		Token:        jwtToken,
-		RefreshToken: tknR,
+		ID:        user.ID,
+		CreatedAt: time.Now(),
+		UpdatedAt: time.Now(),
+		Username:  user.Username,
+		IsAdmin:   user.IsAdmin,
+		Token:     jwtToken,
+	}
+	http.SetCookie(w, &http.Cookie{
+		Name:     "refresh_token",
+		Value:    tknR,
+		Expires:  time.Now().Add(24 * time.Hour),
+		HttpOnly: true,
+		Secure:   false,                // change to true after dev
+		SameSite: http.SameSiteLaxMode, // change Lax => Strict after dev
+		Path:     "/",
+	})
+	respondWithJSON(w, 200, tknUser)
+}
+
+func (cfg *ApiConfig) RefreshHandler(w http.ResponseWriter, r *http.Request) {
+
+	cookie, err := r.Cookie("refresh_token")
+	if err != nil {
+		respondWithError(w, http.StatusUnauthorized, "missing refresh token")
+		return
 	}
 
-	respondWithJSON(w, 200, tknUser)
+	tkn, err := cfg.db.GetRefreshToken(r.Context(), cookie.Value)
+	if err != nil || !tkn.ExpiresAt.Valid || tkn.ExpiresAt.Time.Before(time.Now()) {
+		respondWithError(w, http.StatusUnauthorized, "refresh token invalid or expired")
+		return
+	}
+
+	err = cfg.db.DeleteRefreshToken(r.Context(), tkn.Token)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to delete token")
+		return
+	}
+
+	newRefreshToken, err := auth.MakeRefreshToken()
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
+		return
+	}
+
+	refreshParams := db.CreateRefreshTokenParams{
+		Token:     newRefreshToken,
+		UserID:    tkn.UserID,
+		ExpiresAt: sql.NullTime{Time: time.Now().Add(24 * time.Hour), Valid: true},
+	}
+
+	rTkn, err := cfg.db.CreateRefreshToken(r.Context(), refreshParams)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to add refresh token to database")
+		return
+	}
+
+	jwtToken, err := auth.MakeJWT(tkn.UserID, cfg.tokenSecret, 15*time.Minute)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to make JWT token")
+		return
+	}
+
+	http.SetCookie(w, &http.Cookie{
+		Name:     "refresh_token",
+		Value:    rTkn.Token,
+		Expires:  rTkn.ExpiresAt.Time,
+		HttpOnly: true,
+		Secure:   false,                // change to true after dev
+		SameSite: http.SameSiteLaxMode, // change Lax => Strict after dev
+		Path:     "/",
+	})
+
+	respondWithJSON(w, 200, map[string]string{
+		"token": jwtToken,
+	})
+}
+
+func (cfg *ApiConfig) MakeAdmin(w http.ResponseWriter, r *http.Request) {
+
+	user := User{}
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&user)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid request")
+		return
+	}
+	fmt.Println("this is user data")
+	fmt.Println(user)
+
+	dbUser, err := cfg.db.GetUser(r.Context(), user.Id)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "invalid username")
+		return
+	}
+	
+	_, err = cfg.db.MakeAdmin(r.Context(), dbUser.ID)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to make admin")
+		return
+	}
+
+	respondWithJSON(w, 200, "admin rights granted")
+}
+
+func (cfg *ApiConfig) RemoveAdmin(w http.ResponseWriter, r *http.Request) {
+
+	user := User{}
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&user)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid request")
+		return
+	}
+
+	dbUser, err := cfg.db.GetUser(r.Context(), user.Id)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "invalid username")
+		return
+	}
+	
+	_, err = cfg.db.RemoveAdmin(r.Context(), dbUser.ID)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to remove admin tag")
+		return
+	}
+
+	respondWithJSON(w, 200, "admin rights removed")
 }

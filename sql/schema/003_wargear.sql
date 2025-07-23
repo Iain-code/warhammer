@@ -3,13 +3,13 @@ CREATE TABLE wargear (
     datasheet_id INT NOT NULL,
     id INT PRIMARY KEY,
     Name TEXT NOT NULL,
-    Range TEXT,
-    Type TEXT,
-    A TEXT,
-    BS_WS TEXT,
-    Strength TEXT,
-    AP TEXT,
-    Damage TEXT,
+    Range TEXT NOT NULL,
+    Type TEXT NOT NULL,
+    A TEXT NOT NULL,
+    BS_WS TEXT NOT NULL,
+    Strength TEXT NOT NULL,
+    AP INT,
+    Damage TEXT NOT NULL,
     FOREIGN KEY (datasheet_id)
     REFERENCES models(datasheet_id)
 );

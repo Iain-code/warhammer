@@ -9,7 +9,7 @@ import (
 	"time"
 	"warhammer/internal/db"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
@@ -41,34 +41,41 @@ func main() {
 	cfg.tokenSecret = tknSecret
 	fmt.Println("Successfully connected to the AWS RDS PostgreSQL database!")
 
-	router := chi.NewRouter()
+	r := chi.NewRouter()
 
-	router.Use(cors.Handler(cors.Options{
-		AllowedOrigins:   []string{"https://*", "http://*"},
+	r.Use(cors.Handler(cors.Options{
+		AllowedOrigins:   []string{"http://127.0.0.1:5173"},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"*"},
-		ExposedHeaders:   []string{"Link", "Content-Type", "Authorization"},
-		AllowCredentials: false,
+		ExposedHeaders:   []string{"Link", "Content-Type", "Authorization", "Set-Cookie"},
+		AllowCredentials: true,
 		MaxAge:           300,
 	}))
 
-	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "index.html")
 	})
-	router.Post("/users", cfg.CreateUser)
-	router.Get("/models", cfg.GetModel)
-	router.Get("/factions", cfg.GetModelsForFaction)
-	router.Get("/wargears", cfg.GetWargearForModel)
-	router.Get("/login", cfg.Login)
+	r.Post("/users", cfg.CreateUser)
+	r.Get("/models", cfg.GetModel)
+	r.Get("/factions", cfg.GetModelsForFaction)
+	r.Get("/wargears", cfg.GetWargearForModel)
+	r.Get("/keywords", cfg.GetKeywordsForFaction)
+	r.Get("/points", cfg.GetPointsForModels)
+	r.Post("/login", cfg.Login)
+	r.Post("/refresh", cfg.RefreshHandler)
+	r.Put("/admins", cfg.middlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
+	r.Put("/admins/remove", cfg.middlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
+	r.Put("/admins/models", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateModel)))
+	r.Put("/admins/wargears", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateWargear)))
 
-	chi.Walk(router, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
+	chi.Walk(r, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
 		log.Printf("%s %s\n", method, route)
 		return nil
 	})
 
 	srv := &http.Server{
-		Addr:              ":" + port,
-		Handler:           router,
+		Addr:              "127.0.0.1:" + port,
+		Handler:           r,
 		ReadHeaderTimeout: time.Hour * 1,
 	}
 	log.Printf("Serving on port: %s\n", port)

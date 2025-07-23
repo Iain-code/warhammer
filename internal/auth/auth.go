@@ -2,11 +2,8 @@ package auth
 
 import (
 	"crypto/rand"
-	"encoding/base64"
 	"encoding/hex"
-	"encoding/json"
 	"errors"
-	"fmt"
 	"net/http"
 	"strings"
 	"time"
@@ -66,23 +63,28 @@ func ValidateJWT(tokenString, tokenSecret string) (uuid.UUID, error) {
 	token, err := jwt.ParseWithClaims(tokenString, claims, func(token *jwt.Token) (interface{}, error) {
 		return []byte(tokenSecret), nil
 	})
+
+	if !claims.VerifyExpiresAt(time.Now(), true) {
+		return uuid.Nil, errors.New("token expired")
+	}
+
 	if err != nil {
 		return uuid.Nil, err
 	}
 	if !token.Valid {
 		return uuid.Nil, errors.New("invalid token")
 	}
-	sub := claims.Subject // takes the subject field of claims struct (which is the USER.ID)
-	if sub == "" {
+	subject := claims.Subject // takes the subject field of claims struct (which is the USER.ID)
+	if subject == "" {
 		return uuid.Nil, err
 	}
 
-	notstr, err := uuid.Parse(sub)
+	userID, err := uuid.Parse(subject)
 	if err != nil {
 		return uuid.Nil, err
 	}
 
-	return notstr, nil
+	return userID, nil
 }
 
 func GetBearerToken(headers http.Header) (string, error) {
@@ -91,6 +93,7 @@ func GetBearerToken(headers http.Header) (string, error) {
 	if header == "" {
 		return "", errors.New("no authorization header found")
 	}
+	
 	if !strings.HasPrefix(header, "Bearer ") {
 		return "", errors.New("invalid token")
 	}
@@ -110,27 +113,4 @@ func MakeRefreshToken() (string, error) {
 	hexStr := hex.EncodeToString(stuff)
 
 	return hexStr, nil
-
-}
-
-func isTokenExpired(tokenString string) (bool, error) {
-
-	parts := strings.Split(tokenString, ".")
-	if len(parts) != 3 {
-		return true, fmt.Errorf("invalid token")
-	}
-
-	payload, err := base64.RawURLEncoding.DecodeString(parts[1])
-	if err != nil {
-		return true, err
-	}
-
-	claims := &jwt.RegisteredClaims{}
-	if err := json.Unmarshal(payload, &claims); err != nil {
-		return true, err
-	}
-
-	currentTime := time.Now().Unix()
-
-	return claims.ExpiresAt.Unix() < currentTime, nil
 }

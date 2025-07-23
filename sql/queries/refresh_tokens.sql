@@ -6,3 +6,11 @@ VALUES(
     $3
 ) RETURNING *;
 
+-- name: GetRefreshToken :one
+SELECT * FROM refresh_tokens
+WHERE refresh_tokens.token = $1;
+
+-- name: DeleteRefreshToken :exec
+DELETE from refresh_tokens
+WHERE refresh_tokens.token = $1;
+
