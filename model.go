@@ -201,3 +201,29 @@ func (cfg *ApiConfig) GetPointsForModels(w http.ResponseWriter, r *http.Request)
 
 	respondWithJSON(w, 200, pointSlice)
 }
+
+func (cfg *ApiConfig) GetEnhancements(w http.ResponseWriter, r *http.Request) {
+
+	enhance, err := cfg.db.GetEnhancements(r.Context())
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "failed to get enhancements")
+		return
+	}
+
+	enhanceSlice := []Enhancement{}
+	for _, item := range enhance {
+		enhanceJSON := Enhancement{
+			ID:          item.ID,
+			FactionID:   item.FactionID,
+			Name:        item.Name,
+			Cost:        item.Cost,
+			Detachment:  item.Detachment,
+			Legend:      item.Legend,
+			Description: item.Description,
+			Field8:      item.Field8,
+		}
+		enhanceSlice = append(enhanceSlice, enhanceJSON)
+	}
+
+	respondWithJSON(w, 200, enhanceSlice)
+}

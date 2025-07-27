@@ -65,3 +65,14 @@ type Keyword struct {
 	DatasheetID int32  `json:"datasheet_id"`
 	Keyword     string `json:"keyword"`
 }
+
+type Enhancement struct {
+	ID          int32  `json:"id"`
+	FactionID   string `json:"faction_id"`
+	Name        string `json:"name"`
+	Cost        int32  `json:"cost"`
+	Detachment  string `json:"detachment"`
+	Legend      string `json:"legend"`
+	Description string `json:"description"`
+	Field8      string `json:"field8"`
+}

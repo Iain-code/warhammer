@@ -10,6 +10,17 @@ import (
 	"github.com/google/uuid"
 )
 
+type Enhancement struct {
+	ID          int32
+	FactionID   string
+	Name        string
+	Cost        int32
+	Detachment  string
+	Legend      string
+	Description string
+	Field8      string
+}
+
 type Faction struct {
 	ID        int32
 	Name      sql.NullString
