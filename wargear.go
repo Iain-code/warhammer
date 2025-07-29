@@ -144,3 +144,32 @@ func (cfg *ApiConfig) UpdateWargear(w http.ResponseWriter, r *http.Request) {
 
 	respondWithJSON(w, 200, wargearJSON)
 }
+
+func (cfg *ApiConfig) GetWargearForModelsAll(w http.ResponseWriter, r *http.Request) {
+
+	wargears, err := cfg.db.GetWargearForAll(r.Context())
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to fetch wargear")
+		return
+	}
+	
+	wargearSlice := []Wargear{}
+
+	for _, w := range wargears {
+		wargearJSON := Wargear{
+			DatasheetID: w.DatasheetID,
+			Id: w.ID,
+			Name: w.Name,
+			Range: w.Range,
+			Type: w.Type,
+			A: w.A,
+			BsWs: w.BsWs,
+			Strength: w.Strength,
+			Ap: w.Ap,
+			Damage: w.Damage,
+		}
+		wargearSlice = append(wargearSlice, wargearJSON)
+	}
+
+	respondWithJSON(w, 200, wargearSlice)
+}

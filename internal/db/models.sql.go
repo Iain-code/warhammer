@@ -8,8 +8,6 @@ package db
 import (
 	"context"
 	"database/sql"
-
-	"github.com/lib/pq"
 )
 
 const createModel = `-- name: CreateModel :exec
@@ -55,34 +53,6 @@ func (q *Queries) CreateModel(ctx context.Context, arg CreateModelParams) error 
 		arg.Oc,
 	)
 	return err
-}
-
-const getKeywordsForFaction = `-- name: GetKeywordsForFaction :many
-SELECT id, datasheet_id, keyword FROM keywords
-WHERE datasheet_id = ANY($1)
-`
-
-func (q *Queries) GetKeywordsForFaction(ctx context.Context, datasheetID []int32) ([]Keyword, error) {
-	rows, err := q.db.QueryContext(ctx, getKeywordsForFaction, pq.Array(datasheetID))
-	if err != nil {
-		return nil, err
-	}
-	defer rows.Close()
-	var items []Keyword
-	for rows.Next() {
-		var i Keyword
-		if err := rows.Scan(&i.ID, &i.DatasheetID, &i.Keyword); err != nil {
-			return nil, err
-		}
-		items = append(items, i)
-	}
-	if err := rows.Close(); err != nil {
-		return nil, err
-	}
-	if err := rows.Err(); err != nil {
-		return nil, err
-	}
-	return items, nil
 }
 
 const getModel = `-- name: GetModel :one
@@ -134,46 +104,6 @@ func (q *Queries) GetModelsForFaction(ctx context.Context, factionID sql.NullStr
 			&i.W,
 			&i.Ld,
 			&i.Oc,
-		); err != nil {
-			return nil, err
-		}
-		items = append(items, i)
-	}
-	if err := rows.Close(); err != nil {
-		return nil, err
-	}
-	if err := rows.Err(); err != nil {
-		return nil, err
-	}
-	return items, nil
-}
-
-const getWargearForModel = `-- name: GetWargearForModel :many
-SELECT wargear.datasheet_id, wargear.id, wargear.name, wargear.range, wargear.type, wargear.a, wargear.bs_ws, wargear.strength, wargear.ap, wargear.damage FROM wargear
-JOIN models ON wargear.datasheet_id = models.datasheet_id
-WHERE wargear.datasheet_id = $1
-`
-
-func (q *Queries) GetWargearForModel(ctx context.Context, datasheetID int32) ([]Wargear, error) {
-	rows, err := q.db.QueryContext(ctx, getWargearForModel, datasheetID)
-	if err != nil {
-		return nil, err
-	}
-	defer rows.Close()
-	var items []Wargear
-	for rows.Next() {
-		var i Wargear
-		if err := rows.Scan(
-			&i.DatasheetID,
-			&i.ID,
-			&i.Name,
-			&i.Range,
-			&i.Type,
-			&i.A,
-			&i.BsWs,
-			&i.Strength,
-			&i.Ap,
-			&i.Damage,
 		); err != nil {
 			return nil, err
 		}
@@ -242,64 +172,6 @@ func (q *Queries) UpdateModel(ctx context.Context, arg UpdateModelParams) (Model
 		&i.W,
 		&i.Ld,
 		&i.Oc,
-	)
-	return i, err
-}
-
-const updateWargear = `-- name: UpdateWargear :one
-UPDATE wargear
-SET
-  datasheet_id = $2,
-  Name = $3,
-  Range = $4,
-  Type = $5,
-  A = $6,
-  BS_WS = $7,
-  Strength = $8,
-  AP = $9,
-  Damage = $10
-WHERE id = $1
-RETURNING datasheet_id, id, name, range, type, a, bs_ws, strength, ap, damage
-`
-
-type UpdateWargearParams struct {
-	ID          int32
-	DatasheetID int32
-	Name        string
-	Range       string
-	Type        string
-	A           string
-	BsWs        string
-	Strength    string
-	Ap          sql.NullInt32
-	Damage      string
-}
-
-func (q *Queries) UpdateWargear(ctx context.Context, arg UpdateWargearParams) (Wargear, error) {
-	row := q.db.QueryRowContext(ctx, updateWargear,
-		arg.ID,
-		arg.DatasheetID,
-		arg.Name,
-		arg.Range,
-		arg.Type,
-		arg.A,
-		arg.BsWs,
-		arg.Strength,
-		arg.Ap,
-		arg.Damage,
-	)
-	var i Wargear
-	err := row.Scan(
-		&i.DatasheetID,
-		&i.ID,
-		&i.Name,
-		&i.Range,
-		&i.Type,
-		&i.A,
-		&i.BsWs,
-		&i.Strength,
-		&i.Ap,
-		&i.Damage,
 	)
 	return i, err
 }

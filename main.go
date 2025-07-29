@@ -59,6 +59,7 @@ func main() {
 	r.Get("/models", cfg.GetModel)
 	r.Get("/factions", cfg.GetModelsForFaction)
 	r.Get("/wargears", cfg.GetWargearForModel)
+	r.Get("/wargears/models", cfg.GetWargearForModelsAll)
 	r.Get("/keywords", cfg.GetKeywordsForFaction)
 	r.Get("/points", cfg.GetPointsForModels)
 	r.Get("/enhancements", cfg.GetEnhancements)
