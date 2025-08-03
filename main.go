@@ -63,6 +63,7 @@ func main() {
 	r.Get("/keywords", cfg.GetKeywordsForFaction)
 	r.Get("/points", cfg.GetPointsForModels)
 	r.Get("/enhancements", cfg.GetEnhancements)
+	r.Get("/abilities", cfg.GetAbilities)
 	r.Post("/login", cfg.Login)
 	r.Post("/refresh", cfg.RefreshHandler)
 	r.Put("/admins", cfg.middlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))

@@ -76,3 +76,15 @@ type Enhancement struct {
 	Description string `json:"description"`
 	Field8      string `json:"field8"`
 }
+
+type Abilities struct {
+	DatasheetID int32    `json:"datasheet_id"`
+	Line        int32    `json:"line"`
+	AbilityID   int32    `json:"ability_id"`
+	Model       string `json:"model"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
+	Type        string `json:"type"`
+	Parameter   string `json:"parameter"`
+	Field9      string `json:"FIELD9"`
+}

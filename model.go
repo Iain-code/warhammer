@@ -227,3 +227,28 @@ func (cfg *ApiConfig) GetEnhancements(w http.ResponseWriter, r *http.Request) {
 
 	respondWithJSON(w, 200, enhanceSlice)
 }
+
+func (cfg *ApiConfig) GetAbilities(w http.ResponseWriter, r *http.Request) {
+	abilities, err := cfg.db.GetAbilities(r.Context())
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "failed to get abilities")
+		return
+	}
+	abiltiesSlice := []Abilities{}
+	for _, item := range abilities {
+		abilitiesJSON := Abilities{
+			DatasheetID: item.DatasheetID,
+			Line: item.Line,
+			AbilityID: item.AbilityID,
+			Model: item.Model,
+			Name: item.Name,
+			Description: item.Description,
+			Type: item.Type,
+			Parameter: item.Parameter,
+		}
+		abiltiesSlice = append(abiltiesSlice, abilitiesJSON)
+	}
+	respondWithJSON(w, 200, abiltiesSlice)
+}
+
+

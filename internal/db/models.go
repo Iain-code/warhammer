@@ -10,6 +10,17 @@ import (
 	"github.com/google/uuid"
 )
 
+type Ability struct {
+	DatasheetID int32
+	Line        int32
+	AbilityID   int32
+	Model       string
+	Name        string
+	Description string
+	Type        string
+	Parameter   string
+}
+
 type Enhancement struct {
 	ID          int32
 	FactionID   string
