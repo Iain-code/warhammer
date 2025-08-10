@@ -71,6 +71,15 @@ type RefreshToken struct {
 	ExpiresAt sql.NullTime
 }
 
+type Roster struct {
+	ID           uuid.UUID
+	UserID       uuid.UUID
+	ArmyList     []int32
+	Enhancements []string
+	Name         string
+	Faction      string
+}
+
 type User struct {
 	ID             uuid.UUID
 	CreatedAt      sql.NullTime

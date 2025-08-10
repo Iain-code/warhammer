@@ -3,9 +3,12 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
+
+	"github.com/google/uuid"
 )
 
 func (cfg *ApiConfig) GetModel(w http.ResponseWriter, r *http.Request) {
@@ -251,4 +254,64 @@ func (cfg *ApiConfig) GetAbilities(w http.ResponseWriter, r *http.Request) {
 	respondWithJSON(w, 200, abiltiesSlice)
 }
 
+func (cfg *ApiConfig) SaveToRoster(w http.ResponseWriter, r *http.Request) {
 
+	data := Roster{}
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&data)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "Invalid request body")
+		return
+	}
+
+	dbData := db.SaveToRosterParams{
+		ID: uuid.New(),
+		UserID: data.UserID,
+		ArmyList: data.ArmyList,
+		Enhancements: data.Enhancement,
+		Name: data.Name,
+		Faction: data.Faction,
+	}
+	fmt.Println(dbData)
+
+	err = cfg.db.SaveToRoster(r.Context(), dbData)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "Failed to save roster")
+		return
+	}
+
+	respondWithJSON(w, 200, "army saved successfully")
+}
+
+func (cfg *ApiConfig) GetArmies(w http.ResponseWriter, r *http.Request) {
+
+	str := r.URL.Query().Get("user_id")
+	id, err := uuid.Parse(str)
+    if err != nil {
+        fmt.Println("Invalid UUID:", err)
+        return
+    }
+
+	armies, err := cfg.db.GetArmies(r.Context(), id)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "Failed to fetch armies")
+		return
+	}
+
+	rosterSlice := []Roster{}
+
+	for _, a := range armies {
+		rosterJSON := Roster{
+			Id: a.ID,
+			UserID: a.UserID,
+			ArmyList: a.ArmyList,
+			Enhancement: a.Enhancements,
+			Name: a.Name,
+			Faction: a.Faction,
+		}
+		rosterSlice = append(rosterSlice, rosterJSON)
+	}
+	fmt.Println(rosterSlice)
+
+	respondWithJSON(w, 200, rosterSlice)
+}

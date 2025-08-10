@@ -64,6 +64,8 @@ func main() {
 	r.Get("/points", cfg.GetPointsForModels)
 	r.Get("/enhancements", cfg.GetEnhancements)
 	r.Get("/abilities", cfg.GetAbilities)
+	r.Get("/rosters/armies", cfg.GetArmies)
+	r.Post("/rosters/save", cfg.SaveToRoster)
 	r.Post("/login", cfg.Login)
 	r.Post("/refresh", cfg.RefreshHandler)
 	r.Put("/admins", cfg.middlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
