@@ -16,6 +16,7 @@ import (
 )
 
 func main() {
+	log.Printf("Starting warhammer...")
 	err := godotenv.Load(".env")
 	if err != nil {
 		log.Printf("warning: assuming default configuration. .env unreadable: %v", err)
@@ -24,6 +25,7 @@ func main() {
 	dbUrl := os.Getenv("dbUrl")
 	tknSecret := os.Getenv("TOKEN_SECRET")
 
+	log.Printf("trying to connect to database...")
 	dbConn, err := sql.Open("postgres", dbUrl)
 	if err != nil {
 		log.Printf("database not formed correctly ")
@@ -57,6 +59,7 @@ func main() {
 	})
 	r.Post("/users", cfg.CreateUser)
 	r.Get("/models", cfg.GetModel)
+	r.Get("/models/all", cfg.GetAllModels)
 	r.Get("/factions", cfg.GetModelsForFaction)
 	r.Get("/wargears", cfg.GetWargearForModel)
 	r.Get("/wargears/models", cfg.GetWargearForModelsAll)

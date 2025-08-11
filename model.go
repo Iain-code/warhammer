@@ -48,6 +48,33 @@ func (cfg *ApiConfig) GetModel(w http.ResponseWriter, r *http.Request) {
 
 }
 
+func (cfg *ApiConfig) GetAllModels(w http.ResponseWriter, r *http.Request) {
+
+	models, err := cfg.db.GetAllModels(r.Context())
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "failed to get models")
+		return
+	}
+
+	modelSlice := []Model{}
+	for _, model := range models {
+		modelJSON := Model{
+		OldID:       model.OldID,
+		DatasheetID: model.DatasheetID,
+		Name:        model.Name,
+		M:           model.M,
+		T:           model.T,
+		Sv:          model.Sv,
+		InvSv:       model.InvSv,
+		W:           model.W,
+		Ld:          model.Ld,
+		Oc:          model.Oc,
+	}
+	modelSlice = append(modelSlice, modelJSON)
+  }
+  respondWithJSON(w, 200, modelSlice)
+}
+
 func (cfg *ApiConfig) GetModelsForFaction(w http.ResponseWriter, r *http.Request) {
 
 	factionID := r.URL.Query().Get("faction_id")

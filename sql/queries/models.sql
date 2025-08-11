@@ -17,6 +17,9 @@ VALUES(
 SELECT * FROM models
 WHERE datasheet_id = $1;
 
+-- name: GetAllModels :many
+SELECT * FROM models;
+
 -- name: GetModelsForFaction :many
 SELECT models.* FROM models
 JOIN faction ON models.datasheet_id = faction.id

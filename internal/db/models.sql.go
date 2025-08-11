@@ -55,6 +55,44 @@ func (q *Queries) CreateModel(ctx context.Context, arg CreateModelParams) error 
 	return err
 }
 
+const getAllModels = `-- name: GetAllModels :many
+SELECT old_id, datasheet_id, name, m, t, sv, inv_sv, w, ld, oc FROM models
+`
+
+func (q *Queries) GetAllModels(ctx context.Context) ([]Model, error) {
+	rows, err := q.db.QueryContext(ctx, getAllModels)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Model
+	for rows.Next() {
+		var i Model
+		if err := rows.Scan(
+			&i.OldID,
+			&i.DatasheetID,
+			&i.Name,
+			&i.M,
+			&i.T,
+			&i.Sv,
+			&i.InvSv,
+			&i.W,
+			&i.Ld,
+			&i.Oc,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
 const getModel = `-- name: GetModel :one
 SELECT old_id, datasheet_id, name, m, t, sv, inv_sv, w, ld, oc FROM models
 WHERE datasheet_id = $1
