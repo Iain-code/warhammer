@@ -12,6 +12,16 @@ import (
 	"github.com/lib/pq"
 )
 
+const deleteArmy = `-- name: DeleteArmy :exec
+DELETE FROM roster
+WHERE id = $1
+`
+
+func (q *Queries) DeleteArmy(ctx context.Context, id uuid.UUID) error {
+	_, err := q.db.ExecContext(ctx, deleteArmy, id)
+	return err
+}
+
 const getArmies = `-- name: GetArmies :many
 SELECT id, user_id, army_list, enhancements, name, faction FROM roster
 WHERE user_id = $1

@@ -12,3 +12,7 @@ VALUES (
 -- name: GetArmies :many
 SELECT * FROM roster
 WHERE user_id = $1;
+
+-- name: DeleteArmy :exec
+DELETE FROM roster
+WHERE id = $1;

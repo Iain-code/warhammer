@@ -69,6 +69,7 @@ func main() {
 	r.Get("/abilities", cfg.GetAbilities)
 	r.Get("/rosters/armies", cfg.GetArmies)
 	r.Post("/rosters/save", cfg.SaveToRoster)
+	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy) // restful...make sure everthing is
 	r.Post("/login", cfg.Login)
 	r.Post("/refresh", cfg.RefreshHandler)
 	r.Put("/admins", cfg.middlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
