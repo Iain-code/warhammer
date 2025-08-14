@@ -6,6 +6,7 @@ package db
 
 import (
 	"database/sql"
+	"encoding/json"
 
 	"github.com/google/uuid"
 )
@@ -74,7 +75,7 @@ type RefreshToken struct {
 type Roster struct {
 	ID           uuid.UUID
 	UserID       uuid.UUID
-	ArmyList     []int32
+	ArmyList     json.RawMessage
 	Enhancements []string
 	Name         string
 	Faction      string

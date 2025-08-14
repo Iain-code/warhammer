@@ -7,6 +7,7 @@ package db
 
 import (
 	"context"
+	"encoding/json"
 
 	"github.com/google/uuid"
 	"github.com/lib/pq"
@@ -39,7 +40,7 @@ func (q *Queries) GetArmies(ctx context.Context, userID uuid.UUID) ([]Roster, er
 		if err := rows.Scan(
 			&i.ID,
 			&i.UserID,
-			pq.Array(&i.ArmyList),
+			&i.ArmyList,
 			pq.Array(&i.Enhancements),
 			&i.Name,
 			&i.Faction,
@@ -72,7 +73,7 @@ VALUES (
 type SaveToRosterParams struct {
 	ID           uuid.UUID
 	UserID       uuid.UUID
-	ArmyList     []int32
+	ArmyList     json.RawMessage
 	Enhancements []string
 	Name         string
 	Faction      string
@@ -82,7 +83,7 @@ func (q *Queries) SaveToRoster(ctx context.Context, arg SaveToRosterParams) erro
 	_, err := q.db.ExecContext(ctx, saveToRoster,
 		arg.ID,
 		arg.UserID,
-		pq.Array(arg.ArmyList),
+		arg.ArmyList,
 		pq.Array(arg.Enhancements),
 		arg.Name,
 		arg.Faction,
