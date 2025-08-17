@@ -5,7 +5,8 @@ CREATE TABLE roster (
     army_list JSONB NOT NULL DEFAULT '{}'::jsonb,
     enhancements text[] NOT NULL,
     name TEXT NOT NULL,
-    faction TEXT NOT NULL
+    faction TEXT NOT NULL,
+    CONSTRAINT uniq_user_roster_name UNIQUE (user_id, name)
 );
 
 -- +goose Down

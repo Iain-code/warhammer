@@ -2,7 +2,6 @@ package main
 
 import (
 	"database/sql"
-	"encoding/json"
 	"warhammer/internal/db"
 
 	"github.com/google/uuid"
@@ -91,21 +90,42 @@ type Abilities struct {
 }
 
 type Roster struct {
-	Id          uuid.UUID       `json:"id"`
-	UserID      uuid.UUID       `json:"user_id"`
-	ArmyList    json.RawMessage `json:"army_list"`
-	Enhancement []string        `json:"enhancements"`
-	Name        string          `json:"name"`
-	Faction     string          `json:"faction"`
+	Id          uuid.UUID `json:"id"`
+	UserID      uuid.UUID `json:"user_id"`
+	ArmyList    ArmyList  `json:"army_list"`
+	Enhancement []string  `json:"enhancements"`
+	Name        string    `json:"name"`
+	Faction     string    `json:"faction"`
 }
 
 type ArmyList struct {
-	Character  []int `json:"character"`
-	Battleline []int `json:"battleline"`
-	Transport  []int `json:"transport"`
-	Mounted    []int `json:"mounted"`
-	Aircraft   []int `json:"aircraft"`
-	Infantry   []int `json:"infantry"`
-	Monster    []int `json:"monster"`
-	Vehicle    []int `json:"vehicle"`
+	Character  []Unit `json:"character"`
+	Battleline []Unit `json:"battleline"`
+	Transport  []Unit `json:"transport"`
+	Mounted    []Unit `json:"mounted"`
+	Aircraft   []Unit `json:"aircraft"`
+	Infantry   []Unit `json:"infantry"`
+	Monster    []Unit `json:"monster"`
+	Vehicle    []Unit `json:"vehicle"`
+}
+
+type UnitPoints struct {
+	Description string `json:"description"`
+	Cost        int    `json:"cost"`
+}
+
+type Unit struct {
+	OldID       int        `json:"old_id"`
+	DatasheetID int        `json:"datasheet_id"`
+	Name        string     `json:"name"`
+	M           string     `json:"M"`
+	T           string     `json:"T"`
+	W           int        `json:"W"`
+	Sv          string     `json:"Sv"`
+	InvSv       string     `json:"inv_sv"`
+	Ld          string     `json:"Ld"`
+	OC          int        `json:"OC"`
+	Instance    int64      `json:"instance"`
+	Keywords    []string   `json:"keywords"`
+	UnitPoints  UnitPoints `json:"unitPoints"`
 }

@@ -37,16 +37,16 @@ func (cfg *ApiConfig) SaveToRoster(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	army := ArmyList{}
-	if err := json.Unmarshal(data.ArmyList, &army); err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid army_list format")
-		return
+	armyJSON, err := json.Marshal(data.ArmyList)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "failed to marshall data")
+		return 
 	}
 
 	dbData := db.SaveToRosterParams{
 		ID:           uuid.New(),
 		UserID:       data.UserID,
-		ArmyList:     data.ArmyList,
+		ArmyList:     armyJSON,
 		Enhancements: data.Enhancement,
 		Name:         data.Name,
 		Faction:      data.Faction,
@@ -76,29 +76,22 @@ func (cfg *ApiConfig) GetArmies(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	resp := make([]Roster, 0, len(rows))
+	resp := []Roster{}
+	
 	for _, a := range rows {
-
 		army := ArmyList{}
 		if len(a.ArmyList) > 0 {
-			if err := json.Unmarshal(a.ArmyList, &army); err != nil {
+			if err := json.Unmarshal(a.ArmyList, &army)
+			err != nil {
 				respondWithError(w, http.StatusInternalServerError, "Malformed army_list in DB")
 				return
 			}
 		}
 
-		normalizeArmy(&army)
-
-		buf, err := json.Marshal(army)
-		if err != nil {
-			respondWithError(w, http.StatusInternalServerError, "Failed to encode army_list")
-			return
-		}
-
 		resp = append(resp, Roster{
 			Id:          a.ID,
 			UserID:      a.UserID,
-			ArmyList:    json.RawMessage(buf),
+			ArmyList:    army,
 			Enhancement: a.Enhancements,
 			Name:        a.Name,
 			Faction:     a.Faction,
@@ -106,31 +99,4 @@ func (cfg *ApiConfig) GetArmies(w http.ResponseWriter, r *http.Request) {
 	}
 
 	respondWithJSON(w, http.StatusOK, resp)
-}
-
-func normalizeArmy(a *ArmyList) {
-	if a.Character == nil {
-		a.Character = []int{}
-	}
-	if a.Battleline == nil {
-		a.Battleline = []int{}
-	}
-	if a.Transport == nil {
-		a.Transport = []int{}
-	}
-	if a.Mounted == nil {
-		a.Mounted = []int{}
-	}
-	if a.Aircraft == nil {
-		a.Aircraft = []int{}
-	}
-	if a.Infantry == nil {
-		a.Infantry = []int{}
-	}
-	if a.Monster == nil {
-		a.Monster = []int{}
-	}
-	if a.Vehicle == nil {
-		a.Vehicle = []int{}
-	}
 }
