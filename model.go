@@ -278,3 +278,7 @@ func (cfg *ApiConfig) GetAbilities(w http.ResponseWriter, r *http.Request) {
 	}
 	respondWithJSON(w, 200, abiltiesSlice)
 }
+
+func (cfg *ApiConfig) UpdatePoints(w http.ResponseWriter, r *http.Request) {
+
+}

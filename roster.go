@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"warhammer/internal/db"
 
@@ -40,7 +39,7 @@ func (cfg *ApiConfig) SaveToRoster(w http.ResponseWriter, r *http.Request) {
 	armyJSON, err := json.Marshal(data.ArmyList)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to marshall data")
-		return 
+		return
 	}
 
 	dbData := db.SaveToRosterParams{
@@ -51,7 +50,6 @@ func (cfg *ApiConfig) SaveToRoster(w http.ResponseWriter, r *http.Request) {
 		Name:         data.Name,
 		Faction:      data.Faction,
 	}
-	fmt.Println(dbData)
 
 	err = cfg.db.SaveToRoster(r.Context(), dbData)
 	if err != nil {
@@ -77,12 +75,11 @@ func (cfg *ApiConfig) GetArmies(w http.ResponseWriter, r *http.Request) {
 	}
 
 	resp := []Roster{}
-	
+
 	for _, a := range rows {
 		army := ArmyList{}
 		if len(a.ArmyList) > 0 {
-			if err := json.Unmarshal(a.ArmyList, &army)
-			err != nil {
+			if err := json.Unmarshal(a.ArmyList, &army); err != nil {
 				respondWithError(w, http.StatusInternalServerError, "Malformed army_list in DB")
 				return
 			}
