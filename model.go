@@ -6,7 +6,9 @@ import (
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
+	"fmt"
 
+	"github.com/go-chi/chi/v5"
 )
 
 func (cfg *ApiConfig) GetModel(w http.ResponseWriter, r *http.Request) {
@@ -57,20 +59,20 @@ func (cfg *ApiConfig) GetAllModels(w http.ResponseWriter, r *http.Request) {
 	modelSlice := []Model{}
 	for _, model := range models {
 		modelJSON := Model{
-		OldID:       model.OldID,
-		DatasheetID: model.DatasheetID,
-		Name:        model.Name,
-		M:           model.M,
-		T:           model.T,
-		Sv:          model.Sv,
-		InvSv:       model.InvSv,
-		W:           model.W,
-		Ld:          model.Ld,
-		Oc:          model.Oc,
+			OldID:       model.OldID,
+			DatasheetID: model.DatasheetID,
+			Name:        model.Name,
+			M:           model.M,
+			T:           model.T,
+			Sv:          model.Sv,
+			InvSv:       model.InvSv,
+			W:           model.W,
+			Ld:          model.Ld,
+			Oc:          model.Oc,
+		}
+		modelSlice = append(modelSlice, modelJSON)
 	}
-	modelSlice = append(modelSlice, modelJSON)
-  }
-  respondWithJSON(w, 200, modelSlice)
+	respondWithJSON(w, 200, modelSlice)
 }
 
 func (cfg *ApiConfig) GetModelsForFaction(w http.ResponseWriter, r *http.Request) {
@@ -218,11 +220,11 @@ func (cfg *ApiConfig) GetPointsForModels(w http.ResponseWriter, r *http.Request)
 
 	for _, point := range points {
 		JSONpoints := Points{
-			Id:           point.DatasheetID,
-			Datasheet_id: point.DatasheetID,
-			Line:         point.Line,
-			Description:  point.Description,
-			Cost:         point.Cost,
+			Id:          point.DatasheetID,
+			DatasheetID: point.DatasheetID,
+			Line:        point.Line,
+			Description: point.Description,
+			Cost:        point.Cost,
 		}
 		pointSlice = append(pointSlice, JSONpoints)
 	}
@@ -266,13 +268,13 @@ func (cfg *ApiConfig) GetAbilities(w http.ResponseWriter, r *http.Request) {
 	for _, item := range abilities {
 		abilitiesJSON := Abilities{
 			DatasheetID: item.DatasheetID,
-			Line: item.Line,
-			AbilityID: item.AbilityID,
-			Model: item.Model,
-			Name: item.Name,
+			Line:        item.Line,
+			AbilityID:   item.AbilityID,
+			Model:       item.Model,
+			Name:        item.Name,
 			Description: item.Description,
-			Type: item.Type,
-			Parameter: item.Parameter,
+			Type:        item.Type,
+			Parameter:   item.Parameter,
 		}
 		abiltiesSlice = append(abiltiesSlice, abilitiesJSON)
 	}
@@ -281,4 +283,58 @@ func (cfg *ApiConfig) GetAbilities(w http.ResponseWriter, r *http.Request) {
 
 func (cfg *ApiConfig) UpdatePoints(w http.ResponseWriter, r *http.Request) {
 
+	Id := chi.URLParam(r, "id")
+	if Id == "" {
+		respondWithError(w, http.StatusBadRequest, "ID not provided")
+		return
+	}
+
+	pointsModel := Points{}
+	decode := json.NewDecoder(r.Body)
+	err := decode.Decode(&pointsModel)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "invalid request body")
+		return
+	}
+
+	parseId, err := strconv.ParseInt(Id, 10, 64)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
+		return
+	}
+
+	Id32 := int32(parseId)
+
+	model, err := cfg.db.GetPointsForOneID(r.Context(), Id32)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "failed to find datasheet_id model")
+		return
+	}
+
+	params := db.UpdatePointsForIDParams{
+		ID:          pointsModel.Id,
+		DatasheetID: model.DatasheetID,
+		Line:        model.Line,
+		Description: model.Description,
+		Cost:        pointsModel.Cost,
+	}
+
+	fmt.Printf("Id: %v\n", Id)
+	fmt.Printf("Model: %v\n", model)
+
+	updatedPoints, err := cfg.db.UpdatePointsForID(r.Context(), params)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to update points")
+		return
+	}
+
+	pointsJSON := Points{
+		Id: updatedPoints.ID,
+		DatasheetID: updatedPoints.DatasheetID,
+		Line: updatedPoints.Line,
+		Description: updatedPoints.Description,
+		Cost: updatedPoints.Cost,
+	}
+
+	respondWithJSON(w, 200, pointsJSON)
 }

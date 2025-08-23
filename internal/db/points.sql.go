@@ -44,3 +44,59 @@ func (q *Queries) GetPointsForID(ctx context.Context, datasheetID []int32) ([]Po
 	}
 	return items, nil
 }
+
+const getPointsForOneID = `-- name: GetPointsForOneID :one
+SELECT id, datasheet_id, line, description, cost FROM points
+WHERE datasheet_id = $1
+`
+
+func (q *Queries) GetPointsForOneID(ctx context.Context, datasheetID int32) (Point, error) {
+	row := q.db.QueryRowContext(ctx, getPointsForOneID, datasheetID)
+	var i Point
+	err := row.Scan(
+		&i.ID,
+		&i.DatasheetID,
+		&i.Line,
+		&i.Description,
+		&i.Cost,
+	)
+	return i, err
+}
+
+const updatePointsForID = `-- name: UpdatePointsForID :one
+UPDATE points
+SET
+  datasheet_id = $2,
+  line = $3,
+  description = $4,
+  cost = $5
+  WHERE id = $1
+  RETURNING id, datasheet_id, line, description, cost
+`
+
+type UpdatePointsForIDParams struct {
+	ID          int32
+	DatasheetID int32
+	Line        int32
+	Description string
+	Cost        int32
+}
+
+func (q *Queries) UpdatePointsForID(ctx context.Context, arg UpdatePointsForIDParams) (Point, error) {
+	row := q.db.QueryRowContext(ctx, updatePointsForID,
+		arg.ID,
+		arg.DatasheetID,
+		arg.Line,
+		arg.Description,
+		arg.Cost,
+	)
+	var i Point
+	err := row.Scan(
+		&i.ID,
+		&i.DatasheetID,
+		&i.Line,
+		&i.Description,
+		&i.Cost,
+	)
+	return i, err
+}

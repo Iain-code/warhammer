@@ -53,11 +53,11 @@ type Wargear struct {
 }
 
 type Points struct {
-	Id           int32  `json:"id"`
-	Datasheet_id int32  `json:"datasheet_id"`
-	Line         int32  `json:"line"`
-	Description  string `json:"description"`
-	Cost         int32  `json:"cost"`
+	Id          int32  `json:"id"`
+	DatasheetID int32  `json:"datasheet_id"`
+	Line        int32  `json:"line"`
+	Description string `json:"description"`
+	Cost        int32  `json:"cost"`
 }
 
 type Keyword struct {

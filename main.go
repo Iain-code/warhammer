@@ -76,7 +76,7 @@ func main() {
 	r.Put("/admins/remove", cfg.middlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
 	r.Put("/admins/models", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateModel)))
 	r.Put("/admins/wargears", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateWargear)))
-	r.Put("/admins/points/{id}", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdatePoints)))
+	r.Put("/admins/points/{id}/{line}", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdatePoints)))
 
 	chi.Walk(r, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
 		log.Printf("%s %s\n", method, route)
