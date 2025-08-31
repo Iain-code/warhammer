@@ -14,3 +14,6 @@ WHERE refresh_tokens.token = $1;
 DELETE from refresh_tokens
 WHERE refresh_tokens.token = $1;
 
+-- name: DeleteUsersTokens :exec
+DELETE from refresh_tokens
+WHERE user_id = $1;

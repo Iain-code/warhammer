@@ -47,11 +47,11 @@ func (q *Queries) GetPointsForID(ctx context.Context, datasheetID []int32) ([]Po
 
 const getPointsForOneID = `-- name: GetPointsForOneID :one
 SELECT id, datasheet_id, line, description, cost FROM points
-WHERE datasheet_id = $1
+WHERE id = $1
 `
 
-func (q *Queries) GetPointsForOneID(ctx context.Context, datasheetID int32) (Point, error) {
-	row := q.db.QueryRowContext(ctx, getPointsForOneID, datasheetID)
+func (q *Queries) GetPointsForOneID(ctx context.Context, id int32) (Point, error) {
+	row := q.db.QueryRowContext(ctx, getPointsForOneID, id)
 	var i Point
 	err := row.Scan(
 		&i.ID,

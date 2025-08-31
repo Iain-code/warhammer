@@ -3,10 +3,10 @@ package main
 import (
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
-	"fmt"
 
 	"github.com/go-chi/chi/v5"
 )
@@ -220,7 +220,7 @@ func (cfg *ApiConfig) GetPointsForModels(w http.ResponseWriter, r *http.Request)
 
 	for _, point := range points {
 		JSONpoints := Points{
-			Id:          point.DatasheetID,
+			Id:          point.ID,
 			DatasheetID: point.DatasheetID,
 			Line:        point.Line,
 			Description: point.Description,
@@ -307,18 +307,19 @@ func (cfg *ApiConfig) UpdatePoints(w http.ResponseWriter, r *http.Request) {
 
 	model, err := cfg.db.GetPointsForOneID(r.Context(), Id32)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "failed to find datasheet_id model")
+		respondWithError(w, http.StatusBadRequest, "failed to find id model")
 		return
 	}
 
 	params := db.UpdatePointsForIDParams{
-		ID:          pointsModel.Id,
+		ID:          model.ID,
 		DatasheetID: model.DatasheetID,
 		Line:        model.Line,
 		Description: model.Description,
 		Cost:        pointsModel.Cost,
 	}
 
+	fmt.Printf("params: %v\n", params)
 	fmt.Printf("Id: %v\n", Id)
 	fmt.Printf("Model: %v\n", model)
 
@@ -329,12 +330,66 @@ func (cfg *ApiConfig) UpdatePoints(w http.ResponseWriter, r *http.Request) {
 	}
 
 	pointsJSON := Points{
-		Id: updatedPoints.ID,
+		Id:          updatedPoints.ID,
 		DatasheetID: updatedPoints.DatasheetID,
-		Line: updatedPoints.Line,
+		Line:        updatedPoints.Line,
 		Description: updatedPoints.Description,
-		Cost: updatedPoints.Cost,
+		Cost:        updatedPoints.Cost,
 	}
 
 	respondWithJSON(w, 200, pointsJSON)
 }
+
+func (cfg *ApiConfig) GetKeywordsForModel(w http.ResponseWriter, r *http.Request) {
+	Id := chi.URLParam(r, "id")
+
+	parsedID, err := strconv.ParseInt(Id, 10, 64)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
+		return
+	}
+
+	Id32 := int32(parsedID)
+
+	models, err := cfg.db.GetKeywordsForModel(r.Context(), Id32)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "unable to fetch keywords")
+		return
+	}
+
+	keywords := KeywordsModel{
+		Id: models[1].ID,
+		DatasheetID: models[1].DatasheetID,
+	}
+
+	for _, model := range models {
+		if (model.Keyword != "") {
+			keywords.Keywords = append(keywords.Keywords, model.Keyword)
+		}
+	}
+
+	respondWithJSON(w, 200, keywords)
+	
+}
+
+func (cfg *ApiConfig) GetAbilitiesForModel(w http.ResponseWriter, r *http.Request) {
+
+	Id := chi.URLParam(r, "id")
+
+	parsedID, err := strconv.ParseInt(Id, 10, 64)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
+		return
+	}
+
+	Id32 := int32(parsedID)
+
+	models, err := cfg.db.GetAbilitiesForModel(r.Context(), Id32)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "unable to fetch abilities")
+		return
+	}
+
+	respondWithJSON(w, 200, models)
+}
+

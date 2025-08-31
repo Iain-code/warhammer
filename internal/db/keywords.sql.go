@@ -38,3 +38,31 @@ func (q *Queries) GetKeywordsForFaction(ctx context.Context, datasheetID []int32
 	}
 	return items, nil
 }
+
+const getKeywordsForModel = `-- name: GetKeywordsForModel :many
+SELECT id, datasheet_id, keyword FROM keywords
+WHERE datasheet_id = $1
+`
+
+func (q *Queries) GetKeywordsForModel(ctx context.Context, datasheetID int32) ([]Keyword, error) {
+	rows, err := q.db.QueryContext(ctx, getKeywordsForModel, datasheetID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Keyword
+	for rows.Next() {
+		var i Keyword
+		if err := rows.Scan(&i.ID, &i.DatasheetID, &i.Keyword); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}

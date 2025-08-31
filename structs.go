@@ -129,3 +129,16 @@ type Unit struct {
 	Keywords    []string   `json:"keywords"`
 	UnitPoints  UnitPoints `json:"unitPoints"`
 }
+
+type KeywordsModel struct {
+	Id          int32    `json:"id"`
+	DatasheetID int32    `json:"datasheet_id"`
+	Keywords    []string `json:"keyword"`
+}
+
+type AbilityUpdate struct {
+	DatasheetID int    `json:"datasheet_id"`
+	Name        string `json:"name"`
+	Line        int32  `json:"line"`
+	Description string `json:"description"`
+}

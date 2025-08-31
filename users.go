@@ -23,11 +23,11 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 	decoder := json.NewDecoder(r.Body)
 	err := decoder.Decode(&newUser)
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid request body", )
+		respondWithError(w, http.StatusBadRequest, "Invalid request body")
 		return
 	}
 	if newUser.Password == "" || newUser.Username == "" {
-		respondWithError(w, http.StatusBadRequest, "username and password are required")
+		respondWithError(w, http.StatusBadRequest, "username and password required")
 		return
 	}
 	hashedPassword, err := auth.HashPassword(newUser.Password)
@@ -43,11 +43,13 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 		Username:       newUser.Username,
 		HashedPassword: hashedPassword,
 	}
+
 	user, err := cfg.db.CreateUser(r.Context(), userParams)
 	if err != nil {
-		respondWithError(w, http.StatusInternalServerError, "Internal Server Error")
+		respondWithError(w, http.StatusInternalServerError, "failed to create user")
 		return
 	}
+
 	userJSON := User{
 		Id:             user.ID,
 		CreatedAt:      user.CreatedAt,
@@ -121,7 +123,11 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// HERE NEED TO GET AND DELETE REFRESH TOKEN FOR USER.ID TO CLEAR PREVIOUS TOKENS
+	err = cfg.db.DeleteUsersTokens(r.Context(), user.ID)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to delete refresh tokens")
+		return
+	}
 
 	tknR, err := auth.MakeRefreshToken()
 	if err != nil {
@@ -236,7 +242,7 @@ func (cfg *ApiConfig) MakeAdmin(w http.ResponseWriter, r *http.Request) {
 		respondWithError(w, http.StatusInternalServerError, "invalid username")
 		return
 	}
-	
+
 	_, err = cfg.db.MakeAdmin(r.Context(), dbUser.ID)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to make admin")
@@ -261,7 +267,7 @@ func (cfg *ApiConfig) RemoveAdmin(w http.ResponseWriter, r *http.Request) {
 		respondWithError(w, http.StatusInternalServerError, "invalid username")
 		return
 	}
-	
+
 	_, err = cfg.db.RemoveAdmin(r.Context(), dbUser.ID)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to remove admin tag")

@@ -64,9 +64,11 @@ func main() {
 	r.Get("/wargears", cfg.GetWargearForModel)
 	r.Get("/wargears/models", cfg.GetWargearForModelsAll)
 	r.Get("/keywords", cfg.GetKeywordsForFaction)
+	r.Get("/keywords/{id}", cfg.GetKeywordsForModel)
 	r.Get("/points", cfg.GetPointsForModels)
 	r.Get("/enhancements", cfg.GetEnhancements)
 	r.Get("/abilities", cfg.GetAbilities)
+	r.Get("/abilities/{id}", cfg.GetAbilitiesForModel)
 	r.Get("/rosters/armies", cfg.GetArmies)
 	r.Post("/rosters/save", cfg.SaveToRoster)
 	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy) // restful...make sure everthing is
@@ -76,6 +78,7 @@ func main() {
 	r.Put("/admins/remove", cfg.middlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
 	r.Put("/admins/models", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateModel)))
 	r.Put("/admins/wargears", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateWargear)))
+	r.Put("/admins/abilities/{id}/{line}", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateAbility)))
 	r.Put("/admins/points/{id}/{line}", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdatePoints)))
 
 	chi.Walk(r, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {

@@ -44,3 +44,103 @@ func (q *Queries) GetAbilities(ctx context.Context) ([]Ability, error) {
 	}
 	return items, nil
 }
+
+const getAbilitiesForModel = `-- name: GetAbilitiesForModel :many
+SELECT datasheet_id, line, ability_id, model, name, description, type, parameter FROM abilities
+WHERE datasheet_id = $1
+`
+
+func (q *Queries) GetAbilitiesForModel(ctx context.Context, datasheetID int32) ([]Ability, error) {
+	rows, err := q.db.QueryContext(ctx, getAbilitiesForModel, datasheetID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Ability
+	for rows.Next() {
+		var i Ability
+		if err := rows.Scan(
+			&i.DatasheetID,
+			&i.Line,
+			&i.AbilityID,
+			&i.Model,
+			&i.Name,
+			&i.Description,
+			&i.Type,
+			&i.Parameter,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
+
+const getAbility = `-- name: GetAbility :one
+SELECT datasheet_id, line, ability_id, model, name, description, type, parameter FROM abilities
+WHERE datasheet_id = $1 AND line = $2
+`
+
+type GetAbilityParams struct {
+	DatasheetID int32
+	Line        int32
+}
+
+func (q *Queries) GetAbility(ctx context.Context, arg GetAbilityParams) (Ability, error) {
+	row := q.db.QueryRowContext(ctx, getAbility, arg.DatasheetID, arg.Line)
+	var i Ability
+	err := row.Scan(
+		&i.DatasheetID,
+		&i.Line,
+		&i.AbilityID,
+		&i.Model,
+		&i.Name,
+		&i.Description,
+		&i.Type,
+		&i.Parameter,
+	)
+	return i, err
+}
+
+const updateAbilities = `-- name: UpdateAbilities :exec
+UPDATE abilities
+SET
+  ability_id = $3,
+  model = $4,
+  name = $5,
+  description = $6,
+  type = $7,
+  parameter = $8
+  WHERE datasheet_id = $1 AND line = $2
+`
+
+type UpdateAbilitiesParams struct {
+	DatasheetID int32
+	Line        int32
+	AbilityID   int32
+	Model       string
+	Name        string
+	Description string
+	Type        string
+	Parameter   string
+}
+
+func (q *Queries) UpdateAbilities(ctx context.Context, arg UpdateAbilitiesParams) error {
+	_, err := q.db.ExecContext(ctx, updateAbilities,
+		arg.DatasheetID,
+		arg.Line,
+		arg.AbilityID,
+		arg.Model,
+		arg.Name,
+		arg.Description,
+		arg.Type,
+		arg.Parameter,
+	)
+	return err
+}
