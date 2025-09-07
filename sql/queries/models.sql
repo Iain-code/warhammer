@@ -43,3 +43,7 @@ SET
   OC = $10
 WHERE datasheet_id = $1
 RETURNING *;
+
+-- name: DeleteUnitFromModels :exec
+DELETE FROM models
+WHERE datasheet_id = $1;

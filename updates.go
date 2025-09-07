@@ -2,10 +2,11 @@ package main
 
 import (
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
-	
+
 	"github.com/go-chi/chi/v5"
 )
 
@@ -60,7 +61,7 @@ func (cfg *ApiConfig) UpdateAbility(w http.ResponseWriter, r *http.Request) {
 
 	err = cfg.db.UpdateAbilities(r.Context(), params)
 	if err != nil {
-		respondWithError(w, http.StatusInternalServerError, "unable to update ability")
+		respondWithError(w, http.StatusInternalServerError, "failed to update ability")
 		return
 	}
 
@@ -69,4 +70,25 @@ func (cfg *ApiConfig) UpdateAbility(w http.ResponseWriter, r *http.Request) {
 	s = append(s, AbilityUpdate.Description)
 
 	respondWithJSON(w, 200, s)
+}
+
+func (cfg *ApiConfig) DeleteUnit(w http.ResponseWriter, r *http.Request) {
+	Id := chi.URLParam(r, "id")
+
+	Id64, err := strconv.ParseInt(Id, 10, 64)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
+		return
+	}
+
+	Id32 := int32(Id64)
+
+	err = cfg.db.DeleteUnitFromModels(r.Context(), Id32)
+	if err != nil {
+		fmt.Printf("delete error: %v", err)
+		respondWithError(w, http.StatusBadRequest, "unable to delete unit from models")
+		return
+	}
+
+	respondWithJSON(w, 200, "Unit removed successfully")
 }

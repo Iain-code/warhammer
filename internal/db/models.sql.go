@@ -55,6 +55,16 @@ func (q *Queries) CreateModel(ctx context.Context, arg CreateModelParams) error 
 	return err
 }
 
+const deleteUnitFromModels = `-- name: DeleteUnitFromModels :exec
+DELETE FROM models
+WHERE datasheet_id = $1
+`
+
+func (q *Queries) DeleteUnitFromModels(ctx context.Context, datasheetID int32) error {
+	_, err := q.db.ExecContext(ctx, deleteUnitFromModels, datasheetID)
+	return err
+}
+
 const getAllModels = `-- name: GetAllModels :many
 SELECT old_id, datasheet_id, name, m, t, sv, inv_sv, w, ld, oc FROM models
 `
