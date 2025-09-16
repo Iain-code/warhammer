@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"database/sql"
@@ -26,7 +26,7 @@ func (cfg *ApiConfig) GetModel(w http.ResponseWriter, r *http.Request) {
 	}
 	datasheetIDInt32 := int32(datasheetIDInt64)
 
-	model, err := cfg.db.GetModel(r.Context(), datasheetIDInt32)
+	model, err := cfg.Db.GetModel(r.Context(), datasheetIDInt32)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "model not found")
 		return
@@ -50,7 +50,7 @@ func (cfg *ApiConfig) GetModel(w http.ResponseWriter, r *http.Request) {
 
 func (cfg *ApiConfig) GetAllModels(w http.ResponseWriter, r *http.Request) {
 
-	models, err := cfg.db.GetAllModels(r.Context())
+	models, err := cfg.Db.GetAllModels(r.Context())
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to get models")
 		return
@@ -84,7 +84,7 @@ func (cfg *ApiConfig) GetModelsForFaction(w http.ResponseWriter, r *http.Request
 	}
 	str := sql.NullString{String: factionID, Valid: true}
 
-	models, err := cfg.db.GetModelsForFaction(r.Context(), str)
+	models, err := cfg.Db.GetModelsForFaction(r.Context(), str)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "model not found")
 		return
@@ -131,7 +131,7 @@ func (cfg *ApiConfig) UpdateModel(w http.ResponseWriter, r *http.Request) {
 		Oc:          model.Oc,
 	}
 
-	updatedModel, err := cfg.db.UpdateModel(r.Context(), paramModel)
+	updatedModel, err := cfg.Db.UpdateModel(r.Context(), paramModel)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to update model")
 		return
@@ -162,7 +162,7 @@ func (cfg *ApiConfig) GetKeywordsForFaction(w http.ResponseWriter, r *http.Reque
 	}
 	str := sql.NullString{String: factionID, Valid: true}
 
-	models, err := cfg.db.GetModelsForFaction(r.Context(), str)
+	models, err := cfg.Db.GetModelsForFaction(r.Context(), str)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "models not found")
 		return
@@ -173,7 +173,7 @@ func (cfg *ApiConfig) GetKeywordsForFaction(w http.ResponseWriter, r *http.Reque
 		modelSlice = append(modelSlice, model.DatasheetID)
 	}
 
-	keywords, err := cfg.db.GetKeywordsForFaction(r.Context(), modelSlice)
+	keywords, err := cfg.Db.GetKeywordsForFaction(r.Context(), modelSlice)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "keywords not found")
 		return
@@ -211,7 +211,7 @@ func (cfg *ApiConfig) GetPointsForModels(w http.ResponseWriter, r *http.Request)
 		parsedArr = append(parsedArr, parsedInt32)
 	}
 
-	points, err := cfg.db.GetPointsForID(r.Context(), parsedArr)
+	points, err := cfg.Db.GetPointsForID(r.Context(), parsedArr)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to get points")
 		return
@@ -234,7 +234,7 @@ func (cfg *ApiConfig) GetPointsForModels(w http.ResponseWriter, r *http.Request)
 
 func (cfg *ApiConfig) GetEnhancements(w http.ResponseWriter, r *http.Request) {
 
-	enhance, err := cfg.db.GetEnhancements(r.Context())
+	enhance, err := cfg.Db.GetEnhancements(r.Context())
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to get enhancements")
 		return
@@ -259,7 +259,7 @@ func (cfg *ApiConfig) GetEnhancements(w http.ResponseWriter, r *http.Request) {
 }
 
 func (cfg *ApiConfig) GetAbilities(w http.ResponseWriter, r *http.Request) {
-	abilities, err := cfg.db.GetAbilities(r.Context())
+	abilities, err := cfg.Db.GetAbilities(r.Context())
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to get abilities")
 		return
@@ -305,7 +305,7 @@ func (cfg *ApiConfig) UpdatePoints(w http.ResponseWriter, r *http.Request) {
 
 	Id32 := int32(parseId)
 
-	model, err := cfg.db.GetPointsForOneID(r.Context(), Id32)
+	model, err := cfg.Db.GetPointsForOneID(r.Context(), Id32)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to find id model")
 		return
@@ -323,7 +323,7 @@ func (cfg *ApiConfig) UpdatePoints(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("Id: %v\n", Id)
 	fmt.Printf("Model: %v\n", model)
 
-	updatedPoints, err := cfg.db.UpdatePointsForID(r.Context(), params)
+	updatedPoints, err := cfg.Db.UpdatePointsForID(r.Context(), params)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to update points")
 		return
@@ -351,7 +351,7 @@ func (cfg *ApiConfig) GetKeywordsForModel(w http.ResponseWriter, r *http.Request
 
 	Id32 := int32(parsedID)
 
-	models, err := cfg.db.GetKeywordsForModel(r.Context(), Id32)
+	models, err := cfg.Db.GetKeywordsForModel(r.Context(), Id32)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "unable to fetch keywords")
 		return
@@ -384,7 +384,7 @@ func (cfg *ApiConfig) GetAbilitiesForModel(w http.ResponseWriter, r *http.Reques
 
 	Id32 := int32(parsedID)
 
-	models, err := cfg.db.GetAbilitiesForModel(r.Context(), Id32)
+	models, err := cfg.Db.GetAbilitiesForModel(r.Context(), Id32)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "unable to fetch abilities")
 		return

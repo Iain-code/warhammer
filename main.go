@@ -8,6 +8,7 @@ import (
 	"os"
 	"time"
 	"warhammer/internal/db"
+	"warhammer/handlers"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
@@ -38,15 +39,17 @@ func main() {
 	}
 
 	dbQueries := db.New(dbConn)
-	cfg := ApiConfig{}
-	cfg.db = *dbQueries
-	cfg.tokenSecret = tknSecret
+	cfg := &handlers.ApiConfig{}
+	cfg.Db = *dbQueries
+	cfg.TokenSecret = tknSecret
 	fmt.Println("Successfully connected to the AWS RDS PostgreSQL database!")
 
 	r := chi.NewRouter()
 
+	allowed := os.Getenv("CORS_ALLOW_ORIGINS")
+
 	r.Use(cors.Handler(cors.Options{
-		AllowedOrigins:   []string{"http://127.0.0.1:5173"},
+		AllowedOrigins:   []string{allowed},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"*"},
 		ExposedHeaders:   []string{"Link", "Content-Type", "Authorization", "Set-Cookie"},
@@ -72,15 +75,15 @@ func main() {
 	r.Get("/rosters/armies", cfg.GetArmies)
 	r.Post("/rosters/save", cfg.SaveToRoster)
 	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy) // restful...make sure everthing is
-	r.Delete("/admins/remove/{id}", cfg.middlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
+	r.Delete("/admins/remove/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
 	r.Post("/login", cfg.Login)
 	r.Post("/refresh", cfg.RefreshHandler)
-	r.Put("/admins", cfg.middlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
-	r.Put("/admins/remove", cfg.middlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
-	r.Put("/admins/models", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateModel)))
-	r.Put("/admins/wargears", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateWargear)))
-	r.Put("/admins/abilities/{id}/{line}", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdateAbility)))
-	r.Put("/admins/points/{id}/{line}", cfg.middlewareAuth(http.HandlerFunc(cfg.UpdatePoints)))
+	r.Put("/admins", cfg.MiddlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
+	r.Put("/admins/remove", cfg.MiddlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
+	r.Put("/admins/models", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateModel)))
+	r.Put("/admins/wargears", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateWargear)))
+	r.Put("/admins/abilities/{id}/{line}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateAbility)))
+	r.Put("/admins/points/{id}/{line}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdatePoints)))
 
 	chi.Walk(r, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
 		log.Printf("%s %s\n", method, route)

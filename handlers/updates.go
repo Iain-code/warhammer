@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"encoding/json"
@@ -42,7 +42,7 @@ func (cfg *ApiConfig) UpdateAbility(w http.ResponseWriter, r *http.Request) {
 		Line:        Line32,
 	}
 
-	ability, err := cfg.db.GetAbility(r.Context(), abilityParams)
+	ability, err := cfg.Db.GetAbility(r.Context(), abilityParams)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "unable to get ability")
 		return
@@ -59,7 +59,7 @@ func (cfg *ApiConfig) UpdateAbility(w http.ResponseWriter, r *http.Request) {
 		Parameter:   ability.Parameter,
 	}
 
-	err = cfg.db.UpdateAbilities(r.Context(), params)
+	err = cfg.Db.UpdateAbilities(r.Context(), params)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to update ability")
 		return
@@ -83,7 +83,7 @@ func (cfg *ApiConfig) DeleteUnit(w http.ResponseWriter, r *http.Request) {
 
 	Id32 := int32(Id64)
 
-	err = cfg.db.DeleteUnitFromModels(r.Context(), Id32)
+	err = cfg.Db.DeleteUnitFromModels(r.Context(), Id32)
 	if err != nil {
 		fmt.Printf("delete error: %v", err)
 		respondWithError(w, http.StatusBadRequest, "unable to delete unit from models")

@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"encoding/json"
@@ -18,7 +18,7 @@ func (cfg *ApiConfig) DeleteArmy(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	err = cfg.db.DeleteArmy(r.Context(), id)
+	err = cfg.Db.DeleteArmy(r.Context(), id)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to delete army")
 	}
@@ -51,7 +51,7 @@ func (cfg *ApiConfig) SaveToRoster(w http.ResponseWriter, r *http.Request) {
 		Faction:      data.Faction,
 	}
 
-	err = cfg.db.SaveToRoster(r.Context(), dbData)
+	err = cfg.Db.SaveToRoster(r.Context(), dbData)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "Failed to save roster")
 		return
@@ -68,7 +68,7 @@ func (cfg *ApiConfig) GetArmies(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	rows, err := cfg.db.GetArmies(r.Context(), id)
+	rows, err := cfg.Db.GetArmies(r.Context(), id)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "Failed to fetch armies")
 		return

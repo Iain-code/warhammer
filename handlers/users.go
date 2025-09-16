@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"database/sql"
@@ -44,7 +44,7 @@ func (cfg *ApiConfig) CreateUser(w http.ResponseWriter, r *http.Request) {
 		HashedPassword: hashedPassword,
 	}
 
-	user, err := cfg.db.CreateUser(r.Context(), userParams)
+	user, err := cfg.Db.CreateUser(r.Context(), userParams)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to create user")
 		return
@@ -71,12 +71,12 @@ func (cfg *ApiConfig) DeleteUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	gotUser, err := cfg.db.GetUserFromUsername(r.Context(), user.Username)
+	gotUser, err := cfg.Db.GetUserFromUsername(r.Context(), user.Username)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
 	}
-	err = cfg.db.DeleteUser(r.Context(), gotUser.ID)
+	err = cfg.Db.DeleteUser(r.Context(), gotUser.ID)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "internal server error")
 		return
@@ -105,7 +105,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	user, err := cfg.db.GetUserFromUsername(r.Context(), newUser.Username)
+	user, err := cfg.Db.GetUserFromUsername(r.Context(), newUser.Username)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "invalid request")
 		return
@@ -117,13 +117,13 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	jwtToken, err := auth.MakeJWT(user.ID, cfg.tokenSecret, 15*time.Minute)
+	jwtToken, err := auth.MakeJWT(user.ID, cfg.TokenSecret, 15*time.Minute)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to make token")
 		return
 	}
 
-	err = cfg.db.DeleteUsersTokens(r.Context(), user.ID)
+	err = cfg.Db.DeleteUsersTokens(r.Context(), user.ID)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to delete refresh tokens")
 		return
@@ -140,7 +140,7 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		UserID:    user.ID,
 		ExpiresAt: sql.NullTime{Time: time.Now().Add(24 * time.Hour), Valid: true},
 	}
-	_, err = cfg.db.CreateRefreshToken(r.Context(), refreshParams)
+	_, err = cfg.Db.CreateRefreshToken(r.Context(), refreshParams)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to make refresh token")
 		return
@@ -174,13 +174,13 @@ func (cfg *ApiConfig) RefreshHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tkn, err := cfg.db.GetRefreshToken(r.Context(), cookie.Value)
+	tkn, err := cfg.Db.GetRefreshToken(r.Context(), cookie.Value)
 	if err != nil || !tkn.ExpiresAt.Valid || tkn.ExpiresAt.Time.Before(time.Now()) {
 		respondWithError(w, http.StatusUnauthorized, "refresh token invalid or expired")
 		return
 	}
 
-	err = cfg.db.DeleteRefreshToken(r.Context(), tkn.Token)
+	err = cfg.Db.DeleteRefreshToken(r.Context(), tkn.Token)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to delete token")
 		return
@@ -198,13 +198,13 @@ func (cfg *ApiConfig) RefreshHandler(w http.ResponseWriter, r *http.Request) {
 		ExpiresAt: sql.NullTime{Time: time.Now().Add(24 * time.Hour), Valid: true},
 	}
 
-	rTkn, err := cfg.db.CreateRefreshToken(r.Context(), refreshParams)
+	rTkn, err := cfg.Db.CreateRefreshToken(r.Context(), refreshParams)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to add refresh token to database")
 		return
 	}
 
-	jwtToken, err := auth.MakeJWT(tkn.UserID, cfg.tokenSecret, 15*time.Minute)
+	jwtToken, err := auth.MakeJWT(tkn.UserID, cfg.TokenSecret, 15*time.Minute)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to make JWT token")
 		return
@@ -237,13 +237,13 @@ func (cfg *ApiConfig) MakeAdmin(w http.ResponseWriter, r *http.Request) {
 	fmt.Println("this is user data")
 	fmt.Println(user)
 
-	dbUser, err := cfg.db.GetUser(r.Context(), user.Id)
+	dbUser, err := cfg.Db.GetUser(r.Context(), user.Id)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "invalid username")
 		return
 	}
 
-	_, err = cfg.db.MakeAdmin(r.Context(), dbUser.ID)
+	_, err = cfg.Db.MakeAdmin(r.Context(), dbUser.ID)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to make admin")
 		return
@@ -262,13 +262,13 @@ func (cfg *ApiConfig) RemoveAdmin(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	dbUser, err := cfg.db.GetUser(r.Context(), user.Id)
+	dbUser, err := cfg.Db.GetUser(r.Context(), user.Id)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "invalid username")
 		return
 	}
 
-	_, err = cfg.db.RemoveAdmin(r.Context(), dbUser.ID)
+	_, err = cfg.Db.RemoveAdmin(r.Context(), dbUser.ID)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to remove admin tag")
 		return

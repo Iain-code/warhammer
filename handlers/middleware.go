@@ -1,11 +1,11 @@
-package main
+package handlers
 
 import (
 	"net/http"
 	"warhammer/internal/auth"
 )
 
-func (cfg *ApiConfig) middlewareAuth(next http.Handler) http.HandlerFunc {
+func (cfg *ApiConfig) MiddlewareAuth(next http.Handler) http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		token, err := auth.GetBearerToken(r.Header)
 		if err != nil {
@@ -13,7 +13,7 @@ func (cfg *ApiConfig) middlewareAuth(next http.Handler) http.HandlerFunc {
 			return
 		}
 
-		_, err = auth.ValidateJWT(token, cfg.tokenSecret)
+		_, err = auth.ValidateJWT(token, cfg.TokenSecret)
 		if err != nil {
 			respondWithError(w, http.StatusUnauthorized, "invalid token")
 			return

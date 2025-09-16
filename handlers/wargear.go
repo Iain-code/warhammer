@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"database/sql"
@@ -37,7 +37,7 @@ func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request)
 
 	int32Value := int32(value)
 
-	wargears, err := cfg.db.GetWargearForModel(r.Context(), int32Value)
+	wargears, err := cfg.Db.GetWargearForModel(r.Context(), int32Value)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "wargear not found")
 		return
@@ -118,7 +118,7 @@ func (cfg *ApiConfig) UpdateWargear(w http.ResponseWriter, r *http.Request) {
 		Damage:      wargear.Damage,
 	}
 
-	updatedWargear, err := cfg.db.UpdateWargear(r.Context(), paramWargear)
+	updatedWargear, err := cfg.Db.UpdateWargear(r.Context(), paramWargear)
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to update wargear")
 		return
@@ -147,7 +147,7 @@ func (cfg *ApiConfig) UpdateWargear(w http.ResponseWriter, r *http.Request) {
 
 func (cfg *ApiConfig) GetWargearForModelsAll(w http.ResponseWriter, r *http.Request) {
 
-	wargears, err := cfg.db.GetWargearForAll(r.Context())
+	wargears, err := cfg.Db.GetWargearForAll(r.Context())
 	if err != nil {
 		respondWithError(w, http.StatusInternalServerError, "failed to fetch wargear")
 		return

@@ -1,4 +1,4 @@
-package main
+package handlers
 
 import (
 	"database/sql"
@@ -7,10 +7,12 @@ import (
 	"github.com/google/uuid"
 )
 
+
 type ApiConfig struct {
-	db          db.Queries
-	tokenSecret string
+	Db          db.Queries
+	TokenSecret string
 }
+
 
 type User struct {
 	Id             uuid.UUID    `json:"id"`
