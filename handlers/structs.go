@@ -9,7 +9,7 @@ import (
 
 
 type ApiConfig struct {
-	Db          db.Queries
+	Db          *db.Queries
 	TokenSecret string
 }
 

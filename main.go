@@ -14,7 +14,12 @@ import (
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
+	"github.com/aws/aws-lambda-go/lambda"
+    "github.com/awslabs/aws-lambda-go-api-proxy/httpadapter"
 )
+
+
+
 
 func main() {
 	log.Printf("Starting warhammer...")
@@ -22,7 +27,7 @@ func main() {
 	if err != nil {
 		log.Printf("warning: assuming default configuration. .env unreadable: %v", err)
 	}
-	port := os.Getenv("port")
+
 	dbUrl := os.Getenv("dbUrl")
 	tknSecret := os.Getenv("TOKEN_SECRET")
 
@@ -40,9 +45,13 @@ func main() {
 
 	dbQueries := db.New(dbConn)
 	cfg := &handlers.ApiConfig{}
-	cfg.Db = *dbQueries
+	cfg.Db = dbQueries
 	cfg.TokenSecret = tknSecret
 	fmt.Println("Successfully connected to the AWS RDS PostgreSQL database!")
+
+	dbConn.SetMaxOpenConns(4)
+	dbConn.SetMaxIdleConns(2)
+	dbConn.SetConnMaxLifetime(30 * time.Minute)
 
 	r := chi.NewRouter()
 
@@ -57,9 +66,6 @@ func main() {
 		MaxAge:           300,
 	}))
 
-	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		http.ServeFile(w, r, "index.html")
-	})
 	r.Post("/users", cfg.CreateUser)
 	r.Get("/models", cfg.GetModel)
 	r.Get("/models/all", cfg.GetAllModels)
@@ -90,12 +96,7 @@ func main() {
 		return nil
 	})
 
-	srv := &http.Server{
-		Addr:              "127.0.0.1:" + port,
-		Handler:           r,
-		ReadHeaderTimeout: time.Hour * 1,
-	}
-	log.Printf("Serving on port: %s\n", port)
-	log.Fatal(srv.ListenAndServe())
+    adapter := httpadapter.New(r)
+    lambda.Start(adapter.ProxyWithContext)
 
 }
