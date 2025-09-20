@@ -62,6 +62,11 @@ func main() {
 		MaxAge:           300,
 	}))
 
+	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {
+    w.Header().Set("Content-Type", "application/json")
+    w.Write([]byte(`{"ok":true}`))
+	})
+
 	r.Post("/users", cfg.CreateUser)
 	r.Get("/models", cfg.GetModel)
 	r.Get("/models/all", cfg.GetAllModels)
