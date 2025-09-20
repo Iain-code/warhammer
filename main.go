@@ -63,8 +63,8 @@ func main() {
 	}))
 
 	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {
-    w.Header().Set("Content-Type", "application/json")
-    w.Write([]byte(`{"ok":true}`))
+		w.Header().Set("Content-Type", "application/json")
+		w.Write([]byte(`{"ok":true}`))
 	})
 
 	r.Post("/users", cfg.CreateUser)
@@ -97,7 +97,7 @@ func main() {
 		return nil
 	})
 
-	adapter := httpadapter.New(r)
+	adapter := httpadapter.NewV2(r)
 	lambda.Start(adapter.ProxyWithContext)
 
 }
