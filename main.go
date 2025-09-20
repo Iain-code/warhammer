@@ -13,6 +13,7 @@ import (
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/awslabs/aws-lambda-go-api-proxy/httpadapter"
 	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
@@ -50,6 +51,7 @@ func main() {
 	dbConn.SetConnMaxLifetime(30 * time.Minute)
 
 	r := chi.NewRouter()
+	r.Use(middleware.Recoverer)
 
 	allowed := os.Getenv("CORS_ALLOW_ORIGINS")
 
@@ -65,6 +67,10 @@ func main() {
 	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write([]byte(`{"ok":true}`))
+	})
+
+	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+		w.Write([]byte("ok"))
 	})
 
 	r.Post("/users", cfg.CreateUser)
