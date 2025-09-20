@@ -7,19 +7,16 @@ import (
 	"net/http"
 	"os"
 	"time"
-	"warhammer/internal/db"
 	"warhammer/handlers"
+	"warhammer/internal/db"
 
+	"github.com/aws/aws-lambda-go/lambda"
+	"github.com/awslabs/aws-lambda-go-api-proxy/httpadapter"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/cors"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
-	"github.com/aws/aws-lambda-go/lambda"
-    "github.com/awslabs/aws-lambda-go-api-proxy/httpadapter"
 )
-
-
-
 
 func main() {
 	log.Printf("Starting warhammer...")
@@ -38,9 +35,8 @@ func main() {
 	}
 	defer dbConn.Close()
 
-	err = dbConn.Ping()
-	if err != nil {
-		log.Fatal(err)
+	if err := dbConn.Ping(); err != nil {
+		log.Printf("DB ping failed: %v", err) // don't Fatal in Lambda init
 	}
 
 	dbQueries := db.New(dbConn)
@@ -96,7 +92,7 @@ func main() {
 		return nil
 	})
 
-    adapter := httpadapter.New(r)
-    lambda.Start(adapter.ProxyWithContext)
+	adapter := httpadapter.New(r)
+	lambda.Start(adapter.ProxyWithContext)
 
 }
