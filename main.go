@@ -51,18 +51,19 @@ func main() {
 	dbConn.SetConnMaxLifetime(30 * time.Minute)
 
 	r := chi.NewRouter()
-	r.Use(middleware.Recoverer)
 
 	allowed := os.Getenv("CORS_ALLOW_ORIGINS")
 
 	r.Use(cors.Handler(cors.Options{
 		AllowedOrigins:   []string{allowed},
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-		AllowedHeaders:   []string{"*"},
-		ExposedHeaders:   []string{"Link", "Content-Type", "Authorization", "Set-Cookie"},
+		AllowedHeaders:   []string{"Content-Type", "Authorization"},
+		ExposedHeaders:   []string{"Content-Type", "Authorization", "Set-Cookie"},
 		AllowCredentials: true,
 		MaxAge:           300,
 	}))
+
+	r.Use(middleware.Recoverer)
 
 	r.Get("/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json")
@@ -81,7 +82,7 @@ func main() {
 	r.Get("/wargears/models", cfg.GetWargearForModelsAll)
 	r.Get("/keywords", cfg.GetKeywordsForFaction)
 	r.Get("/keywords/{id}", cfg.GetKeywordsForModel)
-	r.Get("/points", cfg.GetPointsForModels)
+	r.Get("/points/{ids:[0-9,]+}", cfg.GetPointsForModels)
 	r.Get("/enhancements", cfg.GetEnhancements)
 	r.Get("/abilities", cfg.GetAbilities)
 	r.Get("/abilities/{id}", cfg.GetAbilitiesForModel)

@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
+	"strings"
 
 	"github.com/go-chi/chi/v5"
 )
@@ -195,41 +196,42 @@ func (cfg *ApiConfig) GetKeywordsForFaction(w http.ResponseWriter, r *http.Reque
 
 func (cfg *ApiConfig) GetPointsForModels(w http.ResponseWriter, r *http.Request) {
 
-	queryData := r.URL.Query()["points_id[]"]
-	if len(queryData) == 0 {
-		respondWithError(w, http.StatusBadRequest, "Keyword ID not provided")
-		return
-	}
+	idsStr := chi.URLParam(r, "ids")
+	idsStr = strings.TrimSpace(idsStr)
+    if idsStr == "" {
+        respondWithError(w, http.StatusBadRequest, "points_id is required")
+        return
+    }
 
-	parsedArr := []int32{}
-	for _, item := range queryData {
-		parsed, err := strconv.ParseInt(item, 10, 32)
+	parts := strings.Split(idsStr, ",")
+
+	parsed := make([]int32, 0, len(parts))
+	for _, s := range parts {
+		n, err := strconv.ParseInt(s, 10, 32)
 		if err != nil {
-			respondWithError(w, http.StatusInternalServerError, "failed to parse data")
+			respondWithError(w, http.StatusBadRequest, "invalid points_id: "+s)
+			return
 		}
-		parsedInt32 := int32(parsed)
-		parsedArr = append(parsedArr, parsedInt32)
+		parsed = append(parsed, int32(n))
 	}
 
-	points, err := cfg.Db.GetPointsForID(r.Context(), parsedArr)
+	points, err := cfg.Db.GetPointsForID(r.Context(), parsed)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "failed to get points")
 		return
 	}
-	pointSlice := []Points{}
 
-	for _, point := range points {
-		JSONpoints := Points{
-			Id:          point.ID,
-			DatasheetID: point.DatasheetID,
-			Line:        point.Line,
-			Description: point.Description,
-			Cost:        point.Cost,
-		}
-		pointSlice = append(pointSlice, JSONpoints)
+	out := make([]Points, 0, len(points))
+	for _, p := range points {
+		out = append(out, Points{
+			Id:          p.ID,
+			DatasheetID: p.DatasheetID,
+			Line:        p.Line,
+			Description: p.Description,
+			Cost:        p.Cost,
+		})
 	}
-
-	respondWithJSON(w, 200, pointSlice)
+	respondWithJSON(w, http.StatusOK, out)
 }
 
 func (cfg *ApiConfig) GetEnhancements(w http.ResponseWriter, r *http.Request) {
@@ -358,18 +360,18 @@ func (cfg *ApiConfig) GetKeywordsForModel(w http.ResponseWriter, r *http.Request
 	}
 
 	keywords := KeywordsModel{
-		Id: models[1].ID,
+		Id:          models[1].ID,
 		DatasheetID: models[1].DatasheetID,
 	}
 
 	for _, model := range models {
-		if (model.Keyword != "") {
+		if model.Keyword != "" {
 			keywords.Keywords = append(keywords.Keywords, model.Keyword)
 		}
 	}
 
 	respondWithJSON(w, 200, keywords)
-	
+
 }
 
 func (cfg *ApiConfig) GetAbilitiesForModel(w http.ResponseWriter, r *http.Request) {
@@ -392,4 +394,3 @@ func (cfg *ApiConfig) GetAbilitiesForModel(w http.ResponseWriter, r *http.Reques
 
 	respondWithJSON(w, 200, models)
 }
-
