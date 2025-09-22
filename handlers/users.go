@@ -159,8 +159,8 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		Value:    tknR,
 		Expires:  time.Now().Add(24 * time.Hour),
 		HttpOnly: true,
-		Secure:   false,                // change to true after dev
-		SameSite: http.SameSiteLaxMode, // change Lax => Strict after dev
+		Secure:   true,                    // change to true after dev
+		SameSite: http.SameSiteStrictMode, // change Lax => Strict after dev
 		Path:     "/",
 	})
 	respondWithJSON(w, 200, tknUser)
@@ -215,8 +215,8 @@ func (cfg *ApiConfig) RefreshHandler(w http.ResponseWriter, r *http.Request) {
 		Value:    rTkn.Token,
 		Expires:  rTkn.ExpiresAt.Time,
 		HttpOnly: true,
-		Secure:   false,                // change to true after dev
-		SameSite: http.SameSiteLaxMode, // change Lax => Strict after dev
+		Secure:   true,
+		SameSite: http.SameSiteStrictMode,
 		Path:     "/",
 	})
 
