@@ -216,7 +216,7 @@ func (cfg *ApiConfig) RefreshHandler(w http.ResponseWriter, r *http.Request) {
 		Expires:  rTkn.ExpiresAt.Time,
 		HttpOnly: true,
 		Secure:   true,
-		SameSite: http.SameSiteStrictMode,
+		SameSite: http.SameSiteNoneMode,
 		Path:     "/",
 	})
 
