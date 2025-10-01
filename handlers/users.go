@@ -159,8 +159,8 @@ func (cfg *ApiConfig) Login(w http.ResponseWriter, r *http.Request) {
 		Value:    tknR,
 		Expires:  time.Now().Add(24 * time.Hour),
 		HttpOnly: true,
-		Secure:   true,                    // change to true after dev
-		SameSite: http.SameSiteStrictMode, // change Lax => Strict after dev
+		Secure:   true,
+		SameSite: http.SameSiteNoneMode,
 		Path:     "/",
 	})
 	respondWithJSON(w, 200, tknUser)

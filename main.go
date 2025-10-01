@@ -88,10 +88,11 @@ func main() {
 	r.Get("/abilities/{id}", cfg.GetAbilitiesForModel)
 	r.Get("/rosters/armies", cfg.GetArmies)
 	r.Post("/rosters/save", cfg.SaveToRoster)
-	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy) // restful...make sure everthing is
-	r.Delete("/admins/remove/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
 	r.Post("/login", cfg.Login)
 	r.Post("/refresh", cfg.RefreshHandler)
+	r.Post("/auth/refresh", cfg.RefreshHandler)
+	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy) // restful...make sure everthing is
+	r.Delete("/admins/remove/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
 	r.Put("/admins", cfg.MiddlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
 	r.Put("/admins/remove", cfg.MiddlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
 	r.Put("/admins/models", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateModel)))
