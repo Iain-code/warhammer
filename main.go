@@ -84,6 +84,7 @@ func main() {
 	r.Get("/keywords/{id}", cfg.GetKeywordsForModel)
 	r.Get("/points/{ids:[0-9,]+}", cfg.GetPointsForModels)
 	r.Get("/enhancements", cfg.GetEnhancements)
+	r.Get("/enhancements/{id}", cfg.GetEnhancementsForFaction)
 	r.Get("/abilities", cfg.GetAbilities)
 	r.Get("/abilities/{id}", cfg.GetAbilitiesForModel)
 	r.Get("/rosters/armies", cfg.GetArmies)

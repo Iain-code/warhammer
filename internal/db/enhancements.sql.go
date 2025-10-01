@@ -44,3 +44,40 @@ func (q *Queries) GetEnhancements(ctx context.Context) ([]Enhancement, error) {
 	}
 	return items, nil
 }
+
+const getEnhancementsForFaction = `-- name: GetEnhancementsForFaction :many
+SELECT id, faction_id, name, cost, detachment, legend, description, field8 FROM enhancements
+WHERE faction_id = $1
+`
+
+func (q *Queries) GetEnhancementsForFaction(ctx context.Context, factionID string) ([]Enhancement, error) {
+	rows, err := q.db.QueryContext(ctx, getEnhancementsForFaction, factionID)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var items []Enhancement
+	for rows.Next() {
+		var i Enhancement
+		if err := rows.Scan(
+			&i.ID,
+			&i.FactionID,
+			&i.Name,
+			&i.Cost,
+			&i.Detachment,
+			&i.Legend,
+			&i.Description,
+			&i.Field8,
+		); err != nil {
+			return nil, err
+		}
+		items = append(items, i)
+	}
+	if err := rows.Close(); err != nil {
+		return nil, err
+	}
+	if err := rows.Err(); err != nil {
+		return nil, err
+	}
+	return items, nil
+}
