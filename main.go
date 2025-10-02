@@ -91,8 +91,9 @@ func main() {
 	r.Post("/rosters/save", cfg.SaveToRoster)
 	r.Post("/login", cfg.Login)
 	r.Post("/refresh", cfg.RefreshHandler)
-	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy) // restful...make sure everthing is
+	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy)
 	r.Delete("/admins/remove/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
+	r.Put("admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateEnhancements)))
 	r.Put("/admins", cfg.MiddlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
 	r.Put("/admins/remove", cfg.MiddlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
 	r.Put("/admins/models", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateModel)))

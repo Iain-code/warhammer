@@ -9,6 +9,27 @@ import (
 	"context"
 )
 
+const getEnhancementFromId = `-- name: GetEnhancementFromId :one
+SELECT id, faction_id, name, cost, detachment, legend, description, field8 FROM enhancements
+WHERE id = $1
+`
+
+func (q *Queries) GetEnhancementFromId(ctx context.Context, id int32) (Enhancement, error) {
+	row := q.db.QueryRowContext(ctx, getEnhancementFromId, id)
+	var i Enhancement
+	err := row.Scan(
+		&i.ID,
+		&i.FactionID,
+		&i.Name,
+		&i.Cost,
+		&i.Detachment,
+		&i.Legend,
+		&i.Description,
+		&i.Field8,
+	)
+	return i, err
+}
+
 const getEnhancements = `-- name: GetEnhancements :many
 SELECT id, faction_id, name, cost, detachment, legend, description, field8 FROM enhancements
 `
@@ -80,4 +101,23 @@ func (q *Queries) GetEnhancementsForFaction(ctx context.Context, factionID strin
 		return nil, err
 	}
 	return items, nil
+}
+
+const updateEnhancement = `-- name: UpdateEnhancement :exec
+UPDATE enhancements
+SET 
+  cost = $2,
+  description = $3
+WHERE id = $1
+`
+
+type UpdateEnhancementParams struct {
+	ID          int32
+	Cost        int32
+	Description string
+}
+
+func (q *Queries) UpdateEnhancement(ctx context.Context, arg UpdateEnhancementParams) error {
+	_, err := q.db.ExecContext(ctx, updateEnhancement, arg.ID, arg.Cost, arg.Description)
+	return err
 }

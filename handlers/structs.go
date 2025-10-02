@@ -7,12 +7,10 @@ import (
 	"github.com/google/uuid"
 )
 
-
 type ApiConfig struct {
 	Db          *db.Queries
 	TokenSecret string
 }
-
 
 type User struct {
 	Id             uuid.UUID    `json:"id"`
@@ -143,4 +141,10 @@ type AbilityUpdate struct {
 	Name        string `json:"name"`
 	Line        int32  `json:"line"`
 	Description string `json:"description"`
+}
+
+type EnhancementUpdate struct {
+	ID          string `json:"id"`
+	Cost        *int32  `json:"cost,omitempty"`
+	Description *string `json:"description,omitempty"`
 }

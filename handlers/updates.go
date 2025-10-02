@@ -92,3 +92,57 @@ func (cfg *ApiConfig) DeleteUnit(w http.ResponseWriter, r *http.Request) {
 
 	respondWithJSON(w, 200, "Unit removed successfully")
 }
+
+func (cfg *ApiConfig) UpdateEnhancements(w http.ResponseWriter, r *http.Request) {
+
+	enhanceUpdate := EnhancementUpdate{}
+
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&enhanceUpdate)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "Invalid request body")
+		return
+	}
+
+	fmt.Println(enhanceUpdate)
+
+	Id := chi.URLParam(r, "id")
+
+	Id64, err := strconv.ParseInt(Id, 10, 64)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
+		return
+	}
+
+	Id32 := int32(Id64)
+
+	enhanceDb, err := cfg.Db.GetEnhancementFromId(r.Context(), Id32)
+		if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to find enhancement")
+		return
+	}
+
+	cost := enhanceDb.Cost
+	description := enhanceDb.Description
+
+	if (enhanceUpdate.Cost != nil) {
+		cost = *enhanceUpdate.Cost
+	}
+
+	if (enhanceUpdate.Description != nil) {
+		description = *enhanceUpdate.Description
+	}
+
+	params := db.UpdateEnhancementParams{
+		ID: Id32,
+		Cost: int32(cost),
+		Description: description,
+	}
+
+	err = cfg.Db.UpdateEnhancement(r.Context(), params)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "unable to update enhancement")
+		return
+	}
+}
+
