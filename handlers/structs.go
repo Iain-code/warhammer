@@ -144,7 +144,18 @@ type AbilityUpdate struct {
 }
 
 type EnhancementUpdate struct {
-	ID          string `json:"id"`
+	ID          int32   `json:"id"`
 	Cost        *int32  `json:"cost,omitempty"`
 	Description *string `json:"description,omitempty"`
+	Detachment  string  `json:"detachment"`
+	FactionID   string  `json:"faction_id"`
+	Name        string  `json:"name"`
+}
+
+type WargearDescription struct {
+	ID          int32  `json:"id"`
+	DatasheetID int32  `json:"datasheet_id"`
+	Line        int32  `json:"line"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
 }

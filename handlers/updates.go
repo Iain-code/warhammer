@@ -104,8 +104,6 @@ func (cfg *ApiConfig) UpdateEnhancements(w http.ResponseWriter, r *http.Request)
 		return
 	}
 
-	fmt.Println(enhanceUpdate)
-
 	Id := chi.URLParam(r, "id")
 
 	Id64, err := strconv.ParseInt(Id, 10, 64)
@@ -117,7 +115,7 @@ func (cfg *ApiConfig) UpdateEnhancements(w http.ResponseWriter, r *http.Request)
 	Id32 := int32(Id64)
 
 	enhanceDb, err := cfg.Db.GetEnhancementFromId(r.Context(), Id32)
-		if err != nil {
+	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "unable to find enhancement")
 		return
 	}
@@ -125,18 +123,21 @@ func (cfg *ApiConfig) UpdateEnhancements(w http.ResponseWriter, r *http.Request)
 	cost := enhanceDb.Cost
 	description := enhanceDb.Description
 
-	if (enhanceUpdate.Cost != nil) {
+	if enhanceUpdate.Cost != nil {
 		cost = *enhanceUpdate.Cost
 	}
 
-	if (enhanceUpdate.Description != nil) {
+	if enhanceUpdate.Description != nil {
 		description = *enhanceUpdate.Description
 	}
 
 	params := db.UpdateEnhancementParams{
-		ID: Id32,
-		Cost: int32(cost),
+		ID:          Id32,
+		Cost:        int32(cost),
 		Description: description,
+		Detachment:  enhanceUpdate.Detachment,
+		FactionID:   enhanceUpdate.FactionID,
+		Name:        enhanceUpdate.Name,
 	}
 
 	err = cfg.Db.UpdateEnhancement(r.Context(), params)
@@ -144,5 +145,26 @@ func (cfg *ApiConfig) UpdateEnhancements(w http.ResponseWriter, r *http.Request)
 		respondWithError(w, http.StatusInternalServerError, "unable to update enhancement")
 		return
 	}
+
+	respondWithJSON(w, 200, "enhancement updated successfully")
 }
 
+func (cfg *ApiConfig) DeleteEnhancements(w http.ResponseWriter, r *http.Request) {
+	Id := chi.URLParam(r, "id")
+
+	Id64, err := strconv.ParseInt(Id, 10, 64)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
+		return
+	}
+
+	Id32 := int32(Id64)
+
+	err = cfg.Db.DeleteEnhancement(r.Context(), Id32)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "unable to delete enhancement")
+		return
+	}
+
+	respondWithJSON(w, 200, "enhancement successfully deleted")
+}

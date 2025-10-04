@@ -20,6 +20,7 @@ import (
 )
 
 func main() {
+
 	log.Printf("Starting warhammer...")
 	err := godotenv.Load(".env")
 	if err != nil {
@@ -88,12 +89,14 @@ func main() {
 	r.Get("/abilities", cfg.GetAbilities)
 	r.Get("/abilities/{id}", cfg.GetAbilitiesForModel)
 	r.Get("/rosters/armies", cfg.GetArmies)
+	r.Get("/wargearDescriptions/{id}", cfg.GetWargearDescriptions)
 	r.Post("/rosters/save", cfg.SaveToRoster)
 	r.Post("/login", cfg.Login)
 	r.Post("/refresh", cfg.RefreshHandler)
 	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy)
 	r.Delete("/admins/remove/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
-	r.Put("admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateEnhancements)))
+	r.Delete("/admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteEnhancements)))
+	r.Put("/admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateEnhancements)))
 	r.Put("/admins", cfg.MiddlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
 	r.Put("/admins/remove", cfg.MiddlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
 	r.Put("/admins/models", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateModel)))

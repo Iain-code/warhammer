@@ -7,6 +7,8 @@ import (
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
+
+	"github.com/go-chi/chi/v5"
 )
 
 type wargearResponse struct {
@@ -152,21 +154,57 @@ func (cfg *ApiConfig) GetWargearForModelsAll(w http.ResponseWriter, r *http.Requ
 		respondWithError(w, http.StatusInternalServerError, "failed to fetch wargear")
 		return
 	}
-	
+
 	wargearSlice := []Wargear{}
 
 	for _, w := range wargears {
 		wargearJSON := Wargear{
 			DatasheetID: w.DatasheetID,
-			Id: w.ID,
-			Name: w.Name,
-			Range: w.Range,
-			Type: w.Type,
-			A: w.A,
-			BsWs: w.BsWs,
-			Strength: w.Strength,
-			Ap: w.Ap,
-			Damage: w.Damage,
+			Id:          w.ID,
+			Name:        w.Name,
+			Range:       w.Range,
+			Type:        w.Type,
+			A:           w.A,
+			BsWs:        w.BsWs,
+			Strength:    w.Strength,
+			Ap:          w.Ap,
+			Damage:      w.Damage,
+		}
+		wargearSlice = append(wargearSlice, wargearJSON)
+	}
+
+	respondWithJSON(w, 200, wargearSlice)
+}
+
+func (cfg *ApiConfig) GetWargearDescriptions(w http.ResponseWriter, r *http.Request) {
+	id := chi.URLParam(r, "id")
+
+	id64, err := strconv.ParseInt(id, 10, 64)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
+		return
+	}
+
+	fmt.Printf("id64 --- %v\n", id64)
+	id32 := int32(id64)
+	fmt.Printf("id32 --- %v\n", id32)
+
+	wargearSlice := []WargearDescription{}
+
+	wargear, err := cfg.Db.GetWargearDescriptions(r.Context(), id32)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "unable to fetch wargear descriptions")
+		return
+	}
+	fmt.Printf("wargear --- %+v\n", wargear)
+
+	for _, w := range wargear {
+		wargearJSON := WargearDescription{
+			ID:          w.ID,
+			DatasheetID: w.DatasheetID,
+			Line:        w.Line,
+			Name:        w.Name,
+			Description: w.Description,
 		}
 		wargearSlice = append(wargearSlice, wargearJSON)
 	}

@@ -9,6 +9,16 @@ import (
 	"context"
 )
 
+const deleteEnhancement = `-- name: DeleteEnhancement :exec
+DELETE FROM enhancements
+WHERE id = $1
+`
+
+func (q *Queries) DeleteEnhancement(ctx context.Context, id int32) error {
+	_, err := q.db.ExecContext(ctx, deleteEnhancement, id)
+	return err
+}
+
 const getEnhancementFromId = `-- name: GetEnhancementFromId :one
 SELECT id, faction_id, name, cost, detachment, legend, description, field8 FROM enhancements
 WHERE id = $1
@@ -107,7 +117,10 @@ const updateEnhancement = `-- name: UpdateEnhancement :exec
 UPDATE enhancements
 SET 
   cost = $2,
-  description = $3
+  description = $3,
+  detachment = $4,
+  faction_id = $5,
+  name = $6
 WHERE id = $1
 `
 
@@ -115,9 +128,19 @@ type UpdateEnhancementParams struct {
 	ID          int32
 	Cost        int32
 	Description string
+	Detachment  string
+	FactionID   string
+	Name        string
 }
 
 func (q *Queries) UpdateEnhancement(ctx context.Context, arg UpdateEnhancementParams) error {
-	_, err := q.db.ExecContext(ctx, updateEnhancement, arg.ID, arg.Cost, arg.Description)
+	_, err := q.db.ExecContext(ctx, updateEnhancement,
+		arg.ID,
+		arg.Cost,
+		arg.Description,
+		arg.Detachment,
+		arg.FactionID,
+		arg.Name,
+	)
 	return err
 }

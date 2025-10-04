@@ -3,7 +3,6 @@ package handlers
 import (
 	"database/sql"
 	"encoding/json"
-	"fmt"
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
@@ -294,10 +293,6 @@ func (cfg *ApiConfig) UpdatePoints(w http.ResponseWriter, r *http.Request) {
 		Description: model.Description,
 		Cost:        pointsModel.Cost,
 	}
-
-	fmt.Printf("params: %v\n", params)
-	fmt.Printf("Id: %v\n", Id)
-	fmt.Printf("Model: %v\n", model)
 
 	updatedPoints, err := cfg.Db.UpdatePointsForID(r.Context(), params)
 	if err != nil {
