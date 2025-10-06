@@ -168,3 +168,47 @@ func (cfg *ApiConfig) DeleteEnhancements(w http.ResponseWriter, r *http.Request)
 
 	respondWithJSON(w, 200, "enhancement successfully deleted")
 }
+
+func (cfg *ApiConfig) UpdateWargearDescriptions(w http.ResponseWriter, r *http.Request) {
+	id := chi.URLParam(r, "id")
+
+	id64, err := strconv.ParseInt(id, 10, 64)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
+		return
+	}
+
+	id32 := int32(id64)
+
+	wargearDes := WargearDescription{}
+
+	decoder := json.NewDecoder(r.Body)
+	err = decoder.Decode(&wargearDes)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "Invalid request body")
+		return
+	}
+
+	params := db.UpdateWargearDescriptionsParams{
+		ID:          id32,
+		DatasheetID: wargearDes.DatasheetID,
+		Line:        wargearDes.Line,
+		Name:        wargearDes.Name,
+		Description: wargearDes.Description,
+	}
+
+	updatedWargearDes, err := cfg.Db.UpdateWargearDescriptions(r.Context(), params)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to update wargear description")
+	}
+
+	updatedWargearDesJSON := WargearDescription{
+		ID:          updatedWargearDes.ID,
+		DatasheetID: updatedWargearDes.DatasheetID,
+		Line:        updatedWargearDes.Line,
+		Name:        updatedWargearDes.Name,
+		Description: updatedWargearDes.Description,
+	}
+
+	respondWithJSON(w, 200, updatedWargearDesJSON)
+}

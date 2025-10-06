@@ -42,3 +42,41 @@ func (q *Queries) GetWargearDescriptions(ctx context.Context, datasheetID int32)
 	}
 	return items, nil
 }
+
+const updateWargearDescriptions = `-- name: UpdateWargearDescriptions :one
+UPDATE wargearDescription
+SET
+  datasheet_id = $2,
+  line = $3,
+  name = $4,
+  description = $5
+  WHERE id = $1
+RETURNING id, datasheet_id, line, name, description
+`
+
+type UpdateWargearDescriptionsParams struct {
+	ID          int32
+	DatasheetID int32
+	Line        int32
+	Name        string
+	Description string
+}
+
+func (q *Queries) UpdateWargearDescriptions(ctx context.Context, arg UpdateWargearDescriptionsParams) (Wargeardescription, error) {
+	row := q.db.QueryRowContext(ctx, updateWargearDescriptions,
+		arg.ID,
+		arg.DatasheetID,
+		arg.Line,
+		arg.Name,
+		arg.Description,
+	)
+	var i Wargeardescription
+	err := row.Scan(
+		&i.ID,
+		&i.DatasheetID,
+		&i.Line,
+		&i.Name,
+		&i.Description,
+	)
+	return i, err
+}

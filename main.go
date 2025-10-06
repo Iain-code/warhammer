@@ -96,6 +96,7 @@ func main() {
 	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy)
 	r.Delete("/admins/remove/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
 	r.Delete("/admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteEnhancements)))
+	r.Put("/admins/wargearDescriptions/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateWargearDescriptions)))
 	r.Put("/admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateEnhancements)))
 	r.Put("/admins", cfg.MiddlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
 	r.Put("/admins/remove", cfg.MiddlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
