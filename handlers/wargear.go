@@ -7,6 +7,8 @@ import (
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
+
+	"github.com/go-chi/chi/v5"
 )
 
 type wargearResponse struct {
@@ -24,7 +26,7 @@ type wargearResponse struct {
 }
 
 func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request) {
-	datasheetID := r.URL.Query().Get("datasheet_id")
+	datasheetID := chi.URLParam(r, "id")
 	if datasheetID == "" {
 		respondWithError(w, http.StatusBadRequest, "Datasheet ID not provided")
 		return

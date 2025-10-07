@@ -76,32 +76,39 @@ func main() {
 	})
 
 	r.Post("/users", cfg.CreateUser)
-	r.Get("/models", cfg.GetModel)
-	r.Get("/models/all", cfg.GetAllModels)
-	r.Get("/factions", cfg.GetModelsForFaction)
-	r.Get("/wargears", cfg.GetWargearForModel)
-	r.Get("/wargears/models", cfg.GetWargearForModelsAll)
-	r.Get("/keywords", cfg.GetKeywordsForFaction)
-	r.Get("/keywords/{id}", cfg.GetKeywordsForModel)
-	r.Get("/points/{ids:[0-9,]+}", cfg.GetPointsForModels)
-	r.Get("/enhancements", cfg.GetEnhancements)
-	r.Get("/enhancements/{id}", cfg.GetEnhancementsForFaction)
-	r.Get("/abilities", cfg.GetAbilities)
-	r.Get("/abilities/{id}", cfg.GetAbilitiesForModel)
-	r.Get("/rosters/armies", cfg.GetArmies)
-	r.Post("/rosters/save", cfg.SaveToRoster)
 	r.Post("/login", cfg.Login)
 	r.Post("/refresh", cfg.RefreshHandler)
-	r.Delete("/rosters/remove/{id}", cfg.DeleteArmy)
+
+	r.Get("/models", cfg.GetAllModels)
+	r.Get("/models/factions", cfg.GetModelsForFaction)
+
+	r.Get("/wargears", cfg.GetWargearForModelsAll)
+	r.Get("/wargears/{id}", cfg.GetWargearForModel)
+	r.Get("/keywords", cfg.GetKeywordsForFaction)
+	r.Get("/keywords/{id}", cfg.GetKeywordsForModel)
+
+	r.Get("/points/{ids:[0-9,]+}", cfg.GetPointsForModels)
+
+	r.Get("/enhancements", cfg.GetEnhancements)
+	r.Get("/enhancements/{id}", cfg.GetEnhancementsForFaction)
+
+	r.Get("/abilities", cfg.GetAbilities)
+	r.Get("/abilities/{id}", cfg.GetAbilitiesForModel)
+
+	r.Post("/users/rosters", cfg.SaveToRoster)
+	r.Get("/users/rosters/{id}", cfg.GetArmies)
+	r.Delete("/users/rosters/{id}", cfg.DeleteArmy)
+
 	r.Delete("/admins/remove/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
 	r.Delete("/admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteEnhancements)))
 	r.Put("/admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateEnhancements)))
-	r.Put("/admins", cfg.MiddlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
-	r.Put("/admins/remove", cfg.MiddlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
 	r.Put("/admins/models", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateModel)))
 	r.Put("/admins/wargears", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateWargear)))
 	r.Put("/admins/abilities/{id}/{line}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateAbility)))
 	r.Put("/admins/points/{id}/{line}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdatePoints)))
+
+	r.Put("/users/admins", cfg.MiddlewareAuth(http.HandlerFunc(cfg.MakeAdmin)))
+	r.Put("/users/admins/remove", cfg.MiddlewareAuth(http.HandlerFunc(cfg.RemoveAdmin)))
 
 	chi.Walk(r, func(method string, route string, handler http.Handler, middlewares ...func(http.Handler) http.Handler) error {
 		log.Printf("%s %s\n", method, route)
