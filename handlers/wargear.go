@@ -185,9 +185,7 @@ func (cfg *ApiConfig) GetWargearDescriptions(w http.ResponseWriter, r *http.Requ
 		return
 	}
 
-	fmt.Printf("id64 --- %v\n", id64)
 	id32 := int32(id64)
-	fmt.Printf("id32 --- %v\n", id32)
 
 	wargearSlice := []WargearDescription{}
 
@@ -196,7 +194,6 @@ func (cfg *ApiConfig) GetWargearDescriptions(w http.ResponseWriter, r *http.Requ
 		respondWithError(w, http.StatusInternalServerError, "unable to fetch wargear descriptions")
 		return
 	}
-	fmt.Printf("wargear --- %+v\n", wargear)
 
 	for _, w := range wargear {
 		wargearJSON := WargearDescription{
@@ -205,6 +202,7 @@ func (cfg *ApiConfig) GetWargearDescriptions(w http.ResponseWriter, r *http.Requ
 			Line:        w.Line,
 			Name:        w.Name,
 			Description: w.Description,
+			Type:        w.Type,
 		}
 		wargearSlice = append(wargearSlice, wargearJSON)
 	}

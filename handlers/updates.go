@@ -195,6 +195,7 @@ func (cfg *ApiConfig) UpdateWargearDescriptions(w http.ResponseWriter, r *http.R
 		Line:        wargearDes.Line,
 		Name:        wargearDes.Name,
 		Description: wargearDes.Description,
+		Type:        wargearDes.Type,
 	}
 
 	updatedWargearDes, err := cfg.Db.UpdateWargearDescriptions(r.Context(), params)
@@ -208,6 +209,7 @@ func (cfg *ApiConfig) UpdateWargearDescriptions(w http.ResponseWriter, r *http.R
 		Line:        updatedWargearDes.Line,
 		Name:        updatedWargearDes.Name,
 		Description: updatedWargearDes.Description,
+		Type:        updatedWargearDes.Type,
 	}
 
 	respondWithJSON(w, 200, updatedWargearDesJSON)

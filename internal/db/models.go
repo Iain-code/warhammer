@@ -109,4 +109,5 @@ type Wargeardescription struct {
 	Line        int32
 	Name        string
 	Description string
+	Type        string
 }

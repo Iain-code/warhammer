@@ -158,4 +158,5 @@ type WargearDescription struct {
 	Line        int32  `json:"line"`
 	Name        string `json:"name"`
 	Description string `json:"description"`
+	Type        string `json:"type"`
 }

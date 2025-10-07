@@ -10,7 +10,7 @@ import (
 )
 
 const getWargearDescriptions = `-- name: GetWargearDescriptions :many
-SELECT id, datasheet_id, line, name, description FROM wargearDescription
+SELECT id, datasheet_id, line, name, description, type FROM wargearDescription
 WHERE datasheet_id = $1
 `
 
@@ -29,6 +29,7 @@ func (q *Queries) GetWargearDescriptions(ctx context.Context, datasheetID int32)
 			&i.Line,
 			&i.Name,
 			&i.Description,
+			&i.Type,
 		); err != nil {
 			return nil, err
 		}
@@ -49,9 +50,10 @@ SET
   datasheet_id = $2,
   line = $3,
   name = $4,
-  description = $5
+  description = $5,
+  type = $6
   WHERE id = $1
-RETURNING id, datasheet_id, line, name, description
+RETURNING id, datasheet_id, line, name, description, type
 `
 
 type UpdateWargearDescriptionsParams struct {
@@ -60,6 +62,7 @@ type UpdateWargearDescriptionsParams struct {
 	Line        int32
 	Name        string
 	Description string
+	Type        string
 }
 
 func (q *Queries) UpdateWargearDescriptions(ctx context.Context, arg UpdateWargearDescriptionsParams) (Wargeardescription, error) {
@@ -69,6 +72,7 @@ func (q *Queries) UpdateWargearDescriptions(ctx context.Context, arg UpdateWarge
 		arg.Line,
 		arg.Name,
 		arg.Description,
+		arg.Type,
 	)
 	var i Wargeardescription
 	err := row.Scan(
@@ -77,6 +81,7 @@ func (q *Queries) UpdateWargearDescriptions(ctx context.Context, arg UpdateWarge
 		&i.Line,
 		&i.Name,
 		&i.Description,
+		&i.Type,
 	)
 	return i, err
 }

@@ -5,6 +5,7 @@ CREATE table wargearDescription (
     line INT NOT NULL,
     name TEXT NOT NULL,
     description TEXT NOT NULL,
+    type TEXT NOT NULL,
     FOREIGN KEY (datasheet_id)
     REFERENCES models(datasheet_id)
     ON DELETE CASCADE
