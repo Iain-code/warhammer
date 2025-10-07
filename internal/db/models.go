@@ -101,13 +101,5 @@ type Wargear struct {
 	Strength    string
 	Ap          sql.NullInt32
 	Damage      string
-}
-
-type Wargeardescription struct {
-	ID          int32
-	DatasheetID int32
-	Line        int32
-	Name        string
 	Description string
-	Type        string
 }

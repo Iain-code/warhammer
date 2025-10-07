@@ -11,7 +11,7 @@ import (
 )
 
 const getWargearForAll = `-- name: GetWargearForAll :many
-SELECT datasheet_id, id, name, range, type, a, bs_ws, strength, ap, damage FROM wargear
+SELECT datasheet_id, id, name, range, type, a, bs_ws, strength, ap, damage, description FROM wargear
 `
 
 func (q *Queries) GetWargearForAll(ctx context.Context) ([]Wargear, error) {
@@ -34,6 +34,7 @@ func (q *Queries) GetWargearForAll(ctx context.Context) ([]Wargear, error) {
 			&i.Strength,
 			&i.Ap,
 			&i.Damage,
+			&i.Description,
 		); err != nil {
 			return nil, err
 		}
@@ -49,7 +50,7 @@ func (q *Queries) GetWargearForAll(ctx context.Context) ([]Wargear, error) {
 }
 
 const getWargearForModel = `-- name: GetWargearForModel :many
-SELECT wargear.datasheet_id, wargear.id, wargear.name, wargear.range, wargear.type, wargear.a, wargear.bs_ws, wargear.strength, wargear.ap, wargear.damage FROM wargear
+SELECT wargear.datasheet_id, wargear.id, wargear.name, wargear.range, wargear.type, wargear.a, wargear.bs_ws, wargear.strength, wargear.ap, wargear.damage, wargear.description FROM wargear
 JOIN models ON wargear.datasheet_id = models.datasheet_id
 WHERE wargear.datasheet_id = $1
 `
@@ -74,6 +75,7 @@ func (q *Queries) GetWargearForModel(ctx context.Context, datasheetID int32) ([]
 			&i.Strength,
 			&i.Ap,
 			&i.Damage,
+			&i.Description,
 		); err != nil {
 			return nil, err
 		}
@@ -99,9 +101,10 @@ SET
   BS_WS = $7,
   Strength = $8,
   AP = $9,
-  Damage = $10
+  Damage = $10,
+  Description = $11
 WHERE id = $1
-RETURNING datasheet_id, id, name, range, type, a, bs_ws, strength, ap, damage
+RETURNING datasheet_id, id, name, range, type, a, bs_ws, strength, ap, damage, description
 `
 
 type UpdateWargearParams struct {
@@ -115,6 +118,7 @@ type UpdateWargearParams struct {
 	Strength    string
 	Ap          sql.NullInt32
 	Damage      string
+	Description string
 }
 
 func (q *Queries) UpdateWargear(ctx context.Context, arg UpdateWargearParams) (Wargear, error) {
@@ -129,6 +133,7 @@ func (q *Queries) UpdateWargear(ctx context.Context, arg UpdateWargearParams) (W
 		arg.Strength,
 		arg.Ap,
 		arg.Damage,
+		arg.Description,
 	)
 	var i Wargear
 	err := row.Scan(
@@ -142,6 +147,7 @@ func (q *Queries) UpdateWargear(ctx context.Context, arg UpdateWargearParams) (W
 		&i.Strength,
 		&i.Ap,
 		&i.Damage,
+		&i.Description,
 	)
 	return i, err
 }

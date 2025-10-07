@@ -39,6 +39,7 @@ type Faction struct {
 	Name      string `json:"name"`
 	FactionID string `json:"faction_id"`
 }
+
 type Wargear struct {
 	DatasheetID int32         `json:"datasheet_id"`
 	Id          int32         `json:"id"`
@@ -50,6 +51,7 @@ type Wargear struct {
 	Strength    string        `json:"strength"`
 	Ap          sql.NullInt32 `json:"AP"`
 	Damage      string        `json:"damage"`
+	Description string        `json:"description"`
 }
 
 type Points struct {
@@ -150,13 +152,4 @@ type EnhancementUpdate struct {
 	Detachment  string  `json:"detachment"`
 	FactionID   string  `json:"faction_id"`
 	Name        string  `json:"name"`
-}
-
-type WargearDescription struct {
-	ID          int32  `json:"id"`
-	DatasheetID int32  `json:"datasheet_id"`
-	Line        int32  `json:"line"`
-	Name        string `json:"name"`
-	Description string `json:"description"`
-	Type        string `json:"type"`
 }

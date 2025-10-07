@@ -7,8 +7,6 @@ import (
 	"net/http"
 	"strconv"
 	"warhammer/internal/db"
-
-	"github.com/go-chi/chi/v5"
 )
 
 type wargearResponse struct {
@@ -22,6 +20,7 @@ type wargearResponse struct {
 	Strength    string `json:"strength"`
 	Ap          *int32 `json:"AP"`
 	Damage      string `json:"damage"`
+	Description string `json:"description"`
 }
 
 func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request) {
@@ -63,6 +62,7 @@ func (cfg *ApiConfig) GetWargearForModel(w http.ResponseWriter, r *http.Request)
 			Strength:    wargear.Strength,
 			Ap:          ap,
 			Damage:      wargear.Damage,
+			Description: wargear.Description,
 		}
 		wargearSlice = append(wargearSlice, wargearJSON)
 	}
@@ -82,6 +82,7 @@ func (cfg *ApiConfig) UpdateWargear(w http.ResponseWriter, r *http.Request) {
 		Strength    string `json:"strength"`
 		Ap          int32  `json:"AP"`
 		Damage      string `json:"damage"`
+		Description string `json:"description"`
 	}
 
 	request := wargearRequest{}
@@ -105,6 +106,7 @@ func (cfg *ApiConfig) UpdateWargear(w http.ResponseWriter, r *http.Request) {
 		Strength:    request.Strength,
 		Ap:          sql.NullInt32{Int32: int32(request.Ap), Valid: true},
 		Damage:      request.Damage,
+		Description: request.Description,
 	}
 
 	paramWargear := db.UpdateWargearParams{
@@ -118,6 +120,7 @@ func (cfg *ApiConfig) UpdateWargear(w http.ResponseWriter, r *http.Request) {
 		Strength:    wargear.Strength,
 		Ap:          wargear.Ap,
 		Damage:      wargear.Damage,
+		Description: wargear.Description,
 	}
 
 	updatedWargear, err := cfg.Db.UpdateWargear(r.Context(), paramWargear)
@@ -142,6 +145,7 @@ func (cfg *ApiConfig) UpdateWargear(w http.ResponseWriter, r *http.Request) {
 		Strength:    updatedWargear.Strength,
 		Ap:          ap,
 		Damage:      updatedWargear.Damage,
+		Description: updatedWargear.Description,
 	}
 
 	respondWithJSON(w, 200, wargearJSON)
@@ -169,40 +173,7 @@ func (cfg *ApiConfig) GetWargearForModelsAll(w http.ResponseWriter, r *http.Requ
 			Strength:    w.Strength,
 			Ap:          w.Ap,
 			Damage:      w.Damage,
-		}
-		wargearSlice = append(wargearSlice, wargearJSON)
-	}
-
-	respondWithJSON(w, 200, wargearSlice)
-}
-
-func (cfg *ApiConfig) GetWargearDescriptions(w http.ResponseWriter, r *http.Request) {
-	id := chi.URLParam(r, "id")
-
-	id64, err := strconv.ParseInt(id, 10, 64)
-	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "unable to parse Id")
-		return
-	}
-
-	id32 := int32(id64)
-
-	wargearSlice := []WargearDescription{}
-
-	wargear, err := cfg.Db.GetWargearDescriptions(r.Context(), id32)
-	if err != nil {
-		respondWithError(w, http.StatusInternalServerError, "unable to fetch wargear descriptions")
-		return
-	}
-
-	for _, w := range wargear {
-		wargearJSON := WargearDescription{
-			ID:          w.ID,
-			DatasheetID: w.DatasheetID,
-			Line:        w.Line,
-			Name:        w.Name,
 			Description: w.Description,
-			Type:        w.Type,
 		}
 		wargearSlice = append(wargearSlice, wargearJSON)
 	}

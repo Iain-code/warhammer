@@ -9,7 +9,8 @@ SET
   BS_WS = $7,
   Strength = $8,
   AP = $9,
-  Damage = $10
+  Damage = $10,
+  Description = $11
 WHERE id = $1
 RETURNING *;
 
