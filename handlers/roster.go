@@ -61,7 +61,7 @@ func (cfg *ApiConfig) SaveToRoster(w http.ResponseWriter, r *http.Request) {
 }
 
 func (cfg *ApiConfig) GetArmies(w http.ResponseWriter, r *http.Request) {
-	str := chi.URLParam(r, "user_id")
+	str := chi.URLParam(r, "id")
 	id, err := uuid.Parse(str)
 	if err != nil {
 		respondWithError(w, http.StatusBadRequest, "Invalid user_id")
