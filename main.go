@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 	"warhammer/handlers"
 	"warhammer/internal/db"
@@ -55,8 +56,18 @@ func main() {
 
 	allowed := os.Getenv("CORS_ALLOW_ORIGINS")
 
+	origins := []string{}
+
+	if allowed != "" {
+		for _, o := range strings.Split(allowed, ",") {
+			if s := strings.TrimSpace(o); s != "" {
+				origins = append(origins, s)
+			}
+		}
+	}
+
 	r.Use(cors.Handler(cors.Options{
-		AllowedOrigins:   []string{allowed},
+		AllowedOrigins:   origins,
 		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"Content-Type", "Authorization"},
 		ExposedHeaders:   []string{"Content-Type", "Authorization", "Set-Cookie"},
@@ -115,7 +126,33 @@ func main() {
 		return nil
 	})
 
-	adapter := httpadapter.NewV2(r)
-	lambda.Start(adapter.ProxyWithContext)
+	isLambda := os.Getenv("AWS_LAMBDA_FUNCTION_NAME") != ""
 
+	if isLambda {
+		adapter := httpadapter.NewV2(r)
+		lambda.Start(adapter.ProxyWithContext)
+		return
+	}
+
+	addr := ":" + envDefault("PORT", "3000")
+
+	log.Printf("Starting local HTTP server on %s", addr)
+
+	srv := &http.Server{
+		Addr:         addr,
+		Handler:      r,
+		ReadTimeout:  15 * time.Second,
+		WriteTimeout: 15 * time.Second,
+		IdleTimeout:  60 * time.Second,
+	}
+
+	log.Fatal(srv.ListenAndServe())
+
+}
+
+func envDefault(key, def string) string {
+	if v := os.Getenv(key); v != "" {
+		return v
+	}
+	return def
 }
