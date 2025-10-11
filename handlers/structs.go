@@ -74,9 +74,7 @@ type Enhancement struct {
 	Name        string `json:"name"`
 	Cost        int32  `json:"cost"`
 	Detachment  string `json:"detachment"`
-	Legend      string `json:"legend"`
 	Description string `json:"description"`
-	Field8      string `json:"field8"`
 }
 
 type Abilities struct {

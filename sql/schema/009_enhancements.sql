@@ -5,9 +5,7 @@ CREATE TABLE enhancements (
   name TEXT NOT NULL,
   cost INTEGER NOT NULL,
   detachment TEXT NOT NULL,
-  legend TEXT NOT NULL,
-  description TEXT NOT NULL,
-  field8 TEXT NOT NULL
+  description TEXT NOT NULL
 );
 
 -- +goose Down

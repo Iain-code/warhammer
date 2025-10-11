@@ -9,6 +9,45 @@ import (
 	"context"
 )
 
+const addNewEnhancement = `-- name: AddNewEnhancement :one
+INSERT INTO enhancements (faction_id, name, cost, detachment, description)
+VALUES (
+  $1,
+  $2,
+  $3,
+  $4,
+  $5
+) RETURNING id, faction_id, name, cost, detachment, description
+`
+
+type AddNewEnhancementParams struct {
+	FactionID   string
+	Name        string
+	Cost        int32
+	Detachment  string
+	Description string
+}
+
+func (q *Queries) AddNewEnhancement(ctx context.Context, arg AddNewEnhancementParams) (Enhancement, error) {
+	row := q.db.QueryRowContext(ctx, addNewEnhancement,
+		arg.FactionID,
+		arg.Name,
+		arg.Cost,
+		arg.Detachment,
+		arg.Description,
+	)
+	var i Enhancement
+	err := row.Scan(
+		&i.ID,
+		&i.FactionID,
+		&i.Name,
+		&i.Cost,
+		&i.Detachment,
+		&i.Description,
+	)
+	return i, err
+}
+
 const deleteEnhancement = `-- name: DeleteEnhancement :exec
 DELETE FROM enhancements
 WHERE id = $1
@@ -20,7 +59,7 @@ func (q *Queries) DeleteEnhancement(ctx context.Context, id int32) error {
 }
 
 const getEnhancementFromId = `-- name: GetEnhancementFromId :one
-SELECT id, faction_id, name, cost, detachment, legend, description, field8 FROM enhancements
+SELECT id, faction_id, name, cost, detachment, description FROM enhancements
 WHERE id = $1
 `
 
@@ -33,15 +72,13 @@ func (q *Queries) GetEnhancementFromId(ctx context.Context, id int32) (Enhanceme
 		&i.Name,
 		&i.Cost,
 		&i.Detachment,
-		&i.Legend,
 		&i.Description,
-		&i.Field8,
 	)
 	return i, err
 }
 
 const getEnhancements = `-- name: GetEnhancements :many
-SELECT id, faction_id, name, cost, detachment, legend, description, field8 FROM enhancements
+SELECT id, faction_id, name, cost, detachment, description FROM enhancements
 `
 
 func (q *Queries) GetEnhancements(ctx context.Context) ([]Enhancement, error) {
@@ -59,9 +96,7 @@ func (q *Queries) GetEnhancements(ctx context.Context) ([]Enhancement, error) {
 			&i.Name,
 			&i.Cost,
 			&i.Detachment,
-			&i.Legend,
 			&i.Description,
-			&i.Field8,
 		); err != nil {
 			return nil, err
 		}
@@ -77,7 +112,7 @@ func (q *Queries) GetEnhancements(ctx context.Context) ([]Enhancement, error) {
 }
 
 const getEnhancementsForFaction = `-- name: GetEnhancementsForFaction :many
-SELECT id, faction_id, name, cost, detachment, legend, description, field8 FROM enhancements
+SELECT id, faction_id, name, cost, detachment, description FROM enhancements
 WHERE faction_id = $1
 `
 
@@ -96,9 +131,7 @@ func (q *Queries) GetEnhancementsForFaction(ctx context.Context, factionID strin
 			&i.Name,
 			&i.Cost,
 			&i.Detachment,
-			&i.Legend,
 			&i.Description,
-			&i.Field8,
 		); err != nil {
 			return nil, err
 		}

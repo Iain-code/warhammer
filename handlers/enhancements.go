@@ -1,7 +1,9 @@
 package handlers
 
 import (
+	"encoding/json"
 	"net/http"
+	"warhammer/internal/db"
 
 	"github.com/go-chi/chi/v5"
 )
@@ -22,9 +24,7 @@ func (cfg *ApiConfig) GetEnhancementsForFaction(w http.ResponseWriter, r *http.R
 			Name:        item.Name,
 			Cost:        item.Cost,
 			Detachment:  item.Detachment,
-			Legend:      item.Legend,
 			Description: item.Description,
-			Field8:      item.Field8,
 		}
 		enhanceSlice = append(enhanceSlice, enhanceJSON)
 	}
@@ -49,12 +49,47 @@ func (cfg *ApiConfig) GetEnhancements(w http.ResponseWriter, r *http.Request) {
 			Name:        item.Name,
 			Cost:        item.Cost,
 			Detachment:  item.Detachment,
-			Legend:      item.Legend,
 			Description: item.Description,
-			Field8:      item.Field8,
 		}
 		enhanceSlice = append(enhanceSlice, enhanceJSON)
 	}
 
 	respondWithJSON(w, 200, enhanceSlice)
+}
+
+func (cfg *ApiConfig) AddNewEnhancement(w http.ResponseWriter, r *http.Request) {
+
+	enhancement := Enhancement{}
+
+	decoder := json.NewDecoder(r.Body)
+	err := decoder.Decode(&enhancement)
+	if err != nil {
+		respondWithError(w, http.StatusBadRequest, "Invalid request body")
+		return
+	}
+
+	params := db.AddNewEnhancementParams{
+		FactionID:   enhancement.FactionID,
+		Name:        enhancement.Name,
+		Cost:        enhancement.Cost,
+		Detachment:  enhancement.Detachment,
+		Description: enhancement.Description,
+	}
+
+	newE, err := cfg.Db.AddNewEnhancement(r.Context(), params)
+	if err != nil {
+		respondWithError(w, http.StatusInternalServerError, "failed to add new enhancement")
+		return
+	}
+
+	enhancementJSON := Enhancement{
+		ID:          newE.ID,
+		FactionID:   newE.FactionID,
+		Cost:        newE.Cost,
+		Description: newE.Description,
+		Detachment:  newE.Detachment,
+		Name:        newE.Name,
+	}
+
+	respondWithJSON(w, 200, enhancementJSON)
 }

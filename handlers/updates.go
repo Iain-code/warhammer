@@ -132,7 +132,6 @@ func (cfg *ApiConfig) UpdateEnhancements(w http.ResponseWriter, r *http.Request)
 	}
 
 	params := db.UpdateEnhancementParams{
-		ID:          Id32,
 		Cost:        int32(cost),
 		Description: description,
 		Detachment:  enhanceUpdate.Detachment,

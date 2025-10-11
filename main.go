@@ -113,7 +113,9 @@ func main() {
 	r.Delete("/admins/remove/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteUnit)))
 	r.Delete("/admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.DeleteEnhancements)))
 	r.Put("/admins/enhancements/{id}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateEnhancements)))
+	r.Put("/admins/enhancements", cfg.MiddlewareAuth(http.HandlerFunc(cfg.AddNewEnhancement)))
 	r.Put("/admins/models", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateModel)))
+	r.Post("/admins/models", cfg.MiddlewareAuth(http.HandlerFunc(cfg.AddNewModel)))
 	r.Put("/admins/wargears", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateWargear)))
 	r.Put("/admins/abilities/{id}/{line}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdateAbility)))
 	r.Put("/admins/points/{id}/{line}", cfg.MiddlewareAuth(http.HandlerFunc(cfg.UpdatePoints)))
@@ -127,6 +129,8 @@ func main() {
 	})
 
 	isLambda := os.Getenv("AWS_LAMBDA_FUNCTION_NAME") != ""
+	// Lambda adds this automatically so its a nice check for if its lambda asking for server or if its the 
+	// dev set up asking for a server. 
 
 	if isLambda {
 		adapter := httpadapter.NewV2(r)

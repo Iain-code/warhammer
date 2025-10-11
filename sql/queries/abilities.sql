@@ -20,6 +20,6 @@ SET
   parameter = $8
   WHERE datasheet_id = $1 AND line = $2;
 
-  -- name: DeleteAbility :one
-  DELETE FROM abilities
-  WHERE 
+-- name: DeleteAbility :one
+DELETE FROM abilities
+WHERE

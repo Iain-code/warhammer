@@ -28,9 +28,7 @@ type Enhancement struct {
 	Name        string
 	Cost        int32
 	Detachment  string
-	Legend      string
 	Description string
-	Field8      string
 }
 
 type Faction struct {

@@ -1,0 +1,17 @@
+-- +goose Up
+BEGIN;
+
+ALTER TABLE enhancements 
+  ADD COLUMN id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY;
+
+COMMIT;
+
+-- +goose Down
+
+BEGIN;
+
+ALTER TABLE enhancements DROP CONSTRAINT enhancements_pkey;
+
+ALTER TABLE enhancements DROP COLUMN id;
+
+COMMIT;
